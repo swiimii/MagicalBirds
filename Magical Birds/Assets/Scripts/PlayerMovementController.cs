@@ -45,7 +45,7 @@ public class PlayerMovementController : MonoBehaviour
         }
     }
 
-    // Check if the player is touching the ground
+    // Check if the player is touching an object on the "ground" layer
     private bool checkGrounded()
     {
         var col = feetCollider.bounds; 
