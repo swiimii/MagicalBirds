@@ -17,9 +17,9 @@ GameObject:
   - component: {fileID: 2236737254321942076}
   - component: {fileID: 1245944185758660487}
   - component: {fileID: 3104137695128512642}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -156,7 +156,9 @@ MonoBehaviour:
   deadzoneValue: 0.1
   moving: 0
   grounded: 0
+  blocked: 0
   feetCollider: {fileID: 1245944185758660487}
+  frontCollider: {fileID: 2236737254321942076}
 --- !u!70 &2236737254321942076
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

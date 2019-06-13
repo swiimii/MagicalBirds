@@ -8,20 +8,28 @@ public class PlayerMovementBehavior : MonoBehaviour
     public float jumpForce = 4;
     public void Move(float movementValue) //player walks left or right
     {
-
-        //move the player left or right depending on public speed value
+        // Movement offset, if the player can move
         float xmovement = Time.deltaTime * movementValue * speed;
-        transform.position = new Vector2(transform.position.x + xmovement, transform.position.y);
+
+        var cont = GetComponent<PlayerMovementController>();
 
         //flip the player's direction depending on direction of movement
         //also flips hitboxes
         if (movementValue < 0)
         {
             transform.localScale = new Vector2(-1, 1);
+            if (!cont.CheckBlocked())
+            {
+                transform.position = new Vector2(transform.position.x + xmovement, transform.position.y);
+            }
         }
-        else
+        else if(movementValue > 0)
         {
             transform.localScale = new Vector2(1, 1);
+            if (!cont.CheckBlocked())
+            {
+                transform.position = new Vector2(transform.position.x + xmovement, transform.position.y);
+            }
         }
     }
 

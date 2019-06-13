@@ -1,13 +1,15 @@
-﻿using System.Collections;
+﻿// Much of this code was created by Samuel Scherer
+// Other contributors:
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovementController : MonoBehaviour
 {
     public float deadzoneValue = .1f;
-    public bool moving;
-    public bool grounded;
-    public CapsuleCollider2D feetCollider;
+    public bool moving, grounded, blocked;
+
+    public CapsuleCollider2D feetCollider, frontCollider;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +19,11 @@ public class PlayerMovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
 
         //if the horizontal axis is being pressed, move the player horizontally
         float movementValue = Input.GetAxisRaw("Horizontal");
+
         if ( Mathf.Abs(movementValue) > deadzoneValue)
         {
             moving = true;
@@ -34,7 +38,7 @@ public class PlayerMovementController : MonoBehaviour
         }
 
         //check if player is on the ground
-        grounded = checkGrounded();
+        grounded = CheckGrounded();
         GetComponent<Animator>().SetBool("IsGrounded", grounded); // Tell the animator that the player's not grounded
 
 
@@ -46,7 +50,7 @@ public class PlayerMovementController : MonoBehaviour
     }
 
     // Check if the player is touching an object on the "ground" layer
-    private bool checkGrounded()
+    public bool CheckGrounded()
     {
         var col = feetCollider.bounds; 
         float rayDistance = 0.02f; // Distance ray will be fired
@@ -65,7 +69,7 @@ public class PlayerMovementController : MonoBehaviour
             var rayOrigin = initialRayOrigin + Vector2.right * originOffset; // 
             Debug.DrawRay(rayOrigin, Vector2.down * rayDistance, Color.green); // Shows the direction of the ray in the editor
             var rayCast = Physics2D.Raycast(rayOrigin, Vector2.down, rayDistance, LayerMask.GetMask("Ground")); // Cast ray which checks if grounded
-            // print(rayCast.transform);
+            //print(rayCast.transform);
 
             if (rayCast) // If the ray hits an object in the mask "Ground"
             {
@@ -74,5 +78,30 @@ public class PlayerMovementController : MonoBehaviour
             
         }
         return false; // No ray hit the ground
+    }
+
+
+    // Used for checking if the player is running into a wall. 
+    // Called from PlayerMovementBehavior class
+    public bool CheckBlocked()
+    {
+        var col = frontCollider.bounds;
+        float rayDistance = .02f; // Distance ray will be fired
+
+        int direction = (int)transform.localScale.x; // +1 or -1
+        print(direction);
+        float offset = col.size.x/2 * direction; // Width/2 of the collider * direction
+
+        var rayOrigin = new Vector2(col.center.x + offset, col.center.y); // Origin is in front of the player
+
+        Debug.DrawRay(rayOrigin, transform.right * rayDistance * direction, Color.blue); // Shows the direction of the ray in the editor
+        var rayCast = Physics2D.Raycast(rayOrigin, transform.right * direction, rayDistance, LayerMask.GetMask("Ground")); // Cast ray in front of user
+        print(rayCast.transform);
+
+        if (rayCast)
+        {
+            return true; // Player is blocked by a piece of terrain
+        }
+        return false; // Player is unblocked
     }
 }
