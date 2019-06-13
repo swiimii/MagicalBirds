@@ -35,6 +35,8 @@ public class PlayerMovementController : MonoBehaviour
 
         //check if player is on the ground
         grounded = checkGrounded();
+        GetComponent<Animator>().SetBool("IsGrounded", grounded); // Tell the animator that the player's not grounded
+
 
         //Simple jump function. Needs confirmation that the player is grounded
         if (Input.GetButtonDown("Jump") && grounded)
@@ -43,13 +45,16 @@ public class PlayerMovementController : MonoBehaviour
         }
     }
 
+    // Check if the player is touching an object on the "ground" layer
     private bool checkGrounded()
     {
-        var col = feetCollider.bounds;
-        float rayDistance = 0.02f;
-        //Vector2 feet = new Vector2(col.center.x, col.min.y);//new Vector2(transform.position.x, GetComponent<Collider2D>().bounds.min.y); //(0,1) * bottom bounds  = (0,bottom bound)
+        var col = feetCollider.bounds; 
+        float rayDistance = 0.02f; // Distance ray will be fired
         float radius = feetCollider.bounds.size.y / 2; //For a horizontal capsule, this is the radius
-        float leftFeetBounds = feetCollider.bounds.min.x + radius, rightFeetBounds = feetCollider.bounds.max.x - radius; ; //radius is subtracted so that these rays are only fired from flat parts of collider
+
+        //radius is subtracted so that these rays are only fired from flat parts of the capsule collider
+        float leftFeetBounds = feetCollider.bounds.min.x + radius, rightFeetBounds = feetCollider.bounds.max.x - radius;
+
         var initialRayOrigin = new Vector2(leftFeetBounds, col.min.y);
 
         int numRays = 5; //max number of rays that are drawn
@@ -57,16 +62,17 @@ public class PlayerMovementController : MonoBehaviour
         {
             float originOffset = i * (col.size.x - col.size.y) / (numRays - 1);
 
-            var rayOrigin = initialRayOrigin + Vector2.right * originOffset;
-            Debug.DrawRay(rayOrigin, Vector2.down * rayDistance, Color.green);
-            var rayCast = Physics2D.Raycast(rayOrigin, Vector2.down, rayDistance, LayerMask.GetMask("Ground"));
-            print(rayCast.transform);
-            if (rayCast)
+            var rayOrigin = initialRayOrigin + Vector2.right * originOffset; // 
+            Debug.DrawRay(rayOrigin, Vector2.down * rayDistance, Color.green); // Shows the direction of the ray in the editor
+            var rayCast = Physics2D.Raycast(rayOrigin, Vector2.down, rayDistance, LayerMask.GetMask("Ground")); // Cast ray which checks if grounded
+            // print(rayCast.transform);
+
+            if (rayCast) // If the ray hits an object in the mask "Ground"
             {
-                return true;
+                return true; // Player feet are "touching" the ground
             }
             
         }
-        return false;
+        return false; // No ray hit the ground
     }
 }
