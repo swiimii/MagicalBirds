@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; //included
+using UnityEngine.SceneManagement; //added
 
 
 public class SceneLoader : MonoBehaviour{
@@ -10,7 +10,14 @@ public class SceneLoader : MonoBehaviour{
    {
        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
        SceneManager.LoadScene(currentSceneIndex + 1);
+      
    }
+    
+    public void OnTriggerEnter2D(Collider2D other) 
+    {
+        LoadNextScene();   
+    }
+    
 
    public void LoadStartScene()
    {
