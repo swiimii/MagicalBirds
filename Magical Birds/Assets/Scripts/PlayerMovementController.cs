@@ -43,6 +43,7 @@ public class PlayerMovementController : MonoBehaviour
 
 
         //Simple jump function. Needs confirmation that the player is grounded
+        // Double jumps are controlled in the basic ability controller
         if (Input.GetButtonDown("Jump") && grounded)
         {
             GetComponent<PlayerMovementBehavior>().Jump();
