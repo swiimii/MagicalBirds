@@ -175,7 +175,7 @@ MonoBehaviour:
   playerMaxHealth: 1
   playerCurrentHealth: 0
   invulnerabilityTime: 2
-  damageRecoil: 120
+  damageRecoilMagnitude: 120
   isInvulnerable: 0
 --- !u!70 &2236737254321942076
 CapsuleCollider2D:

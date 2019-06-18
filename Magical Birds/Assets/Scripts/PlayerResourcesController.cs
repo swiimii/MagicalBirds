@@ -82,13 +82,33 @@ public class PlayerResourcesController : MonoBehaviour
     // we were going to do regarding health at the time of writing this comment
     public IEnumerator Invulnerable()
     {
-        var mytime = invulnerabilityTime;
+        float flickerInterval = .10f; // interval between which the player sprite will flicker while invulnerable
+        var countdown = invulnerabilityTime; // countdown timer, during which the player is invincible
+        var spriteTransparency = GetComponent<SpriteRenderer>();
+        bool flag = true;
         isInvulnerable = true;
-        while(mytime > 0)
+
+
+        while(countdown > 0)
         {
-            mytime -= Time.deltaTime;
-            yield return null;
+            countdown -= flickerInterval;
+            
+            if(flag)
+            {
+                spriteTransparency.color = new Color(1, 1, 1, .5f);
+                flag = false;
+            }
+            else
+            {
+                spriteTransparency.color = Color.white;
+
+                flag = true;
+            }
+            // Due to this line, the "flickerInterfal" is time estimate, which will be 0-.10 seconds ... 
+            // longer than the actual invulnerability time
+            yield return new WaitForSeconds(flickerInterval); 
         }
+        spriteTransparency.color = Color.white;
         isInvulnerable = false;
     }
 
