@@ -6,6 +6,9 @@ public class PlayerMovementBehavior : MonoBehaviour
 {
     public float speed = 1;
     public float jumpForce = 4;
+
+    //NOTE: Recoil from damage is found in the PlayerResourcesController script
+
     public void Move(float movementValue) //player walks left or right
     {
         // Movement offset, if the player can move
@@ -36,6 +39,8 @@ public class PlayerMovementBehavior : MonoBehaviour
     public void Jump()
     {
         GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpForce;
+
     }
+
 
 }

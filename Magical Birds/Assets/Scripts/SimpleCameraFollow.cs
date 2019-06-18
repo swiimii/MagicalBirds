@@ -9,7 +9,10 @@ public class SimpleCameraFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var ptp = player.transform.position;
-        transform.position = new Vector3(ptp.x, ptp.y, cameraOffset);
+        if (player) // If player object isn't null, follow the player's position
+        {
+            var ptp = player.transform.position;
+            transform.position = new Vector3(ptp.x, ptp.y, cameraOffset);
+        }
     }
 }

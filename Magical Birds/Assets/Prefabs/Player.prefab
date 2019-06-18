@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7782283973510856567}
   - component: {fileID: 7782283973510856564}
   - component: {fileID: 7782283973510856565}
+  - component: {fileID: 6567220371613963361}
   - component: {fileID: 2236737254321942076}
   - component: {fileID: 1245944185758660487}
   - component: {fileID: 3104137695128512642}
@@ -159,6 +160,23 @@ MonoBehaviour:
   blocked: 0
   feetCollider: {fileID: 1245944185758660487}
   frontCollider: {fileID: 2236737254321942076}
+--- !u!114 &6567220371613963361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7782283973510856563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4283055791059dc498e01d8387ebcd98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMaxHealth: 1
+  playerCurrentHealth: 0
+  invulnerabilityTime: 2
+  damageRecoil: 120
+  isInvulnerable: 0
 --- !u!70 &2236737254321942076
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

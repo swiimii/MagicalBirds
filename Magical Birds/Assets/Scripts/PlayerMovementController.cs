@@ -19,8 +19,6 @@ public class PlayerMovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-
         //if the horizontal axis is being pressed, move the player horizontally
         float movementValue = Input.GetAxisRaw("Horizontal");
 
