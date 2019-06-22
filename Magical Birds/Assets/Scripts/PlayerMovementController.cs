@@ -22,7 +22,7 @@ public class PlayerMovementController : MonoBehaviour
         //if the horizontal axis is being pressed, move the player horizontally
         float movementValue = Input.GetAxisRaw("Horizontal");
 
-        if ( Mathf.Abs(movementValue) > deadzoneValue)
+        if ( Mathf.Abs(movementValue) > deadzoneValue) 
         {
             moving = true;
             GetComponent<Animator>().SetBool("IsMoving", true); //tell animation controller that the player is moving
@@ -63,7 +63,7 @@ public class PlayerMovementController : MonoBehaviour
         int numRays = 5; //max number of rays that are drawn
         for (int i = 0; i < numRays; i++)
         {
-            float originOffset = i * (col.size.x - col.size.y) / (numRays - 1);
+            float originOffset = i * (col.size.x - col.size.y) / (numRays - 1); // Offset the ray based on how many rays are being cast
 
             var rayOrigin = initialRayOrigin + Vector2.right * originOffset; // 
             Debug.DrawRay(rayOrigin, Vector2.down * rayDistance, Color.green); // Shows the direction of the ray in the editor
@@ -88,14 +88,14 @@ public class PlayerMovementController : MonoBehaviour
         float rayDistance = .02f; // Distance ray will be fired
 
         int direction = (int)transform.localScale.x; // +1 or -1
-        print(direction);
+        // print(direction);
         float offset = col.size.x/2 * direction; // Width/2 of the collider * direction
 
         var rayOrigin = new Vector2(col.center.x + offset, col.center.y); // Origin is in front of the player
 
         Debug.DrawRay(rayOrigin, transform.right * rayDistance * direction, Color.blue); // Shows the direction of the ray in the editor
         var rayCast = Physics2D.Raycast(rayOrigin, transform.right * direction, rayDistance, LayerMask.GetMask("Ground")); // Cast ray in front of user
-        print(rayCast.transform);
+        // print(rayCast.transform);
 
         if (rayCast)
         {

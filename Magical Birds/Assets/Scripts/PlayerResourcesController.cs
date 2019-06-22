@@ -48,7 +48,7 @@ public class PlayerResourcesController : MonoBehaviour
 
         force = force / force.magnitude; // Set magnitude to 1
 
-        GetComponent<Rigidbody2D>().AddForce(force * damageRecoilMagnitude); // Move player away from object
+        GetComponent<Rigidbody2D>().velocity = force * damageRecoilMagnitude; // Move player away from object
     }
 
     public bool Heal(int healingDone)

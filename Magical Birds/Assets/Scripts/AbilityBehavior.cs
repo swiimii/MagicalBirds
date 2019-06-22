@@ -14,7 +14,7 @@ public class AbilityBehavior : MonoBehaviour
 
     public void ExtraJump()
     {
-        jumpsLeft -= 1;
+        jumpsLeft -= 1; // Remove a jump from "extraJumps". For double jumping, there should only be one available.
         GetComponent<PlayerMovementBehavior>().Jump(); 
     }
 
@@ -25,7 +25,15 @@ public class AbilityBehavior : MonoBehaviour
 
     public void ResetJumps()
     {
-        jumpsLeft = extraJumps;
+        if (jumpsLeft != extraJumps)
+        {
+            jumpsLeft = extraJumps;
+        }
+  
+    }
+    public bool HasJumpsRemaining()
+    {
+        return jumpsLeft > 0;
     }
 
 
