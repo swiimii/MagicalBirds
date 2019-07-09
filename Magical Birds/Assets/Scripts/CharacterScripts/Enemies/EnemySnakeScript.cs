@@ -10,7 +10,7 @@ public class EnemySnakeScript : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Player"))
         {
-            collision.gameObject.GetComponent<PlayerResourcesController>().Damage(damageDealt, transform.position);//, transform.position);
+            collision.gameObject.GetComponent<PlayerResourcesController>().Damage(damageDealt, transform.position);
         }
     }
 
