@@ -23,6 +23,7 @@ public class BackgroundParallax : MonoBehaviour
 
     private void Update()
     {
+
         Vector2 newPos = trackedObject.transform.position;
         Vector2 difference = newPos - prevTrackedPosition;
         prevTrackedPosition = newPos;
