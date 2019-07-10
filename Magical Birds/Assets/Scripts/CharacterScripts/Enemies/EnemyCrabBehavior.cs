@@ -2,17 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyCrabBehavior : MonoBehaviour
+public class EnemyCrabBehavior : Enemy
 {
-    public int damageDealt = 1;
-
-    private void OnCollisionStay2D(Collision2D collision)
+    public override void Move()
     {
-        if (collision.gameObject.tag.Equals("Player"))
-        {
-            collision.gameObject.GetComponent<PlayerResourcesController>().Damage(damageDealt, transform.position);//, transform.position);
-        }
+
     }
-
-
 }

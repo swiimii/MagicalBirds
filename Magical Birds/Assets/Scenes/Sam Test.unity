@@ -508,7 +508,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30a9a268c59e2624f8317055fbead710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 2
   damageDealt: 1
+  moveSpeed: 0
 --- !u!95 &1049860017
 Animator:
   serializedVersion: 3
