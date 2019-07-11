@@ -13,7 +13,10 @@ public class EnemySnakeScript : Enemy
             SwitchDirection();
         }
 
-        Move();
+        if (!immobile)
+        {
+            Move();
+        }
     }
 
     public override void Move() 

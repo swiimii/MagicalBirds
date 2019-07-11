@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
+    public bool immobile;
     public int health = 2, damageDealt = 1;
     public float moveSpeed = 20;
     public abstract void Move();
