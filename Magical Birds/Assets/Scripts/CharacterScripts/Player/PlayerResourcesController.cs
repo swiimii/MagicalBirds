@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerResourcesController : ResourceController
 {
     // maxHealth, currentHealth, and damageRecoilMagnitude inherited from ResourceController
+    public Sprite healthy, damaged;
     public float invulnerabilityTime = 2;
     public bool isInvulnerable = false;
+    public GameObject[] healthEggs;
 
     // Call from attack scripts and enemy behavior scripts. When the player gets hit
     public override void ProcessDamage(int damageDealt, Vector2 source)
@@ -17,8 +20,15 @@ public class PlayerResourcesController : ResourceController
         }
 
         currentHealth -= damageDealt;
-        StartCoroutine("Invulnerable");
-        DamageRecoil(source);
+
+        // Change Health UI indicator accordingly.
+        if (currentHealth >= 0)
+        {
+            healthEggs[currentHealth].GetComponent<Image>().sprite = damaged;
+            healthEggs[currentHealth].GetComponent<Image>().color = new Color(1, 1, 1, .5f);
+            StartCoroutine("Invulnerable");
+            DamageRecoil(source);
+        }
     }
 
     public bool Heal(int healingDone)
@@ -36,6 +46,13 @@ public class PlayerResourcesController : ResourceController
             if (currentHealth > maxHealth) // Prevent overheal
             {
                 currentHealth = maxHealth;
+            }
+
+            // reset the health indicator
+            foreach(var egg in healthEggs)
+            {
+                egg.GetComponent<Image>().color = Color.white;
+                egg.GetComponent<Image>().sprite = healthy;
             }
             return true;
         }
@@ -78,6 +95,7 @@ public class PlayerResourcesController : ResourceController
         spriteTransparency.color = Color.white;
         isInvulnerable = false;
     }
+
 
     
 }

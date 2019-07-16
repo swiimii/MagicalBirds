@@ -8,7 +8,7 @@ public abstract class Attack : MonoBehaviour
     public float spriteDuration = .25f;
     public int damage = 1;
     // Start is called before the first frame update
-    protected void Start()
+    protected virtual void Start()
     {
         StartCoroutine("AttackFade");
     }
@@ -29,5 +29,10 @@ public abstract class Attack : MonoBehaviour
 
         // Damage must be set in override. That way, different attacks can use different types of knockback / recoil
         //collision.gameObject.GetComponent<ResourceController>().Damage(damage, transform.position);
+    }
+
+    protected float GetDirection()
+    {
+        return (Mathf.Abs(transform.localScale.x)/transform.localScale.x);
     }
 }

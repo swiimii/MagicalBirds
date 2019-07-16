@@ -185,7 +185,7 @@ MonoBehaviour:
   damageDealt: 1
   moveSpeed: 1.5
   feetCollider: {fileID: 2598215640268674063}
-  immobileDuration: 0.7
+  immobileDuration: 0.5
 --- !u!114 &695716529085369365
 MonoBehaviour:
   m_ObjectHideFlags: 0

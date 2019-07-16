@@ -19,10 +19,10 @@ public class EnemySpawner : MonoBehaviour
         {
             player = GameObject.FindGameObjectWithTag("Player");
         }
-
         CreateEnemy();
     }
-    private void Update()
+
+    protected virtual void Update()
     {
         if (enemy && enemy.activeInHierarchy)
         {
@@ -41,11 +41,11 @@ public class EnemySpawner : MonoBehaviour
 
     }
     
-    public virtual void CreateEnemy()
+    public virtual void CreateEnemy(Vector3 position)
     {
         // Instantiate Enemy
         enemy = Instantiate(enemyPrefab);
-        enemy.transform.position = transform.position;
+        enemy.transform.position = position;
 
         // Make the enemy face the direction of the player
         enemy.GetComponent<EnemyMovementController>().SetDirection(GetDirection());
@@ -54,11 +54,20 @@ public class EnemySpawner : MonoBehaviour
         enemy.SetActive(false);
     }
 
-    public void DespawnEnemy()
+    public virtual void CreateEnemy()
+    {
+        CreateEnemy(transform.position);
+    }
+
+    public virtual void DespawnEnemy(Vector3 position)
     {
         enemy.SetActive(false);
-        enemy.transform.position = transform.position;
-        enemy.GetComponent<EnemyMovementController>().SetDirection(GetDirection());
+        enemy.transform.position = position;
+    }
+
+    public virtual void DespawnEnemy()
+    {
+        DespawnEnemy(transform.position);
     }
 
     public int GetDirection()
