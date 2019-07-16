@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Magical Birds/Assets/Scripts/CharacterScripts/Enemies/Spawners.meta
+guid: fe35d91c54c052c4d9f5ab4ba4d21e7f
+=======
 guid: 7a6ad2e1bdf6a47cfa32e10c9d38c68a
+>>>>>>> 34f28ba0f80eb67c311d9cb5574c8f700d9f90eb:Magical Birds/Assets/Scripts/Game.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
