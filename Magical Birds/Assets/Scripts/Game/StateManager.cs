@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class StateManager : Mono {
+public class StateManager : MonoBehaviour {
     private static StateManager instance;
     // Active Level
     [SerializeField] private int activeLevel;
