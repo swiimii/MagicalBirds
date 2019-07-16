@@ -97,4 +97,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  cameraOffset: -10
+  cameraOffset: {x: 0, y: 0.6, z: -10}
