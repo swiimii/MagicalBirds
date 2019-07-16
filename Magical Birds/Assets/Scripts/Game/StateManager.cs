@@ -39,7 +39,7 @@ public class StateManager : MonoBehaviour {
         Debug.Log("Added " + collectedItem + " to items collected");
     }
 
-    public void setLevel(string levelId) {
+    public void setLevel(int levelId) {
         activeLevel = levelId;
         SceneManager.LoadScene(levelId);
     }
