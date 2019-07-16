@@ -1,52 +1,34 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class StateManager
-{
+public class StateManager : Mono {
     private static StateManager instance;
     // Active Level
-    private int activeLevel;
-    // Maximum HP
-    private int maxHP;
-    // Current HP
-    private int hp;
-    // Damage Player Does
-    private int dmg;
+    [SerializeField] private int activeLevel;
     // Items Collected
-    private string[] collectedItems;
+    [SerializeField] private string[] collectedItems;
     // # of items collected, used to index
-    private int itemsCollected;
+    [SerializeField] private int itemsCollected;
 
-    public static StateManager Instance{
-        get{
-            if(instance == null){
-                instance = new StateManager();
-            }
-
-            return instance;
+    private void Awake() {
+        int numStateManagers = FindObjectsOfType<StateManager>().Length;
+        
+        if (numStateManagers > 1) {
+            // TODO: Not sure where gameObject comes from in example, replace with what's appropriate
+            Destroy(gameObject);
+        } else {
+            DontDestroyOnLoad(gameObject);
         }
     }
 
-    // TODO: Remove later when there's something else to start it
-    // Start is called before the first frame update
-    void Start()
-    {
-        startState();
-    }
-
-    private void OnApplicationQuit() {
-        instance = null;
-    }
-
-    public void startState(){
-        Debug.Log("Creating new game state manager");
-
-        //Set defaults
-        activeLevel = 1;
-        maxHP = 6;
-        hp = 6;
-        dmg = 2;
+    void Start() {
+        // Set defaults
+        // TODO: make active level be whichever the main menu is
+        activeLevel = 0;
         itemsCollected = 0;
         collectedItems = new string[3];
     }
@@ -55,5 +37,17 @@ public class StateManager
         collectedItems[itemsCollected] = collectedItem;
         itemsCollected++;
         Debug.Log("Added " + collectedItem + " to items collected");
+    }
+
+    public void setLevel(string levelId) {
+        activeLevel = levelId;
+        SceneManager.LoadScene(levelId);
+    }
+
+    private void ResetGameSession() {
+        // TODO: make active level be whichever the main menu is
+        activeLevel = 0;
+        SceneManager.LoadScene(0);
+        Destroy(gameObject);
     }
 }
