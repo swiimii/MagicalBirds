@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: 7782283973510856567}
   - component: {fileID: 7782283973510856564}
   - component: {fileID: 7782283973510856565}
+  - component: {fileID: 6567220371613963361}
+  - component: {fileID: 7357103240998757355}
+  - component: {fileID: 5008440269420603141}
   - component: {fileID: 2236737254321942076}
   - component: {fileID: 1245944185758660487}
   - component: {fileID: 3104137695128512642}
@@ -32,7 +35,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7782283973510856563}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.003, y: -0.029, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -140,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
-  jumpForce: 3
+  jumpForce: 3.5
 --- !u!114 &7782283973510856565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +162,53 @@ MonoBehaviour:
   blocked: 0
   feetCollider: {fileID: 1245944185758660487}
   frontCollider: {fileID: 2236737254321942076}
+--- !u!114 &6567220371613963361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7782283973510856563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4283055791059dc498e01d8387ebcd98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  currentHealth: 0
+  damageRecoilMagnitude: 2.5
+  invulnerabilityTime: 2
+  isInvulnerable: 0
+--- !u!114 &7357103240998757355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7782283973510856563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d92f51bce8d714a8a85d9034d69f38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canDoubleJump: 0
+  readyToAttack: 1
+  attackCooldown: 0.2
+--- !u!114 &5008440269420603141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7782283973510856563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a737e4b09a8234a4891f34a1eecd7cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackPrefab: {fileID: 1942470479837216815, guid: dccf3b77d4b15a7469cd1c58fd33b432,
+    type: 3}
+  attackOffset: {x: 0.15, y: 0, z: 0}
 --- !u!70 &2236737254321942076
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
