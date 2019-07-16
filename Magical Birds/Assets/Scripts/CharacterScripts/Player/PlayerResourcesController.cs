@@ -7,14 +7,9 @@ public class PlayerResourcesController : ResourceController
     // maxHealth, currentHealth, and damageRecoilMagnitude inherited from ResourceController
     public float invulnerabilityTime = 2;
     public bool isInvulnerable = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        ResetHealth();
-    }
 
-    // Call from attack scripts and enemy behavior scripts. When the player touhes
-    public override void Damage(int damageDealt, Vector2 source)
+    // Call from attack scripts and enemy behavior scripts. When the player gets hit
+    public override void ProcessDamage(int damageDealt, Vector2 source)
     {
         if(isInvulnerable)
         {
@@ -46,11 +41,7 @@ public class PlayerResourcesController : ResourceController
         }
     }
 
-    // Reset health. Could be used at checkpoints?
-    public void ResetHealth()
-    {
-        currentHealth = maxHealth;
-    }
+    
 
     // Coroutine which allows for invincibility frames. I think it'll be a good idea to allow the ...
     // player to move through enemies while invulnerable, IF we use more than one health. I forget what ...
@@ -62,7 +53,7 @@ public class PlayerResourcesController : ResourceController
         var spriteTransparency = GetComponent<SpriteRenderer>();
         bool flag = true;
         isInvulnerable = true;
-
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), true);
 
         while(countdown > 0)
         {
@@ -83,6 +74,7 @@ public class PlayerResourcesController : ResourceController
             // longer than the actual invulnerability time
             yield return new WaitForSeconds(flickerInterval); 
         }
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), false);
         spriteTransparency.color = Color.white;
         isInvulnerable = false;
     }

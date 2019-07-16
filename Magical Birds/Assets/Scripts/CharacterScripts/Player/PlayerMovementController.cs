@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovementController : MonoBehaviour
+public class PlayerMovementController : MovementController
 {
     public float deadzoneValue = .1f;
     public bool moving, grounded, blocked;
@@ -49,7 +49,7 @@ public class PlayerMovementController : MonoBehaviour
     }
 
     // Check if the player is touching an object on the "ground" layer
-    public bool CheckGrounded()
+    public override bool CheckGrounded()
     {
         var col = feetCollider.bounds; 
         float rayDistance = 0.02f; // Distance ray will be fired
@@ -82,7 +82,7 @@ public class PlayerMovementController : MonoBehaviour
 
     // Used for checking if the player is running into a wall. 
     // Called from PlayerMovementBehavior class
-    public bool CheckBlocked()
+    public override bool CheckBlocked()
     {
         var col = frontCollider.bounds;
         float rayDistance = .02f; // Distance ray will be fired

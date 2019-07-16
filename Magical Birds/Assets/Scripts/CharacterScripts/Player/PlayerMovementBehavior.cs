@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovementBehavior : MonoBehaviour
+public class PlayerMovementBehavior : MovementBehavior
 {
     public float speed = 1;
     public float jumpForce = 4;
 
     //NOTE: Recoil from damage is found in the PlayerResourcesController script
 
-    public void Move(float movementValue) //player walks left or right
+    public override void Move(float movementValue) //player walks left or right
     {
         // Movement offset, if the player can move
         float xmovement = Time.deltaTime * movementValue * speed;

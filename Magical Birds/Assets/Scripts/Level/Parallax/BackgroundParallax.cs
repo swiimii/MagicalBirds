@@ -17,8 +17,14 @@ public class BackgroundParallax : MonoBehaviour
     // Set trackedcamera to main camera by default
     private void Start()
     {
-        trackedCamera = Camera.main;
+        if(!trackedCamera)
+            trackedCamera = Camera.main;
         prevTrackedPosition = trackedCamera.transform.position;
+
+        if(!trackedObject)
+        {
+            trackedObject = GameObject.FindGameObjectWithTag("Player");
+        }
     }
 
     private void Update()

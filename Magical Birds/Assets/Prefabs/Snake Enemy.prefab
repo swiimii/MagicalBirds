@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 2598215640268674065}
   - component: {fileID: 2598215640268674066}
   - component: {fileID: 2598215640268674062}
-  - component: {fileID: 2598215640268674061}
   - component: {fileID: 2598215640268674063}
   - component: {fileID: 2598215640268674060}
+  - component: {fileID: 2598215640268674061}
+  - component: {fileID: 695716529085369365}
   m_Layer: 10
   m_Name: Snake Enemy
   m_TagString: Enemy
@@ -30,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2598215640268674067}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3326101, y: 0.60806423, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -125,21 +126,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &2598215640268674061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2598215640268674067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: def48a776efc87b4bbc8f5b9a03e5919, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 2
-  damageDealt: 1
-  moveSpeed: 2
 --- !u!61 &2598215640268674063
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -182,3 +168,36 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.16}
   serializedVersion: 2
   m_Radius: 0.16
+--- !u!114 &2598215640268674061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2598215640268674067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: def48a776efc87b4bbc8f5b9a03e5919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  immobile: 0
+  health: 2
+  damageDealt: 1
+  moveSpeed: 1.5
+  feetCollider: {fileID: 2598215640268674063}
+  immobileDuration: 0.7
+--- !u!114 &695716529085369365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2598215640268674067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f6e5b40065aa604d877b35b44473fcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 2
+  currentHealth: 2
+  damageRecoilMagnitude: 2.5
