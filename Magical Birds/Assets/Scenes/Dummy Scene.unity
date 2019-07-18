@@ -579,6 +579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5dc4007045b942d5b83709846df5e2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   collectedItems: []
 --- !u!1 &1573417782
 GameObject:
@@ -612,7 +613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1872401602}
-  cameraOffset: -10
+  offset: {x: 0, y: 0, z: 0}
 --- !u!81 &1573417784
 AudioListener:
   m_ObjectHideFlags: 0
@@ -684,19 +685,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7782283974740259259}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1872401615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1872401602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8aafa0f3648474b82a4ccc5efd40add9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentInterItem: {fileID: 0}
 --- !u!1 &2050140433
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,6 +838,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2869184395849975069, guid: 187e84c4babdc8a42b8866abd8a1f98e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 187e84c4babdc8a42b8866abd8a1f98e, type: 3}

@@ -10,6 +10,12 @@ public class CSVScript : MonoBehaviour {
     private List<string>[] data;
     private StreamReader sr;
 
+
+    private void Start()
+    {
+        FindObjectOfType<StateManager>().setLevel(1);
+    }
+
     public void SelectFile()
     {
         try
