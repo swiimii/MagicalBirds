@@ -23,6 +23,9 @@ public class StateManager : MonoBehaviour {
     // Player's last used checkpoint to respawn from
     // TODO: should be game object?
     public GameObject currentCheckpoint;
+    public float masterVolume;
+    public float musicVolume;
+    public float soundVolume;
 
 
     private void Awake() {
