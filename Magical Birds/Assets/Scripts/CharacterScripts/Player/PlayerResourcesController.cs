@@ -14,21 +14,42 @@ public class PlayerResourcesController : ResourceController
     // Call from attack scripts and enemy behavior scripts. When the player gets hit
     public override void ProcessDamage(int damageDealt, Vector2 source)
     {
-        if(isInvulnerable)
+        //if(isInvulnerable)
+        //{
+        //    return; // Don't do damage if the player is invulnerable
+        //}
+
+        //currentHealth -= damageDealt;
+
+        //// Change Health UI indicator accordingly.
+        //if (currentHealth >= 0)
+        //{
+        //    healthEggs[currentHealth].GetComponent<Image>().sprite = damaged;
+        //    healthEggs[currentHealth].GetComponent<Image>().color = new Color(1, 1, 1, .5f);
+        //    StartCoroutine("Invulnerable");
+        //    DamageRecoil(source);
+        //}
+        if (isInvulnerable)
         {
             return; // Don't do damage if the player is invulnerable
         }
 
-        currentHealth -= damageDealt;
-
-        // Change Health UI indicator accordingly.
-        if (currentHealth >= 0)
+        else
         {
-            healthEggs[currentHealth].GetComponent<Image>().sprite = damaged;
-            healthEggs[currentHealth].GetComponent<Image>().color = new Color(1, 1, 1, .5f);
             StartCoroutine("Invulnerable");
-            DamageRecoil(source);
+            base.ProcessDamage(damageDealt, source);
+
+            // Change UI according to current health
+            if(currentHealth >= 0)
+            {
+                for (int i = healthEggs.Length; i > currentHealth; i--)
+                {
+                    healthEggs[i - 1].GetComponent<Image>().sprite = damaged;
+                    healthEggs[i - 1].GetComponent<Image>().color = new Color(1, 1, 1, .5f);
+                }
+            } 
         }
+        
     }
 
     public bool Heal(int healingDone)
@@ -58,7 +79,11 @@ public class PlayerResourcesController : ResourceController
         }
     }
 
-    
+    public override IEnumerator Death()
+    {
+        yield return null;
+    }
+       
 
     // Coroutine which allows for invincibility frames. I think it'll be a good idea to allow the ...
     // player to move through enemies while invulnerable, IF we use more than one health. I forget what ...

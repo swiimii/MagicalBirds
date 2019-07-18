@@ -625,8 +625,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canDoubleJump: 0
-  readyToAttack: 1
-  attackCooldown: 0.2
+  readyToBasicAttack: 1
+  readyToPowerAttack: 1
+  readyToRangedAttack: 1
+  basicAttackCooldown: 0.2
+  powerAttackCooldown: 0.5
+  rangedAttackCooldown: 0.5
 --- !u!114 &5008440269420603141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,7 +643,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a737e4b09a8234a4891f34a1eecd7cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackPrefab: {fileID: 1942470479837216815, guid: dccf3b77d4b15a7469cd1c58fd33b432,
+  BasicAttackPrefab: {fileID: 1942470479837216815, guid: dccf3b77d4b15a7469cd1c58fd33b432,
+    type: 3}
+  PowerAttackPrefab: {fileID: 0}
+  RangedAttackPrefab: {fileID: 8014984893692812993, guid: 8e7988565e9d3ad4d804e37c99f504b0,
     type: 3}
   attackOffset: {x: 0.15, y: 0, z: 0}
 --- !u!70 &2236737254321942076

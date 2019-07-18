@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AbilityBehavior : MonoBehaviour
 {
-    public GameObject AttackPrefab;
+    public GameObject BasicAttackPrefab, PowerAttackPrefab, RangedAttackPrefab;
     public Vector3 attackOffset;
 
     private readonly int extraJumps = 1;
@@ -22,13 +22,26 @@ public class AbilityBehavior : MonoBehaviour
         GetComponent<PlayerMovementBehavior>().Jump(); 
     }
 
-    public void Attack()
+    public void BasicAttack()
     {
-        var direction = transform.localScale.x;
-        var attack = Instantiate(AttackPrefab, GetComponent<SpriteRenderer>().bounds.center + attackOffset * direction, Quaternion.identity);
+        var direction = Mathf.Abs(transform.localScale.x)/transform.localScale.x;
+        var attack = Instantiate(BasicAttackPrefab, GetComponent<SpriteRenderer>().bounds.center + attackOffset * direction, Quaternion.identity);
 
         // Change directino of attack while maintaining scale
         attack.transform.localScale = 
+        new Vector3(direction * attack.transform.localScale.x,
+                    transform.localScale.y,
+                    transform.localScale.z
+                    );
+    }
+
+    public void SnowballAttack()
+    {
+        var direction = Mathf.Abs(transform.localScale.x) / transform.localScale.x;
+        var attack = Instantiate(RangedAttackPrefab, GetComponent<SpriteRenderer>().bounds.center + attackOffset * direction, Quaternion.identity);
+        var angle = attack.GetComponent<RangedAttack>().direction;
+        attack.GetComponent<RangedAttack>().direction = new Vector2(angle.x * direction, angle.y);
+        attack.transform.localScale =
         new Vector3(direction * attack.transform.localScale.x,
                     transform.localScale.y,
                     transform.localScale.z
