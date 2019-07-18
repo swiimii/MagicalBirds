@@ -27,7 +27,7 @@ public class PlayerInteract : MonoBehaviour
             interactPrompt.SetActive(true);
             currentFriend = other.gameObject;
         } else if(other.CompareTag("Pickup")) {
-            other.SendMessage("DoPickup");
+            other.SendMessage("DoInteract");
         }
     }
 

@@ -11,6 +11,7 @@ public class ResourceController : MonoBehaviour
     public virtual void Start()
     {
         ResetHealth();
+        FindObjectOfType<StateManager>().player = gameObject;
     }
 
     #region Damage Functions

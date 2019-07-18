@@ -451,4 +451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35c024515639746d3b570f75340a250f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Woodpecker
+  name: Woodpecker
+  talkedTo: 0
+  itemToCollect: {fileID: 0}
+  abilityLevel: 2

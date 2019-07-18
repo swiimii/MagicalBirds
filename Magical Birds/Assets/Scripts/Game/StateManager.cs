@@ -20,6 +20,9 @@ public class StateManager : MonoBehaviour {
         3 - Double + Smash + Snowball
     */
     public int unlockedAbilities;
+    // Player's last used checkpoint to respawn from
+    // TODO: should be game object?
+    public GameObject currentCheckpoint;
 
 
     private void Awake() {
@@ -51,6 +54,10 @@ public class StateManager : MonoBehaviour {
         // TODO: change this LoadScene arg to be whatever the main menu scene is
         SceneManager.LoadScene(0);
         Destroy(gameObject);
+    }
+
+    private void DoPlayerDeath() {
+        // TODO: whatever happens when the player dies, i.e. reset to checkpoint
     }
 
     private void SaveProgress() {

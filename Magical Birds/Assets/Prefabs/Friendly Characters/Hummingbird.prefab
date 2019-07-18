@@ -307,7 +307,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35c024515639746d3b570f75340a250f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: HummingBird
+  name: Hummingbird
+  talkedTo: 0
+  itemToCollect: {fileID: 0}
+  abilityLevel: 1
 --- !u!61 &8490821746651439964
 BoxCollider2D:
   m_ObjectHideFlags: 0
