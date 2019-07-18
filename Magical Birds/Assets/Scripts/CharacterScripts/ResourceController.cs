@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class ResourceController : MonoBehaviour
+public class ResourceController : MonoBehaviour
 {
     public int maxHealth = 1;
     public int currentHealth;
@@ -19,7 +19,10 @@ public abstract class ResourceController : MonoBehaviour
     public virtual void ProcessDamage(int damageDealt, Vector2 source)
     {
         currentHealth -= damageDealt;
-        DamageRecoil(source);
+        if (GetComponent<Rigidbody2D>())
+        {
+            DamageRecoil(source);
+        }
         if (CheckDead())
         {
             StartCoroutine("Death");
@@ -29,7 +32,11 @@ public abstract class ResourceController : MonoBehaviour
     public virtual void ProcessDamage(int damageDealt, Vector2 direction, float magnitude)
     {
         currentHealth -= damageDealt;
-        FixedDamageRecoil(direction, magnitude);
+        if (GetComponent<Rigidbody2D>())
+        {
+            FixedDamageRecoil(direction, magnitude);
+        }
+
         if (CheckDead())
         {
             StartCoroutine("Death");
@@ -89,7 +96,10 @@ public abstract class ResourceController : MonoBehaviour
     public virtual IEnumerator Death()
     {
         GetComponent<Collider2D>().enabled = false;
-        GetComponent<Rigidbody2D>().isKinematic = true;
+        if (GetComponent<Rigidbody2D>())
+        {
+            GetComponent<Rigidbody2D>().isKinematic = true;
+        }
         GetComponent<MovementController>().enabled = false;
         GetComponent<Animator>().SetBool("isDead", true);
         transform.localScale = new Vector3(1, 1, 1);

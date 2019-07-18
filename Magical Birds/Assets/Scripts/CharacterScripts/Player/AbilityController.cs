@@ -8,9 +8,9 @@ public class AbilityController : MonoBehaviour
     // Fields for the jump ability
     public bool canDoubleJump = false;
 
-    // Fields for the basic attack ability
-    public bool readyToAttack = true;
-    public float attackCooldown;
+    // Fields for the attack abilities
+    public bool readyToBasicAttack = true, readyToPowerAttack = true, readyToRangedAttack = true;
+    public float basicAttackCooldown, powerAttackCooldown, rangedAttackCooldown;
 
     void Update()
     {
@@ -31,20 +31,47 @@ public class AbilityController : MonoBehaviour
         }
 
         // Attack control
-        if (readyToAttack && Input.GetButtonDown("Ability1"))
+        if (readyToBasicAttack && Input.GetButtonDown("Ability1"))
         {
-            StartCoroutine("AttackDelay");
-            behav.Attack();
+            StartCoroutine("AttackDelay1");
+            behav.BasicAttack();
+        }
+
+        if (readyToPowerAttack && Input.GetButtonDown("Ability2"))
+        {
+            // Attack Delay
+
+            // Power Attack
+        }
+
+        if (readyToRangedAttack && Input.GetButtonDown("Ability3"))
+        {
+            StartCoroutine("AttackDelay3");
+            behav.SnowballAttack();
         }
 
 
     }
 
-    public IEnumerator AttackDelay()
+    public IEnumerator AttackDelay1()
     {
-        readyToAttack = false;
-        yield return new WaitForSeconds(attackCooldown);
-        readyToAttack = true;
+        readyToBasicAttack = false;
+        yield return new WaitForSeconds(basicAttackCooldown);
+        readyToBasicAttack = true;
+    }
+
+    public IEnumerator AttackDelay2()
+    {
+        readyToPowerAttack = false;
+        yield return new WaitForSeconds(powerAttackCooldown);
+        readyToPowerAttack = true;
+    }
+
+    public IEnumerator AttackDelay3()
+    {
+        readyToRangedAttack = false;
+        yield return new WaitForSeconds(rangedAttackCooldown);
+        readyToRangedAttack = true;
     }
 
 
