@@ -31,20 +31,20 @@ public class AbilityController : MonoBehaviour
         }
 
         // Attack control
-        if (readyToBasicAttack && Input.GetButtonDown("Ability1"))
+        if (readyToBasicAttack && Input.GetButton("Ability1"))
         {
             StartCoroutine("AttackDelay1");
             behav.BasicAttack();
         }
 
-        if (readyToPowerAttack && Input.GetButtonDown("Ability2"))
+        if (readyToPowerAttack && Input.GetButton("Ability2"))
         {
             // Attack Delay
 
             // Power Attack
         }
 
-        if (readyToRangedAttack && Input.GetButtonDown("Ability3"))
+        if (readyToRangedAttack && Input.GetButton("Ability3"))
         {
             StartCoroutine("AttackDelay3");
             behav.SnowballAttack();

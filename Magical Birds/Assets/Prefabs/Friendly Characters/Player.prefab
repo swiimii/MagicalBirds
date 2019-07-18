@@ -628,9 +628,9 @@ MonoBehaviour:
   readyToBasicAttack: 1
   readyToPowerAttack: 1
   readyToRangedAttack: 1
-  basicAttackCooldown: 0.2
-  powerAttackCooldown: 0.5
-  rangedAttackCooldown: 0.5
+  basicAttackCooldown: 0.5
+  powerAttackCooldown: 1.5
+  rangedAttackCooldown: 0.7
 --- !u!114 &5008440269420603141
 MonoBehaviour:
   m_ObjectHideFlags: 0
