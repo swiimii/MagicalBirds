@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class InteractiveItemBase : MonoBehaviour
 {
-    public string itemName;
-    public Sprite image;
     public virtual void DoInteract(){
+        FindObjectOfType<StateManager>().addCollectedItem(gameObject);
         gameObject.SetActive(false);
-        StateManager.Instance.addCollectedItem(itemName);
+
     }
 }
