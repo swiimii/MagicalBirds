@@ -318,6 +318,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7782283973510856563, guid: 187e84c4babdc8a42b8866abd8a1f98e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7782283973510856563, guid: 187e84c4babdc8a42b8866abd8a1f98e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 7782283973510856560, guid: 187e84c4babdc8a42b8866abd8a1f98e,
         type: 3}
       propertyPath: m_RootOrder
@@ -357,11 +367,6 @@ PrefabInstance:
         type: 3}
       propertyPath: attackDelay
       value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6567220371613963361, guid: 187e84c4babdc8a42b8866abd8a1f98e,
-        type: 3}
-      propertyPath: invulnerabilityTime
-      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2869184395849975069, guid: 187e84c4babdc8a42b8866abd8a1f98e,
         type: 3}
@@ -1458,7 +1463,7 @@ PrefabInstance:
     - target: {fileID: 7297753963138902324, guid: 12c796b04c10e5b4a8768c82a5e574ab,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7297753963138902327, guid: 12c796b04c10e5b4a8768c82a5e574ab,
         type: 3}

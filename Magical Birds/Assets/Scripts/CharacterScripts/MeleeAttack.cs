@@ -4,8 +4,8 @@ using UnityEngine;
 
 public abstract class MeleeAttack : Attack
 {
-    public float hitboxDuration = 0;
-    public float spriteDuration = .25f;
+    public float hitboxDuration = .25f;
+    public float spriteDuration = 0;
 
     // Start is called before the first frame update
     protected virtual void Start()
@@ -22,9 +22,11 @@ public abstract class MeleeAttack : Attack
     }
 
     // I set the physics settings so that objects on the "Player Attack" layer only hit enemies.
-    protected virtual void OnCollisionEnter2D(Collision2D collision)
+    protected override void OnCollisionEnter2D(Collision2D collision)
     {
-        //Only hit each enemy once
+        base.OnCollisionEnter2D(collision);
+
+        // Prevent colliders from sticking
         Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collision.collider);
 
         // Damage must be set in override. That way, different attacks can use different types of knockback / recoil

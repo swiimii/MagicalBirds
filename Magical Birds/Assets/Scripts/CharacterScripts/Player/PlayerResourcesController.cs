@@ -90,6 +90,7 @@ public class PlayerResourcesController : ResourceController
 
     public override IEnumerator Death()
     {
+        
         yield return null;
     }
        

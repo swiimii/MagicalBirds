@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1942470479837216808}
   - component: {fileID: 1942470479837216811}
   - component: {fileID: 9143042919194109569}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Smaller Chevron Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,9 +127,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 251a1d8c34f4fd049a5d7fbb5d2afc01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
+  hits: []
   hitboxDuration: 0.1
   spriteDuration: 0
-  damage: 1
   knockbackMagnitude: 0.6
 --- !u!50 &9143042919194109569
 Rigidbody2D:

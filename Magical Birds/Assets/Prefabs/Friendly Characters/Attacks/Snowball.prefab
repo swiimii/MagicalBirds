@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8014984893692812992}
   - component: {fileID: 8014984893692813005}
   - component: {fileID: 8014984893692813004}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Snowball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  hits: []
   speed: 4
   direction: {x: 5, y: 1}
 --- !u!50 &8014984893692813005

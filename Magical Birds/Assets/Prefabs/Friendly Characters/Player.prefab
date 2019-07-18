@@ -607,7 +607,7 @@ MonoBehaviour:
   damageRecoilMagnitude: 2.5
   healthy: {fileID: 21300000, guid: 3b6776351ae222a47b381b5dde0b6fae, type: 3}
   damaged: {fileID: 21300000, guid: 293cb383a2c68cb4aade19ef0c64e344, type: 3}
-  invulnerabilityTime: 2
+  invulnerabilityTime: 0.5
   isInvulnerable: 0
   healthEggs:
   - {fileID: 3460577224120444564}
@@ -712,3 +712,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
   currentFriend: {fileID: 0}
+  interactPrompt: {fileID: 0}
