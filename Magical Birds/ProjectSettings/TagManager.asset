@@ -5,40 +5,41 @@ TagManager:
   serializedVersion: 2
   tags:
   - Background
-  - Enemy
+  - Item
+  - Pickup
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  -
   - Water
   - UI
-  - 
-  - 
+  -
+  -
   - Ground
+  - Item
+  - Pickup
   - Player
   - Enemy
   - Player Attack
   - Enemy Attack
   - Player Ranged Attack
   - Enemy Ranged Attack
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
   m_SortingLayers:
   - name: Default
     uniqueID: 0

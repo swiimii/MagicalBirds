@@ -14,21 +14,6 @@ public class PlayerResourcesController : ResourceController
     // Call from attack scripts and enemy behavior scripts. When the player gets hit
     public override void ProcessDamage(int damageDealt, Vector2 source)
     {
-        //if(isInvulnerable)
-        //{
-        //    return; // Don't do damage if the player is invulnerable
-        //}
-
-        //currentHealth -= damageDealt;
-
-        //// Change Health UI indicator accordingly.
-        //if (currentHealth >= 0)
-        //{
-        //    healthEggs[currentHealth].GetComponent<Image>().sprite = damaged;
-        //    healthEggs[currentHealth].GetComponent<Image>().color = new Color(1, 1, 1, .5f);
-        //    StartCoroutine("Invulnerable");
-        //    DamageRecoil(source);
-        //}
         if (isInvulnerable)
         {
             return; // Don't do damage if the player is invulnerable
@@ -50,6 +35,30 @@ public class PlayerResourcesController : ResourceController
             } 
         }
         
+    }
+
+    public override void ProcessDamage(int damageDealt, Vector2 direction, float magnitude)
+    {
+        if (isInvulnerable)
+        {
+            return; // Don't do damage if the player is invulnerable
+        }
+
+        else
+        {
+            StartCoroutine("Invulnerable");
+            base.ProcessDamage(damageDealt, direction, magnitude);
+
+            // Change UI according to current health
+            if (currentHealth >= 0)
+            {
+                for (int i = healthEggs.Length; i > currentHealth; i--)
+                {
+                    healthEggs[i - 1].GetComponent<Image>().sprite = damaged;
+                    healthEggs[i - 1].GetComponent<Image>().color = new Color(1, 1, 1, .5f);
+                }
+            }
+        }
     }
 
     public bool Heal(int healingDone)
