@@ -309,7 +309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aafa0f3648474b82a4ccc5efd40add9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentInterItem: {fileID: 0}
+  currentItem: {fileID: 0}
+  currentFriend: {fileID: 0}
 --- !u!1 &840934958
 GameObject:
   m_ObjectHideFlags: 0

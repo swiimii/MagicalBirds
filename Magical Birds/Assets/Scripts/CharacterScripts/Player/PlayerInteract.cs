@@ -4,25 +4,42 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
-    public GameObject currentInterItem = null;
+    public GameObject currentItem = null;
+    public GameObject currentFriend = null;
+    public GameObject interactPrompt = null;
 
     void Update() {
-        if(Input.GetButtonDown("Interact") && currentInterItem != null) {
-            currentInterItem.SendMessage("DoInteract");
+        if(Input.GetButtonDown("Interact")) {
+            if(currentFriend != null) {
+                currentFriend.SendMessage("DoInteract");
+                return;
+            }
+            if(currentItem != null) {
+                currentItem.SendMessage("DoInteract");
+            }
         }
     }
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Item")) {
-            currentInterItem = other.gameObject;
-        } else if(other.CompareTag("Item")) {
-            //TODO: Pickup items logic
+            interactPrompt.SetActive(true);
+            currentItem = other.gameObject;
+        } else if (other.CompareTag("Friend")) {
+            interactPrompt.SetActive(true);
+            currentFriend = other.gameObject;
+        } else if(other.CompareTag("Pickup")) {
+            other.SendMessage("DoPickup");
         }
     }
 
     private void OnTriggerExit2D(Collider2D other) {
-        if(other.CompareTag("Item")) {
-            if(other.gameObject == currentInterItem){
-                currentInterItem = null;
+        if(other.CompareTag("Item") || other.CompareTag("Friend")) {
+            interactPrompt.SetActive(false);
+            if(other.gameObject == currentItem){
+                currentItem = null;
+            }
+
+            if(other.gameObject == currentFriend){
+                currentFriend = null;
             }
         }
     }

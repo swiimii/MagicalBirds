@@ -3,19 +3,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class StateManager : MonoBehaviour {
+    // Player
+    public GameObject player;
     // Items Collected
     public List<GameObject> collectedItems;
+    // Unlocked Levels
+    public List<int> unlockedLevels;
+    // TODO: Move to player?
+    /* 
+      Unlocked Abilities:
+        0 - None
+        1 - Double Jump
+        2 - Double + Smash
+        3 - Double + Smash + Snowball
+    */
+    public int unlockedAbilities;
 
 
     private void Awake() {
-
         int numStateManagers = FindObjectsOfType<StateManager>().Length;
         
         if (numStateManagers > 1) {
-            // TODO: Not sure where gameObject comes from in example, replace with what's appropriate
             Destroy(gameObject);
         } else {
             DontDestroyOnLoad(gameObject);
@@ -24,9 +34,8 @@ public class StateManager : MonoBehaviour {
 
     void Start() {
         // Set defaults
-        // TODO: make active level be whichever the main menu is
+        // TODO: get from save if there is one
         collectedItems = new List<GameObject>();
-
     }
 
     public void addCollectedItem(GameObject collectedItem){
@@ -39,8 +48,16 @@ public class StateManager : MonoBehaviour {
     }
 
     private void ResetGameSession() {
-        // TODO: make active level be whichever the main menu is
+        // TODO: change this LoadScene arg to be whatever the main menu scene is
         SceneManager.LoadScene(0);
         Destroy(gameObject);
+    }
+
+    private void SaveProgress() {
+        // TODO: do saving to csv; token/cookie if on web
+    }
+
+    private void OnApplicationQuit() {
+        // TODO: do saving to csv; token/cookie if on web
     }
 }

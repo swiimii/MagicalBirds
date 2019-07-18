@@ -1,12 +1,12 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractiveItemBase : MonoBehaviour
+public class KeyItems : Interactives
 {
-    public virtual void DoInteract(){
+    public override void DoInteract(){
+        print("Interacting with " + itemName);
         FindObjectOfType<StateManager>().addCollectedItem(gameObject);
         gameObject.SetActive(false);
-
     }
 }
