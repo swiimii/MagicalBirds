@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChevronAttack : Attack
+public class ChevronAttack : MeleeAttack
 {
     public float knockbackMagnitude;
     private Vector3 knockbackDirection = new Vector2(2, 1);

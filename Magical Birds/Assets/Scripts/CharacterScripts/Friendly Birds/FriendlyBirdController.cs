@@ -5,22 +5,30 @@ using UnityEngine;
 public class FriendlyBirdController : MonoBehaviour
 {
     public GameObject player;
-    public GameObject questPrefab;
+    public GameObject questBubble;
+    public GameObject questBubbleOverlay;
     public float outerDistanceThreshold, innerDistanceThreshold;
-    private readonly float minimumQuestFade = .2f;
+    [SerializeField] float minimumQuestFade = .2f;
 
     protected void Start()
     {
-        var color = questPrefab.GetComponent<SpriteRenderer>().color;
-        questPrefab.GetComponent<SpriteRenderer>().color = new Color(color.r, color.g, color.b, 0);
+        //Change bubble and (overlay?) to transparent
+        var transparent = new Color(1, 1, 1, minimumQuestFade);
+        questBubble.GetComponent<SpriteRenderer>().color = transparent;
+        if (questBubbleOverlay)
+        {
+            questBubbleOverlay.GetComponent<SpriteRenderer>().color = transparent;
+        }
 
-        if(!player)
+        // Track player if not assigned in hierarchy
+        if (!player)
         {
             player = GameObject.FindGameObjectWithTag("Player");
         }
     }
     public void Update()
     {
+        // Change bubble transparency according to distance of player from friend (this)
         float distance;
         if((distance = PlayerDistance()) < outerDistanceThreshold)
         {
@@ -35,9 +43,16 @@ public class FriendlyBirdController : MonoBehaviour
 
     public void FadeQuestNotifier(float distance)
     {
-        float magnitude = (distance - innerDistanceThreshold) / (outerDistanceThreshold - innerDistanceThreshold);
-        var color = questPrefab.GetComponent<SpriteRenderer>().color;
-        questPrefab.GetComponent<SpriteRenderer>().color = new Color(color.r, color.g, color.b, 1 - magnitude);
+        // Set partial transparency to bubble and (overlay?) according to distance
+        float magnitude = 1 - (distance - innerDistanceThreshold) / (outerDistanceThreshold - innerDistanceThreshold);
+        magnitude = Mathf.Clamp(magnitude, minimumQuestFade, 1);
+
+        var partialTransparency = new Color(1, 1, 1, magnitude);
+        questBubble.GetComponent<SpriteRenderer>().color = partialTransparency;
+        if (questBubbleOverlay)
+        {
+            questBubbleOverlay.GetComponent<SpriteRenderer>().color = partialTransparency;
+        }
     }
 
     
