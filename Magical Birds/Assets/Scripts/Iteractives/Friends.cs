@@ -5,6 +5,6 @@ using UnityEngine;
 public class Friends : Interactives
 {
     public override void DoInteract(){
-        print("Interacting with " + itemName);
+        print("Interacting with " + name);
     }
 }
