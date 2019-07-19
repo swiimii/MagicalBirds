@@ -13,6 +13,9 @@ public class BackgroundParallax : MonoBehaviour
     public GameObject trackedObject; // used for parallax math
     public Camera trackedCamera; // used for bounds
     public Vector2 prevTrackedPosition;
+    public bool restrictedByBounds = true;
+    public Transform bottomBounds;
+
 
     // Set trackedcamera to main camera by default
     private void Start()
@@ -57,6 +60,15 @@ public class BackgroundParallax : MonoBehaviour
                 // move layer to left if needed
                 ReplaceLeft(difference.x, background1, i);
             }
+            if(restrictedByBounds)
+            {
+
+                var bot = bottomBounds.position.y;
+                layers[i].transform.position = new Vector3(layers[i].transform.position.x,
+                                                 Mathf.Clamp(layers[i].transform.position.y, bot, layers[i].transform.position.y),
+                                                 layers[i].transform.position.z);
+
+            }
         }
 
         // Now, interact only with BG 2
@@ -78,6 +90,16 @@ public class BackgroundParallax : MonoBehaviour
             {
                 // move layer to the left if needed
                 ReplaceLeft(difference.x, background2, i);
+            }
+
+            if (restrictedByBounds)
+            {
+
+                var bot = bottomBounds.position.y;
+                layers[i].transform.position = new Vector3(layers[i].transform.position.x,
+                                                 Mathf.Clamp(layers[i].transform.position.y, bot, layers[i].transform.position.y),
+                                                 layers[i].transform.position.z);
+
             }
         }        
         

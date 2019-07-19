@@ -39,7 +39,6 @@ public class PlayerMovementBehavior : MovementBehavior
     public void Jump()
     {
         GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpForce;
-
     }
 
 

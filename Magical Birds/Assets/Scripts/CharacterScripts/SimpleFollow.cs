@@ -6,6 +6,8 @@ public class SimpleFollow : MonoBehaviour
 {
     public GameObject player;
     public Vector3 offset;
+    public bool restrictedByBounds = false;
+    public Transform bottomLeftBounds, topRightBounds;
     // Update is called once per frame
     private void Start()
     {
@@ -20,6 +22,16 @@ public class SimpleFollow : MonoBehaviour
         {
             var ptp = player.transform.position;
             transform.position = new Vector3(ptp.x, ptp.y) + offset;
+        }
+        if(restrictedByBounds)
+        {
+            var topBounds = topRightBounds.position.y;
+            var rightBounds = topRightBounds.position.x;
+            var bottomBounds = bottomLeftBounds.position.y;
+            var leftBounds = bottomLeftBounds.position.x;
+            transform.position = new Vector3(Mathf.Clamp(transform.position.x, leftBounds, rightBounds),
+                                             Mathf.Clamp(transform.position.y, bottomBounds, topBounds),
+                                             transform.position.z);
         }
     }
 }
