@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SnakeMovementController : EnemyMovementController
 {
+    public bool immobile;
     public BoxCollider2D feetCollider;
     public float immobileDuration = .7f;
     private bool moveReady = true;
@@ -48,35 +49,16 @@ public class SnakeMovementController : EnemyMovementController
     //Check if snake is running into a wall
     public override bool CheckBlocked()
     {
-
-        //var col = GetComponent<BoxCollider2D>().bounds;
-        //float rayDistance = .2f; // Distance ray will be fired
-
-        //int direction = GetDirection(); // +1 or -1
-        //                                                // print(direction);
-        //float offset = (col.size.x / 2 ) * direction; // Width/2 of the collider * direction
-
-        //var rayOrigin = new Vector2(col.center.x + offset, col.center.y + col.size.y/2); // Origin is in front of the snake
-
-        //Debug.DrawRay(rayOrigin, transform.right * rayDistance*100 * direction, Color.green); // Shows the direction of the ray in the editor
-        //var rayCast = Physics2D.Raycast(rayOrigin, transform.right * direction, rayDistance, LayerMask.GetMask("Ground")); // Cast ray in front of snake
-        //// print(rayCast.transform);
-
-        //if (rayCast)
-        //{
-        //    return true; // Snake is blocked by a piece of terrain
-        //}
-        //return false; // Snake is unblocked
         var col = GetComponent<SpriteRenderer>().bounds;
-        float rayDistance = .18f; // Distance ray will be fired
+        float rayDistance = .25f; // Distance ray will be fired
 
         int direction = GetDirection(); // +1 or -1
                                         // print(direction);
-        float offset = (col.size.x / 2) * direction; // Width/2 of the collider * direction
+        //float offset = (col.size.x / 2) * direction; // Width/2 of the collider * direction
 
         var rayOrigin = col.center;//new Vector2(col.center.x + offset, col.center.y + col.size.y / 2); // Origin is in front of the snake
 
-        Debug.DrawRay(rayOrigin, transform.right * rayDistance * 100 * direction, Color.green); // Shows the direction of the ray in the editor
+        Debug.DrawRay(rayOrigin, transform.right * rayDistance * direction, Color.green); // Shows the direction of the ray in the editor
         var rayCast = Physics2D.Raycast(rayOrigin, transform.right * direction, rayDistance, LayerMask.GetMask("Ground")); // Cast ray in front of snake
         // print(rayCast.transform);
 
@@ -110,7 +92,6 @@ public class SnakeMovementController : EnemyMovementController
             if (CheckGrounded())
             {
                 yield return null;
-
             }
             else
             {
@@ -119,7 +100,6 @@ public class SnakeMovementController : EnemyMovementController
         }
         immobile = false;
         Physics2D.IgnoreCollision(GetComponent<Collider2D>(), playerCol, false);
-
     }
 
     public override bool CheckGrounded()
@@ -147,7 +127,6 @@ public class SnakeMovementController : EnemyMovementController
             {
                 return true; // Player feet are "touching" the ground
             }
-
         }
         return false; // No ray hit the ground
     }

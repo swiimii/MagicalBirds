@@ -1071,6 +1071,8 @@ MonoBehaviour:
   trackedObject: {fileID: 0}
   trackedCamera: {fileID: 0}
   prevTrackedPosition: {x: 0, y: 0}
+  restrictedByBounds: 0
+  bottomBounds: {fileID: 0}
 --- !u!1 &713352932435772844
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,19 +24,22 @@ public class EnemySpawner : MonoBehaviour
 
     protected virtual void Update()
     {
-        if (enemy && enemy.activeInHierarchy)
+        if (player)
         {
-            return;
-        }
+            if (enemy && enemy.activeInHierarchy)
+            {
+                return;
+            }
 
-        else if (enemy && !enemy.activeInHierarchy && Mathf.Abs(transform.position.x - player.transform.position.x) < distanceUntilSpawn)
-        {
-            enemy.SetActive(true);
-        }
+            else if (enemy && !enemy.activeInHierarchy && Mathf.Abs(transform.position.x - player.transform.position.x) < distanceUntilSpawn)
+            {
+                enemy.SetActive(true);
+            }
 
-        else if (!enemy && Mathf.Abs(transform.position.x - player.transform.position.x) > distanceUntilSpawn)
-        {
-            CreateEnemy();
+            else if (!enemy && Mathf.Abs(transform.position.x - player.transform.position.x) > distanceUntilSpawn)
+            {
+                CreateEnemy();
+            }
         }
 
     }

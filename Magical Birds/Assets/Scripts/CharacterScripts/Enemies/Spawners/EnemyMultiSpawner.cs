@@ -26,7 +26,7 @@ public class EnemyMultiSpawner : EnemySpawner
     protected override void Update()
     {
         
-        if (Mathf.Abs(transform.position.x - player.transform.position.x) < distanceUntilSpawn)
+        if (player && Mathf.Abs(transform.position.x - player.transform.position.x) < distanceUntilSpawn)
         {
 
             for (int i = 0; i < enemies.Count; i++)

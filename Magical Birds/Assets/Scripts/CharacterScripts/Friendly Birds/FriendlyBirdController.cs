@@ -30,7 +30,7 @@ public class FriendlyBirdController : MonoBehaviour
     {
         // Change bubble transparency according to distance of player from friend (this)
         float distance;
-        if((distance = PlayerDistance()) < outerDistanceThreshold)
+        if(player && (distance = PlayerDistance()) < outerDistanceThreshold)
         {
             FadeQuestNotifier(distance);
         }       

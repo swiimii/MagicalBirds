@@ -101,6 +101,7 @@ public class ResourceController : MonoBehaviour
 
     public virtual IEnumerator Death()
     {
+        
         GetComponent<Collider2D>().enabled = false;
         if (GetComponent<Rigidbody2D>())
         {

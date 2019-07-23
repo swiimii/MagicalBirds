@@ -16,4 +16,6 @@ public class SnakeResourceController : ResourceController
         base.ProcessDamage(damageDealt, direction, magnitude);
         StartCoroutine(GetComponent<SnakeMovementController>().ImmobilizeUntilGrounded());
     }
+
+
 }
