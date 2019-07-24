@@ -15,8 +15,8 @@ public class StateManager : MonoBehaviour {
     /* 
       Unlocked Abilities:
         0 - None
-        1 - Double Jump
-        2 - Double + Smash
+        1 - Smash Attack
+        2 - Smash + Double Jump
         3 - Double + Smash + Snowball
     */
     public int unlockedAbilities;
@@ -42,6 +42,7 @@ public class StateManager : MonoBehaviour {
         // Set defaults
         // TODO: get from save if there is one
         collectedItems = new List<GameObject>();
+        unlockedAbilities = 0;
     }
 
     public void addCollectedItem(GameObject collectedItem){
@@ -64,10 +65,10 @@ public class StateManager : MonoBehaviour {
     }
 
     private void SaveProgress() {
-        // TODO: do saving to csv; token/cookie if on web
+        // TODO: do saving to csv;
     }
 
     private void OnApplicationQuit() {
-        // TODO: do saving to csv; token/cookie if on web
+        // TODO: do saving to csv;
     }
 }
