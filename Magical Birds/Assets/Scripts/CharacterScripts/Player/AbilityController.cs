@@ -39,9 +39,8 @@ public class AbilityController : MonoBehaviour
 
         if (readyToPowerAttack && Input.GetButton("Ability2"))
         {
-            // Attack Delay
-
-            // Power Attack
+            StartCoroutine("AttackDelay2");
+            behav.HeavyAttack();
         }
 
         if (readyToRangedAttack && Input.GetButton("Ability3"))

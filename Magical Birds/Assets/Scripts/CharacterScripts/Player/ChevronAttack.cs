@@ -5,7 +5,7 @@ using UnityEngine;
 public class ChevronAttack : MeleeAttack
 {
     public float knockbackMagnitude;
-    private Vector3 knockbackDirection = new Vector2(2, 1);
+    protected Vector3 knockbackDirection = new Vector2(2, 1);
 
     protected override void OnCollisionEnter2D(Collision2D collision)
     {
