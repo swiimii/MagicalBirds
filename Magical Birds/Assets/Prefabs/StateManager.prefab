@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3518381923893472294}
   - component: {fileID: 3518381923893472295}
+  - component: {fileID: 7682973995508851874}
   m_Layer: 0
   m_Name: StateManager
   m_TagString: GameController
@@ -43,4 +44,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5dc4007045b942d5b83709846df5e2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   collectedItems: []
+  unlockedLevels: 
+  unlockedAbilities: 0
+  currentCheckpoint: {fileID: 0}
+  masterVolume: 0
+  musicVolume: 0
+  soundVolume: 0
+--- !u!114 &7682973995508851874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3518381923893472312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19d55c438e954114e8461ef44f940a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data_location: 

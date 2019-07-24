@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,7 +11,7 @@ public class StateManager : MonoBehaviour {
     // Items Collected
     public List<GameObject> collectedItems;
     // Unlocked Levels
-    public List<int> unlockedLevels;
+    public int unlockedLevels;
     // TODO: Move to player?
     /* 
       Unlocked Abilities:
@@ -25,8 +26,9 @@ public class StateManager : MonoBehaviour {
     public GameObject currentCheckpoint;
     public float masterVolume;
     public float musicVolume;
-    public float soundVolume;
+    public float effectsVolume;
 
+    [SerializeField] volatile bool gameLoaded = false;
 
     private void Awake() {
         int numStateManagers = FindObjectsOfType<StateManager>().Length;
@@ -60,7 +62,7 @@ public class StateManager : MonoBehaviour {
         Destroy(gameObject);
     }
 
-    private void DoPlayerDeath() {
+    public void DoPlayerDeath() {
         // TODO: whatever happens when the player dies, i.e. reset to checkpoint
     }
 
@@ -71,4 +73,24 @@ public class StateManager : MonoBehaviour {
     private void OnApplicationQuit() {
         // TODO: do saving to csv;
     }
+
+    public void ReadData()
+    {
+        // Set defaults
+        // TODO: get from save if there is one
+        collectedItems = new List<GameObject>();
+
+        // Read from save file
+        List<string>[] data = GetComponent<CSVScript>().ReadFile();
+        unlockedLevels = Convert.ToInt32(data[1][0]);
+        unlockedAbilities = Convert.ToInt32(data[1][1]);
+        masterVolume = (float)Convert.ToDouble(data[1][2]);
+        musicVolume = (float)Convert.ToDouble(data[1][3]);
+        effectsVolume = (float)Convert.ToDouble(data[1][4]);
+
+        gameLoaded = true;     
+
+    }
+
+
 }
