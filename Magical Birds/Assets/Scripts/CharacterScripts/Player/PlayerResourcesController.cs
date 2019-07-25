@@ -7,6 +7,9 @@ public class PlayerResourcesController : ResourceController
 {
     // maxHealth, currentHealth, and damageRecoilMagnitude inherited from ResourceController
     public Sprite healthy, damaged;
+    public Color greyedOut = new Color(1, 1, 1, 0.5f);
+    public Color full = new Color(1, 1, 1, 1.0f);
+
     public float invulnerabilityTime = 2;
     public bool isInvulnerable = false;
     public GameObject[] healthEggs;
@@ -30,7 +33,7 @@ public class PlayerResourcesController : ResourceController
                 for (int i = healthEggs.Length; i > currentHealth; i--)
                 {
                     healthEggs[i - 1].GetComponent<Image>().sprite = damaged;
-                    healthEggs[i - 1].GetComponent<Image>().color = new Color(1, 1, 1, .5f);
+                    // healthEggs[i - 1].GetComponent<Image>().color = greyedOut;
                 }
             } 
         }
@@ -55,7 +58,7 @@ public class PlayerResourcesController : ResourceController
                 for (int i = healthEggs.Length; i > currentHealth; i--)
                 {
                     healthEggs[i - 1].GetComponent<Image>().sprite = damaged;
-                    healthEggs[i - 1].GetComponent<Image>().color = new Color(1, 1, 1, .5f);
+                    // healthEggs[i - 1].GetComponent<Image>().color = greyedOut;
                 }
             }
         }
@@ -79,10 +82,10 @@ public class PlayerResourcesController : ResourceController
             }
 
             // reset the health indicator
-            foreach(var egg in healthEggs)
+            for(int n = 0; n < currentHealth; n++)
             {
-                egg.GetComponent<Image>().color = Color.white;
-                egg.GetComponent<Image>().sprite = healthy;
+                // healthEggs[n].GetComponent<Image>().color = full;
+                healthEggs[n].GetComponent<Image>().sprite = healthy;
             }
             return true;
         }
