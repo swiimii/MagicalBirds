@@ -7,7 +7,7 @@ public class Penguin : Friends
     private void Start() {
         state = FindObjectOfType<StateManager>();
         currentQuest = "item";
-        killRequirement = 10;
+        killRequirement = 5;
         itemToCollect = "YellowFeather";
         abilityLevel = 3;
     }

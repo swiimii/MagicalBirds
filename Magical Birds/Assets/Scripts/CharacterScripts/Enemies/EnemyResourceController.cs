@@ -11,10 +11,10 @@ public class EnemyResourceController : ResourceController {
             if(enemyType.ToLower() == "snake") {
                 FindObjectOfType<Woodpecker>().SendMessage("incrementKilled");
             // TODO: replace with correct enemy type
-            } else if(enemyType.ToLower() == "bat"){
+            } else if(enemyType.ToLower() == "rat"){
                 FindObjectOfType<Hummingbird>().SendMessage("incrementKilled");
             // TODO: replace with correct enemy type
-            } else if(enemyType.ToLower() == "squirrel"){
+            } else if(enemyType.ToLower() == "bat"){
                 FindObjectOfType<Penguin>().SendMessage("incrementKilled");
             } else if(enemyType.ToLower() == "bosscat"){
                 // TODO: do win?

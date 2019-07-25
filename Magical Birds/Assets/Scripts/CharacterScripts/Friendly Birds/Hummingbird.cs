@@ -7,7 +7,7 @@ public class Hummingbird : Friends
     private void Start() {
         state = FindObjectOfType<StateManager>();
         currentQuest = "item";
-        killRequirement = 10;
+        killRequirement = 8;
         itemToCollect = "BlueFeather";
         abilityLevel = 2;
     }
