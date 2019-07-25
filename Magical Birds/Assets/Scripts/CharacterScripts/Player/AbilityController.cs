@@ -54,47 +54,6 @@ public class AbilityController : MonoBehaviour
         checkAbilities();
     }
 
-    private void checkAbilities() {
-        int unlocked = FindObjectOfType<StateManager>().unlockedAbilities;
-        
-        switch (unlocked) {
-            case 0: {
-                readyToPowerAttack = false;
-                readyToRangedAttack = false;
-                canDoubleJump = false;
-                break;
-            }
-            case 1: {
-                readyToPowerAttack = true;
-                readyToRangedAttack = false;
-                canDoubleJump = false;
-                break;
-            }
-            case 2: {
-                readyToPowerAttack = true;
-                readyToRangedAttack = false;
-                canDoubleJump = true;
-                break;
-            }
-            case 3: {
-                readyToPowerAttack = true;
-                readyToRangedAttack = true;
-                canDoubleJump = true;
-                break;
-            }
-            default: {
-                readyToPowerAttack = false;
-                readyToRangedAttack = false;
-                canDoubleJump = false;
-                break;
-            }
-        }
-    }
-
-    private void Start() {
-        checkAbilities();
-    }
-
     void Update()
     {
         var grounded = GetComponent<PlayerMovementController>().grounded;
@@ -137,11 +96,12 @@ public class AbilityController : MonoBehaviour
 
     public IEnumerator AttackDelay1()
     {
+        readyToBasicAttack = false;
         basicAttackCDSprite.SetActive(true);
         var sprite = basicAttackCDSprite.GetComponent<SpriteRenderer>();
         var maxSpriteSize = sprite.bounds.size.y;
 
-        readyToBasicAttack = false;
+        
         for(float i = 0; i < basicAttackCooldown; i += Time.deltaTime)
         {
             sprite.size = new Vector2(sprite.size.x, maxSpriteSize - i / basicAttackCooldown * maxSpriteSize);
@@ -156,11 +116,12 @@ public class AbilityController : MonoBehaviour
 
     public IEnumerator AttackDelay2()
     {
+        readyToPowerAttack = false;
         powerAttackCDSprite.SetActive(true);
         var sprite = powerAttackCDSprite.GetComponent<SpriteRenderer>();
         var maxSpriteSize = sprite.bounds.size.y;
 
-        readyToPowerAttack = false;
+        
         for (float i = 0; i < powerAttackCooldown; i += Time.deltaTime)
         {
             sprite.size = new Vector2(sprite.size.x, maxSpriteSize - i / powerAttackCooldown * maxSpriteSize);
@@ -175,11 +136,12 @@ public class AbilityController : MonoBehaviour
 
     public IEnumerator AttackDelay3()
     {
+        readyToRangedAttack = false;
         rangedAttackCDSprite.SetActive(true);
         var sprite = rangedAttackCDSprite.GetComponent<SpriteRenderer>();
         var maxSpriteSize = sprite.bounds.size.y;
 
-        readyToRangedAttack = false;
+        
         for (float i = 0; i < rangedAttackCooldown; i += Time.deltaTime)
         {
             sprite.size = new Vector2(sprite.size.x, maxSpriteSize - i / rangedAttackCooldown * maxSpriteSize);
