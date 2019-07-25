@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class PlayerResourcesController : ResourceController
 {
     // maxHealth, currentHealth, and damageRecoilMagnitude inherited from ResourceController
-    public Sprite healthy, damaged;
     public Color greyedOut = new Color(1, 1, 1, 0.5f);
     public Color full = new Color(1, 1, 1, 1.0f);
 
     public float invulnerabilityTime = 2;
     public bool isInvulnerable = false;
     public GameObject[] healthEggs;
+    public GameObject[] damagedEggs;
 
     // Call from attack scripts and enemy behavior scripts. When the player gets hit
     public override void ProcessDamage(int damageDealt, Vector2 source)
@@ -32,7 +32,8 @@ public class PlayerResourcesController : ResourceController
             {
                 for (int i = healthEggs.Length; i > currentHealth; i--)
                 {
-                    healthEggs[i - 1].GetComponent<Image>().sprite = damaged;
+                    damagedEggs[i - 1].SetActive(true);
+                    healthEggs[i - 1].SetActive(false);
                     // healthEggs[i - 1].GetComponent<Image>().color = greyedOut;
                 }
             } 
@@ -57,7 +58,8 @@ public class PlayerResourcesController : ResourceController
             {
                 for (int i = healthEggs.Length; i > currentHealth; i--)
                 {
-                    healthEggs[i - 1].GetComponent<Image>().sprite = damaged;
+                    damagedEggs[i - 1].SetActive(true);
+                    healthEggs[i - 1].SetActive(false);
                     // healthEggs[i - 1].GetComponent<Image>().color = greyedOut;
                 }
             }
@@ -85,7 +87,9 @@ public class PlayerResourcesController : ResourceController
             for(int n = 0; n < currentHealth; n++)
             {
                 // healthEggs[n].GetComponent<Image>().color = full;
-                healthEggs[n].GetComponent<Image>().sprite = healthy;
+                damagedEggs[n].SetActive(false);
+                healthEggs[n].SetActive(true);
+                //healthEggs[n].transform.position = temp;
             }
             return true;
         }

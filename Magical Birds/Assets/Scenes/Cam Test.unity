@@ -294,7 +294,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 874802802}
+      objectReference: {fileID: 7782283973177118978}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2c0e6cff4b31ef4abbdf125315acb6f, type: 3}
 --- !u!20 &237535480 stripped
@@ -588,7 +588,7 @@ PrefabInstance:
         type: 3}
       propertyPath: trackedObject
       value: 
-      objectReference: {fileID: 874802802}
+      objectReference: {fileID: 7782283973177118978}
     - target: {fileID: 4726758190401637072, guid: dd0aa29b8e53e5641860c8e695dc181a,
         type: 3}
       propertyPath: trackedCamera
@@ -737,7 +737,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 874802802}
+      objectReference: {fileID: 7782283973177118978}
     - target: {fileID: 3236176099132533462, guid: 12c796b04c10e5b4a8768c82a5e574ab,
         type: 3}
       propertyPath: cameraOffset.x
@@ -1007,7 +1007,7 @@ PrefabInstance:
         type: 3}
       propertyPath: trackedObject
       value: 
-      objectReference: {fileID: 874802802}
+      objectReference: {fileID: 7782283973177118978}
     - target: {fileID: 137229903922309124, guid: 7cd5e8f01909aa647a31340696963c09,
         type: 3}
       propertyPath: trackedCamera
@@ -1057,6 +1057,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.414
       objectReference: {fileID: 0}
+    - target: {fileID: 1886043928836891372, guid: c737fa141156c974db70f4df2143b4fb,
+        type: 3}
+      propertyPath: m_Name
+      value: Speech Bubble Overlay
+      objectReference: {fileID: 0}
+    - target: {fileID: 1886043928836891372, guid: c737fa141156c974db70f4df2143b4fb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 770827899640195269, guid: c737fa141156c974db70f4df2143b4fb,
         type: 3}
       propertyPath: m_Layer
@@ -1073,16 +1083,6 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5554303832982488769, guid: c737fa141156c974db70f4df2143b4fb,
-        type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1886043928836891372, guid: c737fa141156c974db70f4df2143b4fb,
-        type: 3}
-      propertyPath: m_Name
-      value: Speech Bubble Overlay
-      objectReference: {fileID: 0}
-    - target: {fileID: 1886043928836891372, guid: c737fa141156c974db70f4df2143b4fb,
         type: 3}
       propertyPath: m_Layer
       value: 20
@@ -1156,6 +1156,11 @@ PrefabInstance:
       propertyPath: attackDelay
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 402730691582928685, guid: 187e84c4babdc8a42b8866abd8a1f98e,
+        type: 3}
+      propertyPath: m_Name
+      value: Player Info UI
+      objectReference: {fileID: 0}
     - target: {fileID: 5008440269420603141, guid: 187e84c4babdc8a42b8866abd8a1f98e,
         type: 3}
       propertyPath: HeavyAttackPrefab
@@ -1167,19 +1172,23 @@ PrefabInstance:
       propertyPath: interactPrompt
       value: 
       objectReference: {fileID: 540761967}
-    - target: {fileID: 402730691582928685, guid: 187e84c4babdc8a42b8866abd8a1f98e,
+    - target: {fileID: 2535814237947614421, guid: 187e84c4babdc8a42b8866abd8a1f98e,
         type: 3}
-      propertyPath: m_Name
-      value: Player Info UI
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19423510005884044, guid: 187e84c4babdc8a42b8866abd8a1f98e,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507073776119303863, guid: 187e84c4babdc8a42b8866abd8a1f98e,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 187e84c4babdc8a42b8866abd8a1f98e, type: 3}
---- !u!1 &874802802 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7782283973510856563, guid: 187e84c4babdc8a42b8866abd8a1f98e,
-    type: 3}
-  m_PrefabInstance: {fileID: 874802801}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &935313883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1227,17 +1236,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7445794272735692443, guid: 07c39f1325bb06047a7ded987a0e6792,
-        type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 3308628605258769853, guid: 07c39f1325bb06047a7ded987a0e6792,
         type: 3}
       propertyPath: m_Name
       value: Speech Bubble
       objectReference: {fileID: 0}
     - target: {fileID: 3308628605258769853, guid: 07c39f1325bb06047a7ded987a0e6792,
+        type: 3}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7445794272735692443, guid: 07c39f1325bb06047a7ded987a0e6792,
         type: 3}
       propertyPath: m_Layer
       value: 20
@@ -2398,3 +2407,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1056db7dcabc74c65a4c482062843774, type: 3}
+--- !u!1 &7782283973177118978 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7782283973510856563, guid: 187e84c4babdc8a42b8866abd8a1f98e,
+    type: 3}
+  m_PrefabInstance: {fileID: 874802801}
+  m_PrefabAsset: {fileID: 0}
