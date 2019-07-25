@@ -46,12 +46,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   collectedItems: []
-  unlockedLevels: 
+  unlockedLevels: 0
   unlockedAbilities: 0
   currentCheckpoint: {fileID: 0}
-  masterVolume: 0
-  musicVolume: 0
-  soundVolume: 0
+  masterVolume: 1
+  musicVolume: 1
+  effectsVolume: 1
+  gameLoaded: 0
 --- !u!114 &7682973995508851874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,3 +66,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data_location: 
+  fileIsFound: 0

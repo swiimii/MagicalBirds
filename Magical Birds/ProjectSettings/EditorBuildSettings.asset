@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Dummy Scene.unity
     guid: af0fc1941e5d97d468a4708f926612a5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/WinScreen.unity
     guid: 54897458bc979c94481c59e21363951d
   m_configObjects: {}
