@@ -98,7 +98,7 @@ MonoBehaviour:
   hits: []
   hitboxDuration: 0.1
   spriteDuration: 0
-  knockbackMagnitude: 0.4
+  knockbackMagnitude: 0.8
 --- !u!50 &6483441222591812217
 Rigidbody2D:
   serializedVersion: 4
