@@ -1,79 +1,85 @@
 fileFormatVersion: 2
-guid: 820db0f491f521145bdefa28390f7f44
+guid: bdd842fb60c5ca745a74c5e5c6a38ab4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3857613476177856450
-    second: All Speech Bubble Overlays_0
+      213: 1999303348342493412
+    second: All Speech Bubble Overlays 1_0
   - first:
-      213: 9180764691559142897
-    second: All Speech Bubble Overlays_1
+      213: 6008211302329343707
+    second: All Speech Bubble Overlays 1_1
   - first:
-      213: -4398724093232816856
-    second: All Speech Bubble Overlays_2
+      213: 8918113818604356211
+    second: All Speech Bubble Overlays 1_2
   - first:
-      213: -3240216761086442664
-    second: All Speech Bubble Overlays_3
+      213: -2828592282561659188
+    second: All Speech Bubble Overlays 1_3
   - first:
-      213: -7284314763461397608
-    second: All Speech Bubble Overlays_4
+      213: -7214163971087461249
+    second: All Speech Bubble Overlays 1_4
   - first:
-      213: 6101289395393353422
-    second: All Speech Bubble Overlays_5
+      213: -7436984457855579566
+    second: All Speech Bubble Overlays 1_5
   - first:
-      213: -6152951412538074659
-    second: All Speech Bubble Overlays_6
+      213: -847040095688948386
+    second: All Speech Bubble Overlays 1_6
   - first:
-      213: -9056175053691529682
-    second: All Speech Bubble Overlays_7
+      213: 4916559708207332332
+    second: All Speech Bubble Overlays 1_7
   - first:
-      213: 8985102720599029846
-    second: All Speech Bubble Overlays_8
+      213: -4406414264913514618
+    second: All Speech Bubble Overlays 1_8
   - first:
-      213: 2971235947518645171
-    second: All Speech Bubble Overlays_9
+      213: 7248570938949023883
+    second: All Speech Bubble Overlays 1_9
   - first:
-      213: 8992777623369772592
-    second: All Speech Bubble Overlays_10
+      213: 1701881206895806427
+    second: All Speech Bubble Overlays 1_10
   - first:
-      213: -1936874955496907293
-    second: All Speech Bubble Overlays_11
+      213: 2959226941027317369
+    second: All Speech Bubble Overlays 1_11
   - first:
-      213: 659081112011517737
-    second: All Speech Bubble Overlays_12
+      213: -8411776325859824634
+    second: All Speech Bubble Overlays 1_12
   - first:
-      213: 9136750547000966580
-    second: All Speech Bubble Overlays_13
+      213: 5787027329399083654
+    second: All Speech Bubble Overlays 1_13
   - first:
-      213: 7705339727530347606
-    second: All Speech Bubble Overlays_14
+      213: 2275564395578552127
+    second: All Speech Bubble Overlays 1_14
   - first:
-      213: 1572981552273948538
-    second: All Speech Bubble Overlays_15
+      213: 5638714593860013371
+    second: All Speech Bubble Overlays 1_15
   - first:
-      213: 3903166757138120409
-    second: All Speech Bubble Overlays_16
+      213: 3348048603170054450
+    second: All Speech Bubble Overlays 1_16
   - first:
-      213: -4703052766397508535
-    second: All Speech Bubble Overlays_17
+      213: -517542558454661600
+    second: All Speech Bubble Overlays 1_17
   - first:
-      213: -7270415682648038023
-    second: All Speech Bubble Overlays_18
+      213: -8137765071825502409
+    second: All Speech Bubble Overlays 1_18
   - first:
-      213: -844779069307826683
-    second: All Speech Bubble Overlays_19
+      213: 2043952543398746558
+    second: All Speech Bubble Overlays 1_19
   - first:
-      213: -8301126269449684291
-    second: All Speech Bubble Overlays_20
+      213: -3315754712468780780
+    second: All Speech Bubble Overlays 1_20
   - first:
-      213: -3457892577090317453
-    second: All Speech Bubble Overlays_21
+      213: -1486089389508354048
+    second: All Speech Bubble Overlays 1_21
   - first:
-      213: 5618209252514980370
-    second: All Speech Bubble Overlays_22
+      213: 6889901783358364341
+    second: All Speech Bubble Overlays 1_22
   - first:
-      213: -5117475072728007327
-    second: All Speech Bubble Overlays_23
+      213: -3025416153908527354
+    second: All Speech Bubble Overlays 1_23
+  - first:
+      213: 1920375830368756803
+    second: All Speech Bubble Overlays 1_24
+  - first:
+      213: -402407213239891321
+    second: All Speech Bubble Overlays 1_25
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -114,7 +120,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -178,7 +184,112 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: All Speech Bubble Overlays_0
+      name: All Speech Bubble Overlays 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b484d0d8fb394af43b3a0ef211f57c35
+      internalID: 1999303348342493412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All Speech Bubble Overlays 1_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c312f855daae2a4aa6dccb74c246838
+      internalID: 6008211302329343707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All Speech Bubble Overlays 1_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc7ba912586247442aeaecc349af17f4
+      internalID: 8918113818604356211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All Speech Bubble Overlays 1_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 287b047c8a0b0734a88d3b8e34a48006
+      internalID: -2828592282561659188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All Speech Bubble Overlays 1_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 462d1184d140201479399722cd953ca4
+      internalID: -7214163971087461249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All Speech Bubble Overlays 1_5
       rect:
         serializedVersion: 2
         x: 0
@@ -192,14 +303,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37320ff870b4f0e458bda546637bcd04
-      internalID: 3857613476177856450
+      spriteID: 2f86e448286ce9742b1286541a014473
+      internalID: -7436984457855579566
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All Speech Bubble Overlays_1
+      name: All Speech Bubble Overlays 1_6
       rect:
         serializedVersion: 2
         x: 32
@@ -213,14 +324,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 225d7c0c413deab49afdd47e0300315e
-      internalID: 9180764691559142897
+      spriteID: b3fd0d1b5ab539f44985065d6f0d77aa
+      internalID: -847040095688948386
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All Speech Bubble Overlays_2
+      name: All Speech Bubble Overlays 1_7
       rect:
         serializedVersion: 2
         x: 64
@@ -234,14 +345,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd18a0da27ad0fc4281a139224d0b5e4
-      internalID: -4398724093232816856
+      spriteID: 1988fc278e9c6c44894e56cb3f136c3d
+      internalID: 4916559708207332332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All Speech Bubble Overlays_3
+      name: All Speech Bubble Overlays 1_8
       rect:
         serializedVersion: 2
         x: 96
@@ -255,14 +366,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ab6154b9040dad49b2944cb6d26a699
-      internalID: -3240216761086442664
+      spriteID: 41821d570a9f07641b1feadfa945180b
+      internalID: -4406414264913514618
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All Speech Bubble Overlays_4
+      name: All Speech Bubble Overlays 1_9
       rect:
         serializedVersion: 2
         x: 128
@@ -276,14 +387,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 178e35274ebdcd940b3c2362f30546d8
-      internalID: -7284314763461397608
+      spriteID: cd8b10bb4219eb34ba15bf25925581f2
+      internalID: 7248570938949023883
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All Speech Bubble Overlays_5
+      name: All Speech Bubble Overlays 1_10
       rect:
         serializedVersion: 2
         x: 0
@@ -297,14 +408,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8750939a4cdbbf45b7c98656f0d0e79
-      internalID: 6101289395393353422
+      spriteID: 53e4dfae44fb2f549a1f57089828e824
+      internalID: 1701881206895806427
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All Speech Bubble Overlays_6
+      name: All Speech Bubble Overlays 1_11
       rect:
         serializedVersion: 2
         x: 32
@@ -318,14 +429,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 797640a530d026c49b747f165bba4575
-      internalID: -6152951412538074659
+      spriteID: 8174ec9c0c9f11d46a63bcbaf5460c67
+      internalID: 2959226941027317369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All Speech Bubble Overlays_7
+      name: All Speech Bubble Overlays 1_12
       rect:
         serializedVersion: 2
         x: 64
@@ -339,14 +450,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54420a165198130419cd8979ee37bae7
-      internalID: -9056175053691529682
+      spriteID: 3ce5822674dfc68429f89e152fbbceb5
+      internalID: -8411776325859824634
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All Speech Bubble Overlays_8
+      name: All Speech Bubble Overlays 1_13
       rect:
         serializedVersion: 2
         x: 96
@@ -360,14 +471,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46a22b196a2d72f429d85e548f669442
-      internalID: 8985102720599029846
+      spriteID: cade8dae37907004cb6c6998ea3c06d7
+      internalID: 5787027329399083654
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All Speech Bubble Overlays_9
+      name: All Speech Bubble Overlays 1_14
       rect:
         serializedVersion: 2
         x: 128
@@ -381,14 +492,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc1fb7d7657a1bd47bca882c8a751ab4
-      internalID: 2971235947518645171
+      spriteID: 5b98371c7c806c344a009780545f81b0
+      internalID: 2275564395578552127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All Speech Bubble Overlays_10
+      name: All Speech Bubble Overlays 1_15
       rect:
         serializedVersion: 2
         x: 0
@@ -402,14 +513,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b008e53eeb0a6314ba069a895dc59630
-      internalID: 8992777623369772592
+      spriteID: 3da5b19c2a2479e48bb175c2fd6b2cc5
+      internalID: 5638714593860013371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All Speech Bubble Overlays_11
+      name: All Speech Bubble Overlays 1_16
       rect:
         serializedVersion: 2
         x: 32
@@ -423,14 +534,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13b112b3c8d44194189a3bc90b943a8e
-      internalID: -1936874955496907293
+      spriteID: 6a5d6ef26d98f814a93b0f07475a6fb7
+      internalID: 3348048603170054450
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All Speech Bubble Overlays_12
+      name: All Speech Bubble Overlays 1_17
       rect:
         serializedVersion: 2
         x: 64
@@ -444,14 +555,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07411861ca9e2cb4b8a40ca2fb1ef22f
-      internalID: 659081112011517737
+      spriteID: 4acc04f307b731f4f943d27a5f786c53
+      internalID: -517542558454661600
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All Speech Bubble Overlays_13
+      name: All Speech Bubble Overlays 1_18
       rect:
         serializedVersion: 2
         x: 96
@@ -465,14 +576,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ee03c6012bdb234dbf410c184fba38d
-      internalID: 9136750547000966580
+      spriteID: 006875a440a348b4b9ffb6cda21d592c
+      internalID: -8137765071825502409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All Speech Bubble Overlays_14
+      name: All Speech Bubble Overlays 1_19
       rect:
         serializedVersion: 2
         x: 128
@@ -486,14 +597,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6054be99758528c4ea15b735ee509a26
-      internalID: 7705339727530347606
+      spriteID: c7273533788a78c4685d03e741e1d473
+      internalID: 2043952543398746558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All Speech Bubble Overlays_15
+      name: All Speech Bubble Overlays 1_20
       rect:
         serializedVersion: 2
         x: 0
@@ -507,14 +618,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1509af9c74484e4ba94d1c3e3434e59
-      internalID: 1572981552273948538
+      spriteID: d8fdcf4041b8b034d8250424eccd9c23
+      internalID: -3315754712468780780
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All Speech Bubble Overlays_16
+      name: All Speech Bubble Overlays 1_21
       rect:
         serializedVersion: 2
         x: 32
@@ -528,14 +639,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07a992332aab7e1458d0664b3260a8a5
-      internalID: 3903166757138120409
+      spriteID: f44230bc1520a27419857c6d2b00c29c
+      internalID: -1486089389508354048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All Speech Bubble Overlays_17
+      name: All Speech Bubble Overlays 1_22
       rect:
         serializedVersion: 2
         x: 64
@@ -549,14 +660,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 250945c92ef732848a692605b3a86e3a
-      internalID: -4703052766397508535
+      spriteID: f5febe3fedf618f4bb5a93b040045ba9
+      internalID: 6889901783358364341
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All Speech Bubble Overlays_18
+      name: All Speech Bubble Overlays 1_23
       rect:
         serializedVersion: 2
         x: 96
@@ -570,14 +681,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d96319f696f0df4d85cb24042eb8294
-      internalID: -7270415682648038023
+      spriteID: 51f72176de9b89a44b45f70e9d49b3cc
+      internalID: -3025416153908527354
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All Speech Bubble Overlays_19
+      name: All Speech Bubble Overlays 1_24
       rect:
         serializedVersion: 2
         x: 128
@@ -591,14 +702,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6128047268ca986408027c3e682df511
-      internalID: -844779069307826683
+      spriteID: 7ba1de602a8eff243a3adbc7a9d48f99
+      internalID: 1920375830368756803
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All Speech Bubble Overlays_20
+      name: All Speech Bubble Overlays 1_25
       rect:
         serializedVersion: 2
         x: 0
@@ -612,71 +723,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8b432848347a164e96e47bf66f4f10e
-      internalID: -8301126269449684291
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: All Speech Bubble Overlays_21
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39722f10fd1bb96439e32332dfde7d1c
-      internalID: -3457892577090317453
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: All Speech Bubble Overlays_22
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c6fa9152ae638647a1a15e26dbab04c
-      internalID: 5618209252514980370
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: All Speech Bubble Overlays_23
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c9027027080e9445802892b2a6caa3e
-      internalID: -5117475072728007327
+      spriteID: 7c9df94ab7be84c408a58c9b03ee11aa
+      internalID: -402407213239891321
       vertices: []
       indices: 
       edges: []
@@ -684,7 +732,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 96587ecdc7d1b624d98318e0dec7d078
+    spriteID: 3227da24c4caa014388a8786314fae8c
     internalID: 0
     vertices: []
     indices: 
