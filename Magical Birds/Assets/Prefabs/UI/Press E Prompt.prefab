@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7297753963138902327
 Transform:
   m_ObjectHideFlags: 0
@@ -115,3 +115,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   offset: {x: -0.25, y: 0.25, z: 0}
+  restrictedByBounds: 0
+  bottomLeftBounds: {fileID: 0}
+  topRightBounds: {fileID: 0}
