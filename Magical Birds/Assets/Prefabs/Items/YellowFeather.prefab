@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6027415908922302415}
   - component: {fileID: 6027415908922302416}
   - component: {fileID: 6027415908922302417}
+  - component: {fileID: 3759010573040046048}
   m_Layer: 9
   m_Name: YellowFeather
   m_TagString: Item
@@ -120,3 +121,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactiveName: YellowFeather
+--- !u!114 &3759010573040046048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6027415908922302418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19a79226c35604499974887d8986a2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  origin: {x: 0, y: 0, z: 0}

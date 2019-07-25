@@ -606,7 +606,9 @@ MonoBehaviour:
   currentHealth: 0
   damageRecoilMagnitude: 2.5
   healthy: {fileID: 21300000, guid: 3b6776351ae222a47b381b5dde0b6fae, type: 3}
-  damaged: {fileID: 21300000, guid: 293cb383a2c68cb4aade19ef0c64e344, type: 3}
+  damaged: {fileID: 21300000, guid: 07811ea1446284178a1d9c4ec553c33a, type: 3}
+  greyedOut: {r: 1, g: 1, b: 1, a: 0.5}
+  full: {r: 1, g: 1, b: 1, a: 1}
   invulnerabilityTime: 0.5
   isInvulnerable: 0
   healthEggs:
@@ -646,8 +648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BasicAttackPrefab: {fileID: 1942470479837216815, guid: dccf3b77d4b15a7469cd1c58fd33b432,
     type: 3}
-  PowerAttackPrefab: {fileID: 4462602116894291159, guid: 22596cff03ecb774db35ab0f46823f50,
-    type: 3}
+  HeavyAttackPrefab: {fileID: 0}
   RangedAttackPrefab: {fileID: 8014984893692812993, guid: 8e7988565e9d3ad4d804e37c99f504b0,
     type: 3}
   attackOffset: {x: 0.15, y: 0, z: 0}
