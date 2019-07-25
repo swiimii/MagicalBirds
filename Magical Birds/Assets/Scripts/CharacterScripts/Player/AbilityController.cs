@@ -9,9 +9,50 @@ public class AbilityController : MonoBehaviour
     public bool canDoubleJump = false;
 
     // Fields for the attack abilities
-    public bool readyToBasicAttack = true, readyToPowerAttack = true, readyToRangedAttack = true;
+    public bool readyToBasicAttack = true, readyToPowerAttack = false, readyToRangedAttack = false;
     public float basicAttackCooldown, powerAttackCooldown, rangedAttackCooldown;
     public GameObject basicAttackCDSprite, powerAttackCDSprite, rangedAttackCDSprite;
+
+    private void checkAbilities() {
+        int unlocked = FindObjectOfType<StateManager>().unlockedAbilities;
+        
+        switch (unlocked) {
+            case 0: {
+                readyToPowerAttack = false;
+                readyToRangedAttack = false;
+                canDoubleJump = false;
+                break;
+            }
+            case 1: {
+                readyToPowerAttack = true;
+                readyToRangedAttack = false;
+                canDoubleJump = false;
+                break;
+            }
+            case 2: {
+                readyToPowerAttack = true;
+                readyToRangedAttack = false;
+                canDoubleJump = true;
+                break;
+            }
+            case 3: {
+                readyToPowerAttack = true;
+                readyToRangedAttack = true;
+                canDoubleJump = true;
+                break;
+            }
+            default: {
+                readyToPowerAttack = false;
+                readyToRangedAttack = false;
+                canDoubleJump = false;
+                break;
+            }
+        }
+    }
+
+    private void Start() {
+        checkAbilities();
+    }
 
     void Update()
     {

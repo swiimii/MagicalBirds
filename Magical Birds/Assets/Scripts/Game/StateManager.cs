@@ -12,7 +12,6 @@ public class StateManager : MonoBehaviour {
     public List<GameObject> collectedItems;
     // Unlocked Levels
     public int unlockedLevels;
-    // TODO: Move to player?
     /* 
       Unlocked Abilities:
         0 - None
@@ -51,6 +50,11 @@ public class StateManager : MonoBehaviour {
         Debug.Log("Added " + collectedItem + " to items collected");
     }
 
+    public void removeCollectedItem(GameObject collectedItem) {
+        collectedItems.Remove(collectedItem);
+        Debug.Log("Removed " + collectedItem + " to items collected");
+    }
+
     public void setLevel(int levelId) {
         SceneManager.LoadScene(levelId);
     }
@@ -66,12 +70,10 @@ public class StateManager : MonoBehaviour {
     }
 
     public void SaveProgress() {
-        // TODO: do saving to csv; token/cookie if on web
         GetComponent<CSVScript>().SaveGameState();
     }
 
     public void OnApplicationQuit() {
-        // TODO: do saving to csv; token/cookie if on web
         SaveProgress();
     }
 
@@ -93,7 +95,6 @@ public class StateManager : MonoBehaviour {
     public void ReadData()
     {
         // Set defaults
-        // TODO: get from save if there is one
         collectedItems = new List<GameObject>();
 
         // Read from save file

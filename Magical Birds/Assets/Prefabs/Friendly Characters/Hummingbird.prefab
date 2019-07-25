@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 770827899640195267}
   - component: {fileID: 770827899640195268}
   - component: {fileID: 2470428427693539773}
+  - component: {fileID: 4483437196380907976}
+  - component: {fileID: 1205348201769231771}
   m_Layer: 0
   m_Name: Hummingbird Sprite
-  m_TagString: Untagged
+  m_TagString: Friend
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -99,6 +101,55 @@ MonoBehaviour:
   outerDistanceThreshold: 2
   innerDistanceThreshold: 1
   minimumQuestFade: 0.2
+--- !u!114 &4483437196380907976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770827899640195269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e9eb5c7781646aaa0015cb5e8762a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactiveName: Hummingbird
+  talkedTo: 0
+  textBubble: {fileID: 0}
+  itemReturned: 0
+  enemiesKilled: 0
+  currentQuest: 
+  state: {fileID: 0}
+  itemToCollect: 
+  killRequirement: 0
+  killCount: 0
+  abilityLevel: 0
+--- !u!61 &1205348201769231771
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770827899640195269}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.006231785, y: 0.16537972}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.64, y: 0.32}
+    newSize: {x: 0.64, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7966852, y: 0.3427917}
+  m_EdgeRadius: 0
 --- !u!1 &770827900033563862
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,8 +319,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 770827901632764704}
-  - component: {fileID: 8490821746651439964}
-  - component: {fileID: 5672208466498540084}
   m_Layer: 20
   m_Name: Hummingbird
   m_TagString: Friend
@@ -295,54 +344,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &8490821746651439964
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 770827901632764705}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.07010865, y: 0.40871495}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.1402173, y: 0.8294622}
-  m_EdgeRadius: 0
---- !u!114 &5672208466498540084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 770827901632764705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42e9eb5c7781646aaa0015cb5e8762a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactiveName: Hummingbird
-  talkedTo: 0
-  itemReturned: 0
-  enemiesKilled: 0
-  currentQuest: 
-  state: {fileID: 0}
-  itemToCollect: 
-  killRequirement: 0
-  killCount: 0
-  abilityLevel: 0
 --- !u!1 &1886043928836891372
 GameObject:
   m_ObjectHideFlags: 0
