@@ -5,6 +5,7 @@ using UnityEngine;
 public class Friends : Interactives
 {
     public bool talkedTo = false;
+    public Animator textBubble;
     public bool itemReturned = false;
     public bool enemiesKilled = false;
     public string currentQuest; 
