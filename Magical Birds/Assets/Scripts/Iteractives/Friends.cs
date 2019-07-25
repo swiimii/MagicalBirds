@@ -35,37 +35,38 @@ public class Friends : Interactives
     public override void DoInteract(){
         if(!talkedTo) {
             talkedTo = true;
-            QuestCheck();
+        } else {
+
+            switch (currentQuest) {
+                case "item": {
+                    foreach (GameObject item in state.collectedItems) {
+                        if(item.name == itemToCollect) {
+                            itemReturned = true;
+                            state.removeCollectedItem(item);
+                            break;
+                        }
+                    }
+
+                    if (itemReturned) {
+                        if(state.unlockedAbilities < abilityLevel) {
+                            state.unlockedAbilities = abilityLevel;
+                            FindObjectOfType<AbilityController>().SendMessage("checkAbilities");
+                        }
+                    }
+                    break;
+                }
+                case "kill": {
+                    if (killCount >= killRequirement) {
+                        enemiesKilled = true;
+                    }
+                    break;
+                }
+                default:
+                    break;
+            }
+
         }
 
-        switch (currentQuest)
-        {
-            case "item": {
-                foreach (GameObject item in state.collectedItems) {
-                    if(item.name == itemToCollect) {
-                        itemReturned = true;
-                        state.collectedItems.Remove(item);
-                    }
-                }
-
-                if (itemReturned) {
-                    if(state.unlockedAbilities < abilityLevel) {
-                        state.unlockedAbilities = abilityLevel;
-                    }
-                }
-                QuestCheck();
-                break;
-            }
-            case "kill": {
-                if (killCount >= killRequirement) {
-                    enemiesKilled = true;
-                }
-                QuestCheck();
-                break;
-            }
-            default:
-                QuestCheck();
-                break;
-        }
+        QuestCheck();
     }
 }
