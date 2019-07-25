@@ -268,9 +268,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 770827901632764704}
-  - component: {fileID: 9036475670874362716}
   - component: {fileID: 8490821746651439964}
-  m_Layer: 0
+  - component: {fileID: 5672208466498540084}
+  m_Layer: 20
   m_Name: Hummingbird
   m_TagString: Friend
   m_Icon: {fileID: 0}
@@ -295,22 +295,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9036475670874362716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 770827901632764705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35c024515639746d3b570f75340a250f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: Hummingbird
-  talkedTo: 0
-  itemToCollect: {fileID: 0}
-  abilityLevel: 1
 --- !u!61 &8490821746651439964
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -337,6 +321,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1402173, y: 0.8294622}
   m_EdgeRadius: 0
+--- !u!114 &5672208466498540084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770827901632764705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e9eb5c7781646aaa0015cb5e8762a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactiveName: Hummingbird
+  talkedTo: 0
+  itemReturned: 0
+  enemiesKilled: 0
+  currentQuest: 
+  state: {fileID: 0}
+  itemToCollect: 
+  killRequirement: 0
+  killCount: 0
+  abilityLevel: 0
 --- !u!1 &1886043928836891372
 GameObject:
   m_ObjectHideFlags: 0

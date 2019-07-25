@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 8736537339180083708}
   - component: {fileID: 8736537339180083705}
   - component: {fileID: 1534298230438794771}
-  - component: {fileID: 1523671701830305925}
+  - component: {fileID: 5632126692399713996}
   m_Layer: 0
   m_Name: Penguin
   m_TagString: Friend
@@ -328,7 +328,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.124387, y: 0.96}
   m_EdgeRadius: 0
---- !u!114 &1523671701830305925
+--- !u!114 &5632126692399713996
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -337,10 +337,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 8736537339180083709}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35c024515639746d3b570f75340a250f, type: 3}
+  m_Script: {fileID: 11500000, guid: d2fb4a11fc685413c91499f57d5f7f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Penguin
+  interactiveName: Penguin
   talkedTo: 0
-  itemToCollect: {fileID: 0}
-  abilityLevel: 3
+  itemReturned: 0
+  enemiesKilled: 0
+  currentQuest: 
+  state: {fileID: 0}
+  itemToCollect: 
+  killRequirement: 0
+  killCount: 0
+  abilityLevel: 0

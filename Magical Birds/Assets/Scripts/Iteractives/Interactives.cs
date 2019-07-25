@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class Interactives : MonoBehaviour
 {
-    public string name;
+    public string interactiveName;
     public virtual void DoInteract(){}
 }

@@ -309,7 +309,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1403023816331366279}
   - component: {fileID: 5201746441529221710}
-  - component: {fileID: 8061864514325260092}
+  - component: {fileID: 8438027214509056490}
   m_Layer: 0
   m_Name: Woodpecker
   m_TagString: Friend
@@ -359,7 +359,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7265811, y: 2.2110405}
   m_EdgeRadius: 0
---- !u!114 &8061864514325260092
+--- !u!114 &8438027214509056490
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -368,10 +368,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 8520820737758339296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35c024515639746d3b570f75340a250f, type: 3}
+  m_Script: {fileID: 11500000, guid: fe585d1c06fcf4d1abeddabb091a8575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Woodpecker
+  interactiveName: Woodpecker
   talkedTo: 0
-  itemToCollect: {fileID: 0}
-  abilityLevel: 2
+  itemReturned: 0
+  enemiesKilled: 0
+  currentQuest: 
+  state: {fileID: 0}
+  itemToCollect: 
+  killRequirement: 0
+  killCount: 0
+  abilityLevel: 0

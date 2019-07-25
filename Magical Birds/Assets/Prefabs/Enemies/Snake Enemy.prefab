@@ -165,10 +165,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: def48a776efc87b4bbc8f5b9a03e5919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  immobile: 0
   health: 2
   damageDealt: 1
   moveSpeed: 1.5
+  immobile: 0
   feetCollider: {fileID: 2598215640268674063}
   immobileDuration: 0.5
 --- !u!114 &695716529085369365
@@ -186,6 +186,7 @@ MonoBehaviour:
   maxHealth: 2
   currentHealth: 2
   damageRecoilMagnitude: 2.5
+  enemyType: snake
 --- !u!60 &1240219006827619868
 PolygonCollider2D:
   m_ObjectHideFlags: 0
