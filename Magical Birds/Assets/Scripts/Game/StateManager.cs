@@ -40,12 +40,11 @@ public class StateManager : MonoBehaviour {
         }
     }
 
-    void Start() {
-        // Set defaults
-        // TODO: get from save if there is one
-        collectedItems = new List<GameObject>();
-        unlockedAbilities = 0;
-    }
+    void Start()
+    {
+        ReadData();
+        SceneManager.LoadScene(1);
+    }  
 
     public void addCollectedItem(GameObject collectedItem){
         collectedItems.Add(collectedItem);
@@ -66,12 +65,29 @@ public class StateManager : MonoBehaviour {
         // TODO: whatever happens when the player dies, i.e. reset to checkpoint
     }
 
-    private void SaveProgress() {
-        // TODO: do saving to csv;
+    public void SaveProgress() {
+        // TODO: do saving to csv; token/cookie if on web
+        GetComponent<CSVScript>().SaveGameState();
     }
 
-    private void OnApplicationQuit() {
-        // TODO: do saving to csv;
+    public void OnApplicationQuit() {
+        // TODO: do saving to csv; token/cookie if on web
+        SaveProgress();
+    }
+
+    public void SetMasterVolume(float volume)
+    {
+        masterVolume = volume;
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        musicVolume = volume;
+    }
+
+    public void SetSoundsVolume(float volume)
+    {
+        effectsVolume = volume;
     }
 
     public void ReadData()
