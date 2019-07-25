@@ -11,6 +11,7 @@ public class AbilityController : MonoBehaviour
     // Fields for the attack abilities
     public bool readyToBasicAttack = true, readyToPowerAttack = true, readyToRangedAttack = true;
     public float basicAttackCooldown, powerAttackCooldown, rangedAttackCooldown;
+    public GameObject basicAttackCDSprite, powerAttackCDSprite, rangedAttackCDSprite;
 
     void Update()
     {
@@ -54,22 +55,58 @@ public class AbilityController : MonoBehaviour
 
     public IEnumerator AttackDelay1()
     {
+        basicAttackCDSprite.SetActive(true);
+        var sprite = basicAttackCDSprite.GetComponent<SpriteRenderer>();
+        var maxSpriteSize = sprite.bounds.size.y;
+
         readyToBasicAttack = false;
-        yield return new WaitForSeconds(basicAttackCooldown);
+        for(float i = 0; i < basicAttackCooldown; i += Time.deltaTime)
+        {
+            sprite.size = new Vector2(sprite.size.x, maxSpriteSize - i / basicAttackCooldown * maxSpriteSize);
+            yield return null;
+        }
+
+        sprite.size = new Vector2(sprite.size.x, maxSpriteSize);
+
+        basicAttackCDSprite.SetActive(false);
         readyToBasicAttack = true;
     }
 
     public IEnumerator AttackDelay2()
     {
+        powerAttackCDSprite.SetActive(true);
+        var sprite = powerAttackCDSprite.GetComponent<SpriteRenderer>();
+        var maxSpriteSize = sprite.bounds.size.y;
+
         readyToPowerAttack = false;
-        yield return new WaitForSeconds(powerAttackCooldown);
+        for (float i = 0; i < powerAttackCooldown; i += Time.deltaTime)
+        {
+            sprite.size = new Vector2(sprite.size.x, maxSpriteSize - i / powerAttackCooldown * maxSpriteSize);
+            yield return null;
+        }
+
+        sprite.size = new Vector2(sprite.size.x, maxSpriteSize);
+
+        powerAttackCDSprite.SetActive(false);
         readyToPowerAttack = true;
     }
 
     public IEnumerator AttackDelay3()
     {
+        rangedAttackCDSprite.SetActive(true);
+        var sprite = rangedAttackCDSprite.GetComponent<SpriteRenderer>();
+        var maxSpriteSize = sprite.bounds.size.y;
+
         readyToRangedAttack = false;
-        yield return new WaitForSeconds(rangedAttackCooldown);
+        for (float i = 0; i < rangedAttackCooldown; i += Time.deltaTime)
+        {
+            sprite.size = new Vector2(sprite.size.x, maxSpriteSize - i / rangedAttackCooldown * maxSpriteSize);
+            yield return null;
+        }
+
+        sprite.size = new Vector2(sprite.size.x, maxSpriteSize);
+
+        rangedAttackCDSprite.SetActive(false);
         readyToRangedAttack = true;
     }
 
