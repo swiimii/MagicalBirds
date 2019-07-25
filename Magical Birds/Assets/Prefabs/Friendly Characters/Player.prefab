@@ -646,7 +646,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BasicAttackPrefab: {fileID: 1942470479837216815, guid: dccf3b77d4b15a7469cd1c58fd33b432,
     type: 3}
-  PowerAttackPrefab: {fileID: 0}
+  PowerAttackPrefab: {fileID: 4462602116894291159, guid: 22596cff03ecb774db35ab0f46823f50,
+    type: 3}
   RangedAttackPrefab: {fileID: 8014984893692812993, guid: 8e7988565e9d3ad4d804e37c99f504b0,
     type: 3}
   attackOffset: {x: 0.15, y: 0, z: 0}

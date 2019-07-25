@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AbilityBehavior : MonoBehaviour
 {
-    public GameObject BasicAttackPrefab, PowerAttackPrefab, RangedAttackPrefab;
+    public GameObject BasicAttackPrefab, HeavyAttackPrefab, RangedAttackPrefab;
     public Vector3 attackOffset;
 
     private readonly int extraJumps = 1;
@@ -30,8 +30,21 @@ public class AbilityBehavior : MonoBehaviour
         // Change directino of attack while maintaining scale
         attack.transform.localScale = 
         new Vector3(direction * attack.transform.localScale.x,
-                    transform.localScale.y,
-                    transform.localScale.z
+                    attack.transform.localScale.y,
+                    attack.transform.localScale.z
+                    );
+    }
+
+    public void HeavyAttack()
+    {
+        var direction = Mathf.Abs(transform.localScale.x) / transform.localScale.x;
+        var attack = Instantiate(HeavyAttackPrefab, GetComponent<SpriteRenderer>().bounds.center + attackOffset * direction, Quaternion.identity);
+
+        // Change directino of attack while maintaining scale
+        attack.transform.localScale =
+        new Vector3(direction * attack.transform.localScale.x,
+                    attack.transform.localScale.y,
+                    attack.transform.localScale.z
                     );
     }
 
@@ -43,10 +56,12 @@ public class AbilityBehavior : MonoBehaviour
         attack.GetComponent<RangedAttack>().direction = new Vector2(angle.x * direction, angle.y);
         attack.transform.localScale =
         new Vector3(direction * attack.transform.localScale.x,
-                    transform.localScale.y,
-                    transform.localScale.z
+                    attack.transform.localScale.y,
+                    attack.transform.localScale.z
                     );
     }
+
+    
 
     public void ResetJumps()
     {

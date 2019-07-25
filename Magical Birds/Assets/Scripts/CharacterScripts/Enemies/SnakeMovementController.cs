@@ -89,7 +89,7 @@ public class SnakeMovementController : EnemyMovementController
         yield return new WaitForSeconds(immobileDuration);
         while (true)
         {
-            if (CheckGrounded())
+            if (!CheckGrounded())
             {
                 yield return null;
             }
