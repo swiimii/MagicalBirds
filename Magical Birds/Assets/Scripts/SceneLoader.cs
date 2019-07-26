@@ -23,4 +23,21 @@ public class SceneLoader : MonoBehaviour{
    {
        SceneManager.LoadScene(sceneBuildIndex:0);
    }
+   
+   public void LoadSpring()
+   {
+       SceneManager.LoadScene(sceneBuildIndex:1);
+   }
+    public void LoadSummer()
+    {
+        SceneManager.LoadScene(sceneBuildIndex: 2);
+    }
+    public void LoadFall()
+    {
+        SceneManager.LoadScene(sceneBuildIndex: 3);
+    }
+    public void LoadWinter()
+    {
+        SceneManager.LoadScene(sceneBuildIndex: 4);
+    }
 }
