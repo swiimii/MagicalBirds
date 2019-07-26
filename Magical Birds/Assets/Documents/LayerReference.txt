@@ -1,0 +1,8 @@
+Layer	Name			Value (+/-)
+1(top)	Camera / UI		-10 (or canvas)
+2	Ground			-5
+3	Attacks			-2
+4	Player			0
+5	Friends			2
+6	Enemies			5
+7(bot)	Background Elements	10

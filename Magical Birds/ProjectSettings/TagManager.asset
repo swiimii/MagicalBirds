@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Background
+  - Item
+  - Pickup
+  - Enemy
+  - Friend
   layers:
   - Default
   - TransparentFX
@@ -14,18 +19,18 @@ TagManager:
   - 
   - 
   - Ground
+  - Item
+  - Pickup
   - Player
+  - Enemy
+  - Player Attack
+  - Enemy Attack
+  - Player Ranged Attack
+  - Enemy Ranged Attack
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Trap
+  - Friend
   - 
   - 
   - 
