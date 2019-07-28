@@ -2318,10 +2318,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 2
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 800, y: 800}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -3828,15 +3828,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4ee491760e2fa248871a79e658b08e7, type: 3}
---- !u!224 &3980575679003378282 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5278055791632212484, guid: c4ee491760e2fa248871a79e658b08e7,
-    type: 3}
-  m_PrefabInstance: {fileID: 9080017411257671790}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2863793712890469353 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6466199910746520455, guid: c4ee491760e2fa248871a79e658b08e7,
+    type: 3}
+  m_PrefabInstance: {fileID: 9080017411257671790}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &3980575679003378282 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5278055791632212484, guid: c4ee491760e2fa248871a79e658b08e7,
     type: 3}
   m_PrefabInstance: {fileID: 9080017411257671790}
   m_PrefabAsset: {fileID: 0}
