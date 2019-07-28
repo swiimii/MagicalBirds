@@ -43,7 +43,8 @@ GameObject:
   - component: {fileID: 6069945593813253579}
   - component: {fileID: 6069945593813253574}
   - component: {fileID: 6069945593813253575}
-  - component: {fileID: 8783628511875713729}
+  - component: {fileID: 8854951272611000526}
+  - component: {fileID: 3044754250051970142}
   m_Layer: 12
   m_Name: Bat Enemy
   m_TagString: Enemy
@@ -166,7 +167,28 @@ MonoBehaviour:
   moveSpeed: 1
   leftBound: {fileID: 6069945593668448155}
   rightBound: {fileID: 6069945595487327243}
---- !u!114 &8783628511875713729
+--- !u!50 &8854951272611000526
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6069945593813253578}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
+--- !u!114 &3044754250051970142
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,12 +197,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6069945593813253578}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b56903f797994348bb60ddf3355d7dd, type: 3}
+  m_Script: {fileID: 11500000, guid: 46c11b79b3f3e4230a0f3513aadaf9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
   currentHealth: 0
   damageRecoilMagnitude: 120
+  enemyType: 
 --- !u!1 &6069945595487327242
 GameObject:
   m_ObjectHideFlags: 0
