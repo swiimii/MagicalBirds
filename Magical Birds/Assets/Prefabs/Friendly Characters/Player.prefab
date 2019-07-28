@@ -2933,6 +2933,8 @@ MonoBehaviour:
   - {fileID: 5545057777542541110}
   - {fileID: 2863793712890469353}
   - {fileID: 1300436460060598945}
+  DeathScreen: {fileID: 5537787980951268981}
+  HealthUI: {fileID: 402730691582928685}
 --- !u!114 &7357103240998757355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2969,7 +2971,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BasicAttackPrefab: {fileID: 1942470479837216815, guid: dccf3b77d4b15a7469cd1c58fd33b432,
     type: 3}
-  HeavyAttackPrefab: {fileID: 0}
+  HeavyAttackPrefab: {fileID: 4462602116894291159, guid: 22596cff03ecb774db35ab0f46823f50,
+    type: 3}
   RangedAttackPrefab: {fileID: 8014984893692812993, guid: 8e7988565e9d3ad4d804e37c99f504b0,
     type: 3}
   attackOffset: {x: 0.15, y: 0, z: 0}

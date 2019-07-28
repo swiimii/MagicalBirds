@@ -458,11 +458,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5537787980951268981, guid: 187e84c4babdc8a42b8866abd8a1f98e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7782283973510856563, guid: 187e84c4babdc8a42b8866abd8a1f98e,
         type: 3}
       propertyPath: m_Name
@@ -477,6 +472,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537787980951268981, guid: 187e84c4babdc8a42b8866abd8a1f98e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7960384309964430821, guid: 187e84c4babdc8a42b8866abd8a1f98e,
         type: 3}
@@ -588,12 +588,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Info UI
       objectReference: {fileID: 0}
-    - target: {fileID: 5008440269420603141, guid: 187e84c4babdc8a42b8866abd8a1f98e,
-        type: 3}
-      propertyPath: HeavyAttackPrefab
-      value: 
-      objectReference: {fileID: 4462602116894291159, guid: 22596cff03ecb774db35ab0f46823f50,
-        type: 3}
     - target: {fileID: 820264633, guid: 187e84c4babdc8a42b8866abd8a1f98e, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
