@@ -103,4 +103,14 @@ public class PlayerMovementController : MovementController
         }
         return false; // Player is unblocked
     }
+    // code for moving platform used in Fall level to stick myrd to platform - JVN
+    void OnCollisionEnter2D(Collision2D other) {
+        if (other.transform.tag == "moving_platform")
+            transform.parent = other.transform;
+    }
+    // code for moving platform used in Fall level to UNstick myrd to platform - JVN
+    void OnCollisionExit2D(Collision2D other) {
+        if (other.transform.tag == "moving_platform")
+            transform.parent = null;
+    }
 }
