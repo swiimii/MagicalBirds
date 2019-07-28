@@ -42,7 +42,7 @@ public class PauseMenu : MonoBehaviour
     public void LoadMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("TitleScreen");
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<StateManager>().setLevel(1);
     }
 
     public void QuitGame()
