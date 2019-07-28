@@ -105,7 +105,7 @@ public class ResourceController : MonoBehaviour
         foreach (Collider c in GetComponents<Collider>())
         {
             c.enabled = false;
-     }
+        }
         if (GetComponent<Rigidbody2D>())
         {
             GetComponent<Rigidbody2D>().isKinematic = true;
