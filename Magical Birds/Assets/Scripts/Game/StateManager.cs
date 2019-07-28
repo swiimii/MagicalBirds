@@ -55,18 +55,14 @@ public class StateManager : MonoBehaviour {
         Debug.Log("Removed " + collectedItem + " to items collected");
     }
 
-    public void setLevel(int levelId) {
-        SceneManager.LoadScene(levelId);
+    public void setScene(int sceneId) {
+        currentCheckpoint = null;
+        SceneManager.LoadScene(sceneId);
     }
 
     private void ResetGameSession() {
-        // TODO: change this LoadScene arg to be whatever the main menu scene is
         SceneManager.LoadScene(0);
         Destroy(gameObject);
-    }
-
-    public void DoPlayerDeath() {
-        // TODO: whatever happens when the player dies, i.e. reset to checkpoint
     }
 
     public void SaveProgress() {
