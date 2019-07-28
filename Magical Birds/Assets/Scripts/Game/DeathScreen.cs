@@ -24,17 +24,17 @@ public class DeathScreen : MonoBehaviour
     public void Restart()
     {
         sm.currentCheckpoint = null;
-        sm.setLevel(SceneManager.GetActiveScene().buildIndex);       
+        sm.setScene(SceneManager.GetActiveScene().buildIndex);       
     }
 
     public void RestartFromCheckpoint()
     {
-        sm.setLevel(SceneManager.GetActiveScene().buildIndex);
+        sm.setScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void ReturnToMenu()
     {
         sm.currentCheckpoint = null;
-        sm.setLevel(1);
+        sm.setScene(1);
     }
 }
