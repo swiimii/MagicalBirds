@@ -13,8 +13,20 @@ public class PlayerResourcesController : ResourceController
     public bool isInvulnerable = false;
     public GameObject[] healthEggs;
     public GameObject[] damagedEggs;
+    public GameObject[] feathers;
     public GameObject DeathScreen, HealthUI;
 
+    public override void Start() {
+
+        base.Start();
+        var manager = FindObjectOfType<StateManager>();
+        if (manager)
+        {
+            manager.player = gameObject;
+
+        }
+    }
+    
     // Call from attack scripts and enemy behavior scripts. When the player gets hit
     public override void ProcessDamage(int damageDealt, Vector2 source)
     {
