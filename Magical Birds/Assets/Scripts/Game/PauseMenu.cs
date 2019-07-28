@@ -27,6 +27,8 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<MovementController>().enabled = true;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<AbilityController>().enabled = true;
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f; 
         GameIsPaused = false;
@@ -34,6 +36,8 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<MovementController>().enabled = false;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<AbilityController>().enabled = false;
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
