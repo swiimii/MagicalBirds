@@ -9,6 +9,7 @@ TagManager:
   - Pickup
   - Enemy
   - Friend
+  - moving_platform
   layers:
   - Default
   - TransparentFX
