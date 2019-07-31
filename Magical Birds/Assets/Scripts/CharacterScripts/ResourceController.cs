@@ -64,7 +64,7 @@ public class ResourceController : MonoBehaviour
         ProcessDamage(damageDealt, direction, magnitude);
     }
 
-    protected virtual void DamageRecoil(Vector2 source) // Move character due to damage
+    public virtual void DamageRecoil(Vector2 source) // Move character due to damage
     {
         Vector2 force = new Vector2(1, 1);
         if (Mathf.Abs(transform.position.x - source.x) <= 0.1f) // Move character up if the character is touching from above the enemy
@@ -82,7 +82,7 @@ public class ResourceController : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = force * damageRecoilMagnitude; // Move character away from object
     }
 
-    protected virtual void FixedDamageRecoil(Vector2 direction, float magnitude)
+    public virtual void FixedDamageRecoil(Vector2 direction, float magnitude)
     {
         GetComponent<Rigidbody2D>().velocity = direction * magnitude;
     }

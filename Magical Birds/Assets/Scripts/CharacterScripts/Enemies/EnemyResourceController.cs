@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyResourceController : ResourceController {
+public class EnemyResourceController : ResourceController
+{
     public string enemyType = null;
 
     public override IEnumerator Death() {
@@ -20,5 +21,15 @@ public class EnemyResourceController : ResourceController {
         }
 
         return base.Death();
+    }
+
+    public override void FixedDamageRecoil(Vector2 direction, float magnitude)
+    {
+        base.FixedDamageRecoil(direction, magnitude);
+    }
+
+    public override void DamageRecoil(Vector2 source)
+    {
+        base.DamageRecoil(source);
     }
 }
