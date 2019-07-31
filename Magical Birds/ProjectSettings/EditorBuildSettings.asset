@@ -11,16 +11,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TitleScreen.unity
     guid: 65e60690eb695f24c8e40feefbd42927
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Scenes/Spring Tutorial.unity
+    guid: a41a7e123f61fa74cbe435620bbf173c
+  - enabled: 1
+    path: Assets/Scenes/Summer.unity
+    guid: cdad5dd48d0caf4458b0dba5bdeebe2d
+  - enabled: 1
+    path: Assets/Scenes/Fall.unity
+    guid: a59788d475549b74ab3adebd4bc6bff4
+  - enabled: 1
+    path: Assets/Scenes/Winter.unity
+    guid: a908309d13f190343959ab4174809a02
+  - enabled: 1
     path: Assets/Scenes/Sam Test.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 0
     path: Assets/Scenes/Dummy Scene.unity
     guid: af0fc1941e5d97d468a4708f926612a5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Cam Test.unity
     guid: b59d748cd8edc4bacbadf1d23cc714ca
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/WinScreen.unity
     guid: 54897458bc979c94481c59e21363951d
   m_configObjects: {}

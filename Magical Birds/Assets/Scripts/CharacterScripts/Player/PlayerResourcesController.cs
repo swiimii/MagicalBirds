@@ -13,6 +13,7 @@ public class PlayerResourcesController : ResourceController
     public bool isInvulnerable = false;
     public GameObject[] healthEggs;
     public GameObject[] damagedEggs;
+    public GameObject DeathScreen, HealthUI;
 
     // Call from attack scripts and enemy behavior scripts. When the player gets hit
     public override void ProcessDamage(int damageDealt, Vector2 source)
@@ -37,6 +38,7 @@ public class PlayerResourcesController : ResourceController
                     // healthEggs[i - 1].GetComponent<Image>().color = greyedOut;
                 }
             } 
+
         }
         
     }
@@ -54,14 +56,26 @@ public class PlayerResourcesController : ResourceController
             base.ProcessDamage(damageDealt, direction, magnitude);
 
             // Change UI according to current health
-            if (currentHealth >= 0)
+            if (currentHealth > 0)
             {
                 for (int i = healthEggs.Length; i > currentHealth; i--)
                 {
                     damagedEggs[i - 1].SetActive(true);
                     healthEggs[i - 1].SetActive(false);
-                    // healthEggs[i - 1].GetComponent<Image>().color = greyedOut;
                 }
+            }
+
+            else //Player has died
+            {
+                //Set all healthy eggs to damaged
+                for (int i = healthEggs.Length; i > 0; i--)
+                {
+                    damagedEggs[i - 1].SetActive(true);
+                    healthEggs[i - 1].SetActive(false);
+                }
+
+                // Start Death coroutine
+                StartCoroutine("Death");
             }
         }
     }
@@ -97,8 +111,35 @@ public class PlayerResourcesController : ResourceController
 
     public override IEnumerator Death()
     {
+        // Appropriate death animation
+        foreach (Collider c in GetComponents<Collider>())
+        {
+            c.enabled = false;
+        }
+        if (GetComponent<Rigidbody2D>())
+        {
+            GetComponent<Rigidbody2D>().isKinematic = true;
+        }
+
+        GetComponent<MovementController>().enabled = false;
+        GetComponent<Animator>().SetBool("isDead", true);
+        transform.localScale = new Vector3(1, 1, 1);
+
+        //Camera stops moving
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<SimpleFollow>().player = null;
+        GameObject.FindGameObjectWithTag("Background").GetComponent<BackgroundParallax>().trackedObject = null;
+
+        yield return new WaitForSeconds(.5f);
+
+        //Show death screen
+        HealthUI.SetActive(false);
+        DeathScreen.SetActive(true);
+
+
         
-        yield return null;
+        
+
+
     }
        
 
