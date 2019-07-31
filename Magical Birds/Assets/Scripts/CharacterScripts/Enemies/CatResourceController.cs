@@ -24,4 +24,20 @@ public class CatResourceController : EnemyResourceController
         // Cat has no recoil
         return;
     }
+    public override IEnumerator Death()      
+    {
+        GetComponent<CatEnemyScript>().StopAllCoroutines();
+        GetComponent<CatEnemyScript>().enabled = false;
+
+        return base.Death();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        var rc = collision.gameObject.GetComponent<ResourceController>();
+        if (rc)
+        {
+            rc.Damage(1, transform.position);
+        }
+    }
 }

@@ -110,9 +110,12 @@ public class ResourceController : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().isKinematic = true;
         }
-        GetComponent<MovementController>().enabled = false;
+        if (GetComponent<MovementController>())
+        {
+            GetComponent<MovementController>().enabled = false;
+            transform.localScale = new Vector3(1, 1, 1);
+        }
         GetComponent<Animator>().SetBool("isDead", true);
-        transform.localScale = new Vector3(1, 1, 1);
         yield return new WaitForSeconds(1.5f);
         Destroy(gameObject);
         
