@@ -11,8 +11,12 @@ public class ChevronAttack : MeleeAttack
     {
         base.OnCollisionEnter2D(collision);
 
-        Vector2 realKnockbackDirection = new Vector2(knockbackDirection.x * transform.localScale.x/Mathf.Abs(transform.localScale.x), knockbackDirection.y); 
-        collision.gameObject.GetComponent<ResourceController>().Damage(damage, realKnockbackDirection, knockbackMagnitude);
+        Vector2 realKnockbackDirection = new Vector2(knockbackDirection.x * transform.localScale.x/Mathf.Abs(transform.localScale.x), knockbackDirection.y);
+        var resourceCtrlr = collision.gameObject.GetComponent<ResourceController>();
+        if (resourceCtrlr)
+        {
+            resourceCtrlr.Damage(damage, realKnockbackDirection, knockbackMagnitude);
+        }
     }
      
 }

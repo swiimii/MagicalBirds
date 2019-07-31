@@ -6,6 +6,7 @@ public class RangedAttack : Attack
 {
     public float speed;
     public Vector2 direction;
+    public float dissipationTime = .5f;
 
     public virtual void Start()
     {
@@ -38,7 +39,7 @@ public class RangedAttack : Attack
             GetComponent<Animator>().SetTrigger("finished");
         }
 
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(dissipationTime);
         Destroy(gameObject);
     }
 

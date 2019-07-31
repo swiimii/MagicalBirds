@@ -5,7 +5,7 @@ using UnityEngine;
 public class CatResourceController : EnemyResourceController
 {
     public GameObject healthBar;
-
+    
 
     public override void Start()
     {
@@ -15,7 +15,7 @@ public class CatResourceController : EnemyResourceController
 
     public override void FixedDamageRecoil(Vector2 direction, float magnitude)
     {
-        // Cat is recoil-less
+        // Cat has no recoil
         return;
     }
 
