@@ -6,6 +6,7 @@ public class CatResourceController : EnemyResourceController
 {
     public SpriteRenderer healthBar;
     public float healthBarSize, healthBarMaxSize;
+    public CatArenaScript arena;
     
 
     public override void Start()
@@ -49,6 +50,8 @@ public class CatResourceController : EnemyResourceController
 
         cat.StopAllCoroutines();        
         cat.enabled = false;
+
+        arena.StopBattle();
 
         return base.Death();
     }
