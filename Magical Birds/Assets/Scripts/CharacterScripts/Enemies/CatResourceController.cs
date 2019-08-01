@@ -4,13 +4,28 @@ using UnityEngine;
 
 public class CatResourceController : EnemyResourceController
 {
-    public GameObject healthBar;
+    public SpriteRenderer healthBar;
+    public float healthBarSize, healthBarMaxSize;
     
 
     public override void Start()
     {
         base.Start();
-        healthBar.SetActive(true);
+        healthBar.enabled = true;
+        healthBarMaxSize = healthBar.size.x;
+        healthBarSize = healthBarMaxSize;
+    }
+
+    public override void ProcessDamage(int damageDealt, Vector2 direction, float magnitude)
+    {
+        base.ProcessDamage(damageDealt, direction, magnitude);
+        healthBar.size = new Vector2(healthBarMaxSize * currentHealth / maxHealth, healthBar.size.y);
+    }
+
+    public override void ProcessDamage(int damageDealt, Vector2 source)
+    {        
+        base.ProcessDamage(damageDealt, source);
+        healthBar.size = new Vector2( Mathf.Clamp(healthBarMaxSize * currentHealth / maxHealth,0,100) , healthBar.size.y);
     }
 
     public override void FixedDamageRecoil(Vector2 direction, float magnitude)
@@ -26,8 +41,14 @@ public class CatResourceController : EnemyResourceController
     }
     public override IEnumerator Death()      
     {
-        GetComponent<CatEnemyScript>().StopAllCoroutines();
-        GetComponent<CatEnemyScript>().enabled = false;
+        var cat = GetComponent<CatEnemyScript>();
+        var anim = GetComponent<Animator>();
+        anim.SetBool("isRangedAttack", false);
+        anim.SetBool("isMeleeAttack", false);
+        anim.SetBool("isJumpAttack", false);
+
+        cat.StopAllCoroutines();        
+        cat.enabled = false;
 
         return base.Death();
     }

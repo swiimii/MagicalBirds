@@ -34,17 +34,17 @@ public class CatEnemyScript : MonoBehaviour
                 idleTime = 0;
                 StartCoroutine("MeleeAttack");
             }
-            if (rotationIndex == 1 && idleTime > idleDuration)
+            else if (rotationIndex == 1 && idleTime > idleDuration)
             {
                 rotationIndex = (rotationIndex + 1) % 3;
                 idleTime = 0;
                 StartCoroutine("RangedAttack");
             }
-            if(rotationIndex == 2 && idleTime > idleDuration)
+            else if(rotationIndex == 2 && idleTime > idleDuration / 2)
             {
                 rotationIndex = (rotationIndex + 1) % 3;
                 idleTime = 0;
-                StartCoroutine("JumpAttack");
+                // Do nothing. This is an idle frame.
             }
 
         }
@@ -136,11 +136,5 @@ public class CatEnemyScript : MonoBehaviour
         isIdle = true;
 
     }
-
-    public IEnumerator JumpAttack()
-    {
-        yield return null;
-    }
-
 
 }
