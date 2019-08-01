@@ -27,6 +27,7 @@ public class Friends : Interactives
 
     public void QuestCheck() {
         if(itemReturned && enemiesKilled) {
+            textBubble.GetComponent<Animator>().SetInteger("currentQuest", 3);
             // TODO: do the level win
         } else if (itemReturned) {
             currentQuest = "kill";
