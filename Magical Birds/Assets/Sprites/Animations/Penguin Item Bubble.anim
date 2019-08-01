@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Hummingbird Speech Bubble
+  m_Name: Penguin Item Bubble
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -32,16 +32,16 @@ AnimationClip:
       value: {fileID: 7085415779350458445, guid: edc14619f8454e840a19dd7e8e3e0f22,
         type: 3}
     - time: 0.33333334
-      value: {fileID: 447823392986477976, guid: edc14619f8454e840a19dd7e8e3e0f22,
+      value: {fileID: 1701881206895806427, guid: bdd842fb60c5ca745a74c5e5c6a38ab4,
         type: 3}
     - time: 0.41666666
-      value: {fileID: -6043029976369785337, guid: edc14619f8454e840a19dd7e8e3e0f22,
+      value: {fileID: 2959226941027317369, guid: bdd842fb60c5ca745a74c5e5c6a38ab4,
         type: 3}
     - time: 0.5
-      value: {fileID: 1773555878168605433, guid: edc14619f8454e840a19dd7e8e3e0f22,
+      value: {fileID: 1701881206895806427, guid: bdd842fb60c5ca745a74c5e5c6a38ab4,
         type: 3}
     - time: 0.5833333
-      value: {fileID: -5072796722624697447, guid: edc14619f8454e840a19dd7e8e3e0f22,
+      value: {fileID: 2959226941027317369, guid: bdd842fb60c5ca745a74c5e5c6a38ab4,
         type: 3}
     - time: 0.6666667
       value: {fileID: -3491297610237503823, guid: edc14619f8454e840a19dd7e8e3e0f22,
@@ -78,10 +78,10 @@ AnimationClip:
     - {fileID: -2680752953602176871, guid: edc14619f8454e840a19dd7e8e3e0f22, type: 3}
     - {fileID: -6048734368059101942, guid: edc14619f8454e840a19dd7e8e3e0f22, type: 3}
     - {fileID: 7085415779350458445, guid: edc14619f8454e840a19dd7e8e3e0f22, type: 3}
-    - {fileID: 447823392986477976, guid: edc14619f8454e840a19dd7e8e3e0f22, type: 3}
-    - {fileID: -6043029976369785337, guid: edc14619f8454e840a19dd7e8e3e0f22, type: 3}
-    - {fileID: 1773555878168605433, guid: edc14619f8454e840a19dd7e8e3e0f22, type: 3}
-    - {fileID: -5072796722624697447, guid: edc14619f8454e840a19dd7e8e3e0f22, type: 3}
+    - {fileID: 1701881206895806427, guid: bdd842fb60c5ca745a74c5e5c6a38ab4, type: 3}
+    - {fileID: 2959226941027317369, guid: bdd842fb60c5ca745a74c5e5c6a38ab4, type: 3}
+    - {fileID: 1701881206895806427, guid: bdd842fb60c5ca745a74c5e5c6a38ab4, type: 3}
+    - {fileID: 2959226941027317369, guid: bdd842fb60c5ca745a74c5e5c6a38ab4, type: 3}
     - {fileID: -3491297610237503823, guid: edc14619f8454e840a19dd7e8e3e0f22, type: 3}
     - {fileID: -6974671132349233311, guid: edc14619f8454e840a19dd7e8e3e0f22, type: 3}
     - {fileID: -2325088670472171248, guid: edc14619f8454e840a19dd7e8e3e0f22, type: 3}

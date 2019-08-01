@@ -1057,16 +1057,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.414
       objectReference: {fileID: 0}
-    - target: {fileID: 1886043928836891372, guid: c737fa141156c974db70f4df2143b4fb,
-        type: 3}
-      propertyPath: m_Name
-      value: Speech Bubble Overlay
-      objectReference: {fileID: 0}
-    - target: {fileID: 1886043928836891372, guid: c737fa141156c974db70f4df2143b4fb,
-        type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 770827899640195269, guid: c737fa141156c974db70f4df2143b4fb,
         type: 3}
       propertyPath: m_Layer
@@ -1083,6 +1073,16 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5554303832982488769, guid: c737fa141156c974db70f4df2143b4fb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1886043928836891372, guid: c737fa141156c974db70f4df2143b4fb,
+        type: 3}
+      propertyPath: m_Name
+      value: Speech Bubble Overlay
+      objectReference: {fileID: 0}
+    - target: {fileID: 1886043928836891372, guid: c737fa141156c974db70f4df2143b4fb,
         type: 3}
       propertyPath: m_Layer
       value: 20
@@ -1186,6 +1186,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PreserveAspect
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 820264633, guid: 187e84c4babdc8a42b8866abd8a1f98e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 187e84c4babdc8a42b8866abd8a1f98e, type: 3}
@@ -2240,6 +2244,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610597450998076859, guid: e7a6e0e3a6ee7c04a8fe47a6c8b47d56,
+        type: 3}
+      propertyPath: m_Name
+      value: Speech Bubble
       objectReference: {fileID: 0}
     - target: {fileID: 8736537338623785076, guid: e7a6e0e3a6ee7c04a8fe47a6c8b47d56,
         type: 3}
