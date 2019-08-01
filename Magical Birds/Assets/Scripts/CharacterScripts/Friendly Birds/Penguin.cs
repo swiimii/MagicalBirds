@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Penguin : Friends
 {
-    private void Start() {
+    protected override void Start() {
+        base.Start();
         state = FindObjectOfType<StateManager>();
         currentQuest = "item";
         killRequirement = 5;

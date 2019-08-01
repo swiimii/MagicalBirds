@@ -5,7 +5,7 @@ using UnityEngine;
 public class Friends : Interactives
 {
     public bool talkedTo = false;
-    public Animator textBubble;
+    public GameObject textBubble;
     public bool itemReturned = false;
     public bool enemiesKilled = false;
     public string currentQuest; 
@@ -20,21 +20,39 @@ public class Friends : Interactives
         }
     }
 
+    protected virtual void Start() {
+        state = FindObjectOfType<StateManager>();
+        textBubble.GetComponent<Animator>().SetInteger("currentQuest", 0);
+    }
+
     public void QuestCheck() {
         if(itemReturned && enemiesKilled) {
+            textBubble.GetComponent<Animator>().SetInteger("currentQuest", 3);
             // TODO: do the level win
         } else if (itemReturned) {
             currentQuest = "kill";
-            // TODO: switch the quest reminder
+            textBubble.GetComponent<Animator>().SetInteger("currentQuest", 2);
         } else if (enemiesKilled) {
             currentQuest = "item";
-            // TODO: switch the quest reminder
+            textBubble.GetComponent<Animator>().SetInteger("currentQuest", 1);
         }
     }
 
     public override void DoInteract(){
         if(!talkedTo) {
             talkedTo = true;
+            switch (currentQuest) {
+                case "item": {
+                    textBubble.GetComponent<Animator>().SetInteger("currentQuest", 1);
+                    break;
+                }
+                case "kill": {
+                    textBubble.GetComponent<Animator>().SetInteger("currentQuest", 2);
+                    break;
+                }
+                default:
+                    break;
+            }
         } else {
 
             switch (currentQuest) {
