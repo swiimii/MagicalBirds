@@ -5,10 +5,10 @@ using UnityEngine;
 public class Hummingbird : Friends
 {
     protected override void Start() {
-        base.Start();
         currentQuest = "item";
         killRequirement = 8;
         itemToCollect = "BlueFeather";
         abilityLevel = 2;
+        base.Start();
     }
 }

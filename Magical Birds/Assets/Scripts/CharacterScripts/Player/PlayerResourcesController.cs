@@ -15,11 +15,18 @@ public class PlayerResourcesController : ResourceController
     public GameObject[] damagedEggs;
     public GameObject[] feathers;
     public GameObject DeathScreen, HealthUI;
+    private StateManager state;
 
     public override void Start()
     {
         base.Start();
-        GameObject.FindGameObjectWithTag("GameController").GetComponent<StateManager>().player = gameObject;
+        state = GameObject.FindGameObjectWithTag("GameController").GetComponent<StateManager>();
+        state.player = gameObject;
+
+        if(state.hasCheckpoint) {
+            var friend = GameObject.FindGameObjectWithTag("Friend").transform.position;
+            transform.position = new Vector3(friend.x, friend.y, transform.position.z);
+        }
     }
 
     // Call from attack scripts and enemy behavior scripts. When the player gets hit

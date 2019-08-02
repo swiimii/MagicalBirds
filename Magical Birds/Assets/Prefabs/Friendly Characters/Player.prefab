@@ -2920,7 +2920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sm: {fileID: 0}
-  checkpointButton: {fileID: 0}
+  checkpointButton: {fileID: 6711138872996109332}
 --- !u!1 &5673181606085094152
 GameObject:
   m_ObjectHideFlags: 0

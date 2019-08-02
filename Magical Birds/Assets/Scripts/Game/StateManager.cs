@@ -20,9 +20,8 @@ public class StateManager : MonoBehaviour {
         3 - Double + Smash + Snowball
     */
     public int unlockedAbilities;
-    // Player's last used checkpoint to respawn from
-    // TODO: should be game object?
-    public GameObject currentCheckpoint;
+    // Player has a checkpoint to respawn from?
+    public bool hasCheckpoint;
     public float masterVolume;
     public float musicVolume;
     public float effectsVolume;
@@ -66,10 +65,18 @@ public class StateManager : MonoBehaviour {
     }
 
     public void setScene(int sceneId) {
-        currentCheckpoint = null;
+        var resetCheckpoint = true;
+        if(hasCheckpoint && sceneId == SceneManager.GetActiveScene().buildIndex) {
+            resetCheckpoint = false;
+        }
+
         SceneManager.LoadScene(sceneId);
         Time.timeScale = 1f;
         player = GameObject.FindGameObjectWithTag("Player");
+        
+        if(resetCheckpoint){
+            hasCheckpoint = false;
+        }
     }
 
     private void ResetGameSession() {
