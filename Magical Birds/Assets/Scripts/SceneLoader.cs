@@ -52,4 +52,10 @@ public class SceneLoader : MonoBehaviour{
         //SceneManager.LoadScene(sceneBuildIndex: 4);
         sm.setScene(5);
     }
+
+    public void LoadSelectScene()
+    {
+        //SceneManager.LoadScene(sceneBuildIndex:0);
+        sm.setScene(6);
+    }
 }

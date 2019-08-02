@@ -555,7 +555,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &820264633
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1105,12 +1105,12 @@ GameObject:
   - component: {fileID: 1916035351}
   - component: {fileID: 1916035350}
   m_Layer: 5
-  m_Name: Button
+  m_Name: OptionsBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1916035349
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1210,7 +1210,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1916035351}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5780235450300848586, guid: b37fc8047eb293f4eaf279bb58c11bbe,
+          type: 3}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &2026906150
@@ -1443,7 +1455,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 47, y: -51}
+  m_AnchoredPosition: {x: 47.000244, y: -51}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 1, y: 0}
 --- !u!1 &877635119408409397
@@ -2873,7 +2885,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &7782283973510856564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2886,7 +2898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc8bf41fad8af14b8b0e5b7d275ccc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
+  speed: 2
   jumpForce: 3.5
 --- !u!114 &7782283973510856565
 MonoBehaviour:
@@ -2949,8 +2961,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canDoubleJump: 0
   readyToBasicAttack: 1
-  readyToPowerAttack: 1
-  readyToRangedAttack: 1
+  readyToPowerAttack: 0
+  readyToRangedAttack: 0
   basicAttackCooldown: 0.5
   powerAttackCooldown: 1.5
   rangedAttackCooldown: 0.7
@@ -3828,15 +3840,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4ee491760e2fa248871a79e658b08e7, type: 3}
---- !u!1 &2863793712890469353 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6466199910746520455, guid: c4ee491760e2fa248871a79e658b08e7,
-    type: 3}
-  m_PrefabInstance: {fileID: 9080017411257671790}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &3980575679003378282 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5278055791632212484, guid: c4ee491760e2fa248871a79e658b08e7,
+    type: 3}
+  m_PrefabInstance: {fileID: 9080017411257671790}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2863793712890469353 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6466199910746520455, guid: c4ee491760e2fa248871a79e658b08e7,
     type: 3}
   m_PrefabInstance: {fileID: 9080017411257671790}
   m_PrefabAsset: {fileID: 0}
