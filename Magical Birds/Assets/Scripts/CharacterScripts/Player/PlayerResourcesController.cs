@@ -13,6 +13,7 @@ public class PlayerResourcesController : ResourceController
     public bool isInvulnerable = false;
     public GameObject[] healthEggs;
     public GameObject[] damagedEggs;
+    public GameObject[] feathers;
     public GameObject DeathScreen, HealthUI;
 
     public override void Start()

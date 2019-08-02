@@ -47,11 +47,21 @@ public class StateManager : MonoBehaviour {
 
     public void addCollectedItem(GameObject collectedItem){
         collectedItems.Add(collectedItem);
+
+        for(int n = 0; n < player.GetComponent<PlayerResourcesController>().feathers.Length; n++){
+            player.GetComponent<PlayerResourcesController>().feathers[n].GetComponent<FeatherUI>().changeActiveFeather(collectedItem.name);
+        }
+
         Debug.Log("Added " + collectedItem + " to items collected");
     }
 
     public void removeCollectedItem(GameObject collectedItem) {
         collectedItems.Remove(collectedItem);
+
+        for(int n = 0; n < player.GetComponent<PlayerResourcesController>().feathers.Length; n++){
+            player.GetComponent<PlayerResourcesController>().feathers[n].GetComponent<FeatherUI>().changeActiveFeather();
+        }
+
         Debug.Log("Removed " + collectedItem + " to items collected");
     }
 
