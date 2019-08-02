@@ -14,7 +14,7 @@ public class DeathScreen : MonoBehaviour
     {
         sm = GameObject.FindGameObjectWithTag("GameController").GetComponent<StateManager>();
  
-        if (sm && sm.currentCheckpoint)
+        if (sm && sm.hasCheckpoint)
         {
             checkpointButton.SetActive(true);
         }        
@@ -23,7 +23,7 @@ public class DeathScreen : MonoBehaviour
 
     public void Restart()
     {
-        sm.currentCheckpoint = null;
+        sm.hasCheckpoint = false;
         sm.setScene(SceneManager.GetActiveScene().buildIndex);       
     }
 
@@ -34,7 +34,7 @@ public class DeathScreen : MonoBehaviour
 
     public void ReturnToMenu()
     {
-        sm.currentCheckpoint = null;
+        sm.hasCheckpoint = false;
         sm.setScene(1);
     }
 }

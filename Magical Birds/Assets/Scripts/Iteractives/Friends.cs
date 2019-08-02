@@ -23,19 +23,30 @@ public class Friends : Interactives
     protected virtual void Start() {
         state = FindObjectOfType<StateManager>();
         textBubble.GetComponent<Animator>().SetInteger("currentQuest", 0);
+        if(state.hasCheckpoint){
+            talkedTo = true;
+            if(currentQuest == "item") {
+                itemReturned = true;
+                enemiesKilled = false;
+            }else if(currentQuest == "kill") {
+                enemiesKilled = true;
+                itemReturned = false;
+            }
+            QuestCheck();
+        }
     }
 
     public void QuestCheck() {
         if(itemReturned && enemiesKilled) {
             textBubble.GetComponent<Animator>().SetInteger("currentQuest", 3);
             state.player.GetComponent<VictoryScreen>().StartCoroutine("Victory");
-
-
         } else if (itemReturned) {
             currentQuest = "kill";
+            state.hasCheckpoint = true;
             textBubble.GetComponent<Animator>().SetInteger("currentQuest", 2);
         } else if (enemiesKilled) {
             currentQuest = "item";
+            state.hasCheckpoint = true;
             textBubble.GetComponent<Animator>().SetInteger("currentQuest", 1);
         }
     }

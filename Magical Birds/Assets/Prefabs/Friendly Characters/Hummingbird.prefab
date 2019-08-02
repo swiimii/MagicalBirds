@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2470428427693539773}
   - component: {fileID: 4483437196380907976}
   - component: {fileID: 1205348201769231771}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Hummingbird Sprite
   m_TagString: Friend
   m_Icon: {fileID: 0}
