@@ -120,60 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &31670965 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2368339815544683495, guid: bb386679e66563e4baa9e4208834596b,
-    type: 3}
-  m_PrefabInstance: {fileID: 2368339815546960210}
-  m_PrefabAsset: {fileID: 0}
---- !u!60 &31670966
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 31670965}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.22, y: 0.13}
-    newSize: {x: 0.25, y: 0.14}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.11, y: 0.065}
-      - {x: -0.11, y: -0.055}
-      - {x: -0.099999994, y: -0.065}
-      - {x: 0.099999994, y: -0.065}
-      - {x: 0.099999994, y: -0.055}
-      - {x: 0.11, y: -0.035}
-      - {x: 0.11, y: 0.065}
---- !u!111 &31670967
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 31670965}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 7400000, guid: 9e05d55344742414db2448c472ea0df2, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &278053811
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,6 +493,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7782283973510856560, guid: 187e84c4babdc8a42b8866abd8a1f98e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 7782283973510856560, guid: 187e84c4babdc8a42b8866abd8a1f98e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 7782283973510856566, guid: 187e84c4babdc8a42b8866abd8a1f98e,
         type: 3}
       propertyPath: m_Offset.y
@@ -562,6 +518,15 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 820264633, guid: 187e84c4babdc8a42b8866abd8a1f98e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402730691582928685, guid: 187e84c4babdc8a42b8866abd8a1f98e,
+        type: 3}
+      propertyPath: m_Name
+      value: Player Info UI
+      objectReference: {fileID: 0}
     - target: {fileID: 7357103240998757355, guid: 187e84c4babdc8a42b8866abd8a1f98e,
         type: 3}
       propertyPath: CanDoubleJump
@@ -571,15 +536,6 @@ PrefabInstance:
         type: 3}
       propertyPath: attackDelay
       value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 402730691582928685, guid: 187e84c4babdc8a42b8866abd8a1f98e,
-        type: 3}
-      propertyPath: m_Name
-      value: Player Info UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 820264633, guid: 187e84c4babdc8a42b8866abd8a1f98e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5537787980951268981, guid: 187e84c4babdc8a42b8866abd8a1f98e,
         type: 3}
@@ -960,7 +916,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30a9a268c59e2624f8317055fbead710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
   damageDealt: 1
   moveSpeed: 0
 --- !u!95 &1049860017
@@ -1012,7 +967,7 @@ PrefabInstance:
     - target: {fileID: 3518381923893472312, guid: 685cac3519d592d48b900cd00842f91e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3518381923893472294, guid: 685cac3519d592d48b900cd00842f91e,
         type: 3}
@@ -1704,6 +1659,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2908351242002017293, guid: bb386679e66563e4baa9e4208834596b,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: eaab684a5a315be42b263195875b31af, type: 2}
     - target: {fileID: 2368339815544683495, guid: bb386679e66563e4baa9e4208834596b,
         type: 3}
       propertyPath: m_Name

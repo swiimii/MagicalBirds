@@ -4,9 +4,10 @@ using UnityEngine;
 
 public abstract class EnemyMovementController : MovementController
 {
-    public int health = 2, damageDealt = 1;
+    public int damageDealt = 1;
     public float moveSpeed = 20;
     public abstract void Move();
+
     public virtual int GetDirection()
     {
         return (int)(transform.localScale.x / Mathf.Abs(transform.localScale.x));
