@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4247434908566013815}
   - component: {fileID: 1502868631714543139}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Speech Bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 8736537338623785075}
   - component: {fileID: 8736537338623785073}
   - component: {fileID: 8736537338623785074}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Speech Bubble Overlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 8736537339180083705}
   - component: {fileID: 1534298230438794771}
   - component: {fileID: 5632126692399713996}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Penguin
   m_TagString: Friend
   m_Icon: {fileID: 0}
