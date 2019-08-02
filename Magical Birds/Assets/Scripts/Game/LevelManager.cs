@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class LevelManager : MonoBehaviour
 {
+    public GameObject LevelSelectUI;
     [System.Serializable]
     public class Level
     {
@@ -24,6 +25,12 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         FillList();
+    }
+
+    public void OpenLevelSelection()
+    {
+        //SceneManager.LoadScene(sceneBuildIndex:0);
+        LevelSelectUI.SetActive(false);
     }
 
     void FillList()

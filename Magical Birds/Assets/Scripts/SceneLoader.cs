@@ -8,6 +8,11 @@ public class SceneLoader : MonoBehaviour{
 
     public StateManager sm;
 
+    public void Start()
+    {
+        sm = GameObject.FindGameObjectWithTag("GameController").GetComponent<StateManager>();
+
+    }
     public void LoadNextScene()
    {
        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -29,19 +34,22 @@ public class SceneLoader : MonoBehaviour{
    
    public void LoadSpring()
    {
-        //SceneManager.LoadScene(sceneBuildIndex:1);
+        // SceneManager.LoadScene(sceneBuildIndex:2);
         sm.setScene(2);
    }
     public void LoadSummer()
     {
-        SceneManager.LoadScene(sceneBuildIndex: 2);
+       // SceneManager.LoadScene(sceneBuildIndex: 2);
+        sm.setScene(3);
     }
     public void LoadFall()
     {
-        SceneManager.LoadScene(sceneBuildIndex: 3);
+       //SceneManager.LoadScene(sceneBuildIndex: 3);
+        sm.setScene(4);
     }
     public void LoadWinter()
     {
-        SceneManager.LoadScene(sceneBuildIndex: 4);
+        //SceneManager.LoadScene(sceneBuildIndex: 4);
+        sm.setScene(5);
     }
 }
