@@ -28,7 +28,9 @@ public class Friends : Interactives
     public void QuestCheck() {
         if(itemReturned && enemiesKilled) {
             textBubble.GetComponent<Animator>().SetInteger("currentQuest", 3);
-            // TODO: do the level win
+            state.player.GetComponent<VictoryScreen>().StartCoroutine("Victory");
+
+
         } else if (itemReturned) {
             currentQuest = "kill";
             textBubble.GetComponent<Animator>().SetInteger("currentQuest", 2);
@@ -58,7 +60,7 @@ public class Friends : Interactives
             switch (currentQuest) {
                 case "item": {
                     foreach (GameObject item in state.collectedItems) {
-                        if(item.name == itemToCollect) {
+                        if(item && item.name.Equals(itemToCollect)) {
                             itemReturned = true;
                             state.removeCollectedItem(item);
                             break;

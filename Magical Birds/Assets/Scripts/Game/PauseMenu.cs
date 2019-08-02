@@ -12,7 +12,7 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetButtonDown("Cancel"))
         {
             if (GameIsPaused)
             {
@@ -34,7 +34,7 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
     }
 
-    void Pause()
+    public void Pause()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<MovementController>().enabled = false;
         GameObject.FindGameObjectWithTag("Player").GetComponent<AbilityController>().enabled = false;

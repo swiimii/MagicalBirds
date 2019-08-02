@@ -15,6 +15,12 @@ public class PlayerResourcesController : ResourceController
     public GameObject[] damagedEggs;
     public GameObject DeathScreen, HealthUI;
 
+    public override void Start()
+    {
+        base.Start();
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<StateManager>().player = gameObject;
+    }
+
     // Call from attack scripts and enemy behavior scripts. When the player gets hit
     public override void ProcessDamage(int damageDealt, Vector2 source)
     {

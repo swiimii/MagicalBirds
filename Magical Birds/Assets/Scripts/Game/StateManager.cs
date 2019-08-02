@@ -58,6 +58,7 @@ public class StateManager : MonoBehaviour {
     public void setScene(int sceneId) {
         currentCheckpoint = null;
         SceneManager.LoadScene(sceneId);
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void ResetGameSession() {

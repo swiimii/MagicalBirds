@@ -19,6 +19,11 @@ public class SceneFader : MonoBehaviour
         StartCoroutine(FadeOut(scene));
     }
 
+    public void FadeToContinue()
+    {
+        StartCoroutine(FadeOut(GameObject.FindGameObjectWithTag("GameController").GetComponent<StateManager>().unlockedLevels + 2));
+    }
+
     IEnumerator FadeIn()
     {
         float t = 1f;
