@@ -20,7 +20,7 @@ public abstract class EnemyMovementController : MovementController
         var scale = transform.localScale;
         transform.localScale = new Vector3(Mathf.Abs(scale.x) * direction, scale.y, scale.z);
     }
-    public virtual void OnCollisionStay2D(Collision2D collision)
+    public virtual void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag.Equals("Player"))
         {

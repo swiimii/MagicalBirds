@@ -34,6 +34,11 @@ public class EnemyResourceController : ResourceController
             }
         }
 
+        foreach (Collider2D c in GetComponents<Collider2D>())
+        {
+            c.enabled = false;
+        }
+
 
         return base.Death();
     }

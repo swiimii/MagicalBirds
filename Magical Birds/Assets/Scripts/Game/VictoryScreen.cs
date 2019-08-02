@@ -17,7 +17,7 @@ public class VictoryScreen : MonoBehaviour
 
     public void ReturnToMenu()
     {
-        sm.setScene(1);
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<StateManager>().setScene(1);
     }
 
     public void Continue()

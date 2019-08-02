@@ -42,7 +42,7 @@ public class StateManager : MonoBehaviour {
     void Start()
     {
         ReadData();
-        SceneManager.LoadScene(1);
+        setScene(1);
     }  
 
     public void addCollectedItem(GameObject collectedItem){
@@ -58,6 +58,7 @@ public class StateManager : MonoBehaviour {
     public void setScene(int sceneId) {
         currentCheckpoint = null;
         SceneManager.LoadScene(sceneId);
+        Time.timeScale = 1f;
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
