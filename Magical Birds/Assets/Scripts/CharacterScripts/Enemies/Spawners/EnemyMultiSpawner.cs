@@ -69,7 +69,12 @@ public class EnemyMultiSpawner : EnemySpawner
         enemies[index].transform.position = position;
 
         // Make the enemy face the direction of the player
-        enemies[index].GetComponent<EnemyMovementController>().SetDirection(GetDirection());
+        if(enemies[index].GetComponent<EnemyMovementController>())
+            enemies[index].GetComponent<EnemyMovementController>().SetDirection(GetDirection());
+        else
+        {
+            enemies[index].GetComponentInChildren<EnemyMovementController>().SetDirection(GetDirection());
+        }
 
         //Only set active in update function
         enemies[index].SetActive(false);

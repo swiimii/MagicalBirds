@@ -51,7 +51,12 @@ public class EnemySpawner : MonoBehaviour
         enemy.transform.position = position;
 
         // Make the enemy face the direction of the player
-        enemy.GetComponent<EnemyMovementController>().SetDirection(GetDirection());
+        if(enemy.GetComponent<EnemyMovementController>())
+            enemy.GetComponent<EnemyMovementController>().SetDirection(GetDirection());
+        else
+        {
+            enemy.GetComponentInChildren<EnemyMovementController>().SetDirection(GetDirection());
+        }
 
         //Only set active in update function
         enemy.SetActive(false);

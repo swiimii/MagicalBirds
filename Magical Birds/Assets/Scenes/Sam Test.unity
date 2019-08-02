@@ -537,6 +537,21 @@ PrefabInstance:
       propertyPath: attackDelay
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 7357103240998757355, guid: 187e84c4babdc8a42b8866abd8a1f98e,
+        type: 3}
+      propertyPath: readyToRangedAttack
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7357103240998757355, guid: 187e84c4babdc8a42b8866abd8a1f98e,
+        type: 3}
+      propertyPath: readyToPowerAttack
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7357103240998757355, guid: 187e84c4babdc8a42b8866abd8a1f98e,
+        type: 3}
+      propertyPath: canDoubleJump
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5537787980951268981, guid: 187e84c4babdc8a42b8866abd8a1f98e,
         type: 3}
       propertyPath: m_IsActive
@@ -967,7 +982,7 @@ PrefabInstance:
     - target: {fileID: 3518381923893472312, guid: 685cac3519d592d48b900cd00842f91e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3518381923893472294, guid: 685cac3519d592d48b900cd00842f91e,
         type: 3}
@@ -1659,16 +1674,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2908351242002017293, guid: bb386679e66563e4baa9e4208834596b,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: eaab684a5a315be42b263195875b31af, type: 2}
     - target: {fileID: 2368339815544683495, guid: bb386679e66563e4baa9e4208834596b,
         type: 3}
       propertyPath: m_Name
       value: Brown_Rat
       objectReference: {fileID: 0}
+    - target: {fileID: 2908351242002017293, guid: bb386679e66563e4baa9e4208834596b,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: eaab684a5a315be42b263195875b31af, type: 2}
     - target: {fileID: 2368339815544683493, guid: bb386679e66563e4baa9e4208834596b,
         type: 3}
       propertyPath: m_LocalPosition.x

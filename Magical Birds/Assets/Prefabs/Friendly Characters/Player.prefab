@@ -4057,6 +4057,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8098342213460982936}
     m_Modifications:
+    - target: {fileID: 6466199910746520455, guid: c4ee491760e2fa248871a79e658b08e7,
+        type: 3}
+      propertyPath: m_Name
+      value: Damaged Egg
+      objectReference: {fileID: 0}
+    - target: {fileID: 6466199910746520455, guid: c4ee491760e2fa248871a79e658b08e7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5278055791632212484, guid: c4ee491760e2fa248871a79e658b08e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4161,16 +4171,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6466199910746520455, guid: c4ee491760e2fa248871a79e658b08e7,
-        type: 3}
-      propertyPath: m_Name
-      value: Damaged Egg
-      objectReference: {fileID: 0}
-    - target: {fileID: 6466199910746520455, guid: c4ee491760e2fa248871a79e658b08e7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4ee491760e2fa248871a79e658b08e7, type: 3}
@@ -4193,6 +4193,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1670876860267307837}
     m_Modifications:
+    - target: {fileID: 1013827728885828937, guid: 5fd4e3f67c237cb4084da763721b4b59,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthEgg
+      objectReference: {fileID: 0}
     - target: {fileID: 2202880044545955018, guid: 5fd4e3f67c237cb4084da763721b4b59,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4298,11 +4303,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1013827728885828937, guid: 5fd4e3f67c237cb4084da763721b4b59,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthEgg
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fd4e3f67c237cb4084da763721b4b59, type: 3}
 --- !u!224 &440639352830575526 stripped
@@ -4324,6 +4324,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8098342213460982936}
     m_Modifications:
+    - target: {fileID: 1013827728885828937, guid: 5fd4e3f67c237cb4084da763721b4b59,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthEgg
+      objectReference: {fileID: 0}
     - target: {fileID: 2202880044545955018, guid: 5fd4e3f67c237cb4084da763721b4b59,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4429,11 +4434,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1013827728885828937, guid: 5fd4e3f67c237cb4084da763721b4b59,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthEgg
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fd4e3f67c237cb4084da763721b4b59, type: 3}
 --- !u!224 &3911417675436524198 stripped
@@ -4455,6 +4455,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1699160215308187732}
     m_Modifications:
+    - target: {fileID: 1013827728885828937, guid: 5fd4e3f67c237cb4084da763721b4b59,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthEgg
+      objectReference: {fileID: 0}
     - target: {fileID: 2202880044545955018, guid: 5fd4e3f67c237cb4084da763721b4b59,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4559,11 +4564,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1013827728885828937, guid: 5fd4e3f67c237cb4084da763721b4b59,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthEgg
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fd4e3f67c237cb4084da763721b4b59, type: 3}
@@ -4586,6 +4586,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1699160215308187732}
     m_Modifications:
+    - target: {fileID: 6466199910746520455, guid: c4ee491760e2fa248871a79e658b08e7,
+        type: 3}
+      propertyPath: m_Name
+      value: Damaged Egg
+      objectReference: {fileID: 0}
+    - target: {fileID: 6466199910746520455, guid: c4ee491760e2fa248871a79e658b08e7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5278055791632212484, guid: c4ee491760e2fa248871a79e658b08e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4691,27 +4701,17 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6466199910746520455, guid: c4ee491760e2fa248871a79e658b08e7,
-        type: 3}
-      propertyPath: m_Name
-      value: Damaged Egg
-      objectReference: {fileID: 0}
-    - target: {fileID: 6466199910746520455, guid: c4ee491760e2fa248871a79e658b08e7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4ee491760e2fa248871a79e658b08e7, type: 3}
---- !u!1 &1300436460060598945 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6466199910746520455, guid: c4ee491760e2fa248871a79e658b08e7,
-    type: 3}
-  m_PrefabInstance: {fileID: 5454029148657129766}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &184631478674258722 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5278055791632212484, guid: c4ee491760e2fa248871a79e658b08e7,
+    type: 3}
+  m_PrefabInstance: {fileID: 5454029148657129766}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1300436460060598945 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6466199910746520455, guid: c4ee491760e2fa248871a79e658b08e7,
     type: 3}
   m_PrefabInstance: {fileID: 5454029148657129766}
   m_PrefabAsset: {fileID: 0}
@@ -4722,6 +4722,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1670876860267307837}
     m_Modifications:
+    - target: {fileID: 6466199910746520455, guid: c4ee491760e2fa248871a79e658b08e7,
+        type: 3}
+      propertyPath: m_Name
+      value: Damaged Egg
+      objectReference: {fileID: 0}
+    - target: {fileID: 6466199910746520455, guid: c4ee491760e2fa248871a79e658b08e7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5278055791632212484, guid: c4ee491760e2fa248871a79e658b08e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4826,16 +4836,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6466199910746520455, guid: c4ee491760e2fa248871a79e658b08e7,
-        type: 3}
-      propertyPath: m_Name
-      value: Damaged Egg
-      objectReference: {fileID: 0}
-    - target: {fileID: 6466199910746520455, guid: c4ee491760e2fa248871a79e658b08e7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4ee491760e2fa248871a79e658b08e7, type: 3}

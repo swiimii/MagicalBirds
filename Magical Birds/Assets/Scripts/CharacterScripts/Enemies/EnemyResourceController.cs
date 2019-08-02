@@ -30,7 +30,7 @@ public class EnemyResourceController : ResourceController
             } else if(penguin && enemyType.ToLower() == "bat"){
                 FindObjectOfType<Penguin>().SendMessage("incrementKilled");
             } else if(enemyType.ToLower() == "bosscat"){
-                // TODO: do win?
+                GameObject.FindGameObjectWithTag("Player").GetComponent<VictoryScreen>().Victory();
             }
         }
 
