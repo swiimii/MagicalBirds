@@ -6,8 +6,26 @@ public class LevelSelector : MonoBehaviour
 {
 
     public SceneFader fader;
+    public GameObject levelsParent;
 
-    public Button[] levelButtons;
+
+
+    public void Start()
+    {
+        var sm = GameObject.FindGameObjectWithTag("GameController").GetComponent<StateManager>();
+        if (sm) print("Found");
+        var levelIndex = sm.unlockedLevels;
+        print(levelIndex);
+        
+
+        for(int i = 0; i < levelIndex; i++)
+        {
+            levelsParent.transform.GetChild(i).GetComponent<Button>().interactable = true;
+        }
+        
+    }
+
+    
 
     // void Start()
     // {
@@ -20,9 +38,17 @@ public class LevelSelector : MonoBehaviour
     //     }
     // }
 
-    public void Select(string levelName)
+    public void ContinueGame()
     {
-        fader.FadeTo(levelName);
+        var sm = GameObject.FindGameObjectWithTag("GameController").GetComponent<StateManager>();
+        fader.FadeTo(sm.unlockedLevels + 2);
     }
+
+    public void Select(int levelIndex)
+    {
+        fader.FadeTo(levelIndex);
+    }
+
+
 
 }

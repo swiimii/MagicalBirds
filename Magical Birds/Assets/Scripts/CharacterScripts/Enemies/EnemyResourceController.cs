@@ -6,14 +6,28 @@ public class EnemyResourceController : ResourceController
 {
     public string enemyType = null;
 
+    private Woodpecker woodpecker;
+    private Hummingbird hummingbird;
+    private Penguin penguin;
+
+    public override void Start()
+    {
+        base.Start();
+        woodpecker = FindObjectOfType<Woodpecker>();
+        hummingbird = FindObjectOfType<Hummingbird>();
+        penguin = FindObjectOfType<Penguin>();
+
+    }
+
     public override IEnumerator Death() {
 
+
         if(enemyType != null) {
-            if(enemyType.ToLower() == "snake") {
+            if(woodpecker && enemyType.ToLower() == "snake") {
                 FindObjectOfType<Woodpecker>().SendMessage("incrementKilled");
-            } else if(enemyType.ToLower() == "rat"){
+            } else if(hummingbird && enemyType.ToLower() == "rat"){
                 FindObjectOfType<Hummingbird>().SendMessage("incrementKilled");
-            } else if(enemyType.ToLower() == "bat"){
+            } else if(penguin && enemyType.ToLower() == "bat"){
                 FindObjectOfType<Penguin>().SendMessage("incrementKilled");
             } else if(enemyType.ToLower() == "bosscat"){
                 // TODO: do win?

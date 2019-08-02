@@ -10637,11 +10637,6 @@ PrefabInstance:
       propertyPath: cameraOffset.y
       value: 0.8
       objectReference: {fileID: 0}
-    - target: {fileID: 4894365219897887937, guid: d2c0e6cff4b31ef4abbdf125315acb6f,
-        type: 3}
-      propertyPath: orthographic size
-      value: 1.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2c0e6cff4b31ef4abbdf125315acb6f, type: 3}
 --- !u!4 &1708205041 stripped
@@ -13563,6 +13558,14 @@ PrefabInstance:
       propertyPath: interactPrompt
       value: 
       objectReference: {fileID: 516525284}
+    - target: {fileID: 820264633, guid: 187e84c4babdc8a42b8866abd8a1f98e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 820264633, guid: 187e84c4babdc8a42b8866abd8a1f98e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7782283973510856564, guid: 187e84c4babdc8a42b8866abd8a1f98e,
         type: 3}
       propertyPath: speed
@@ -13572,14 +13575,6 @@ PrefabInstance:
         type: 3}
       propertyPath: jumpForce
       value: 3.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 820264633, guid: 187e84c4babdc8a42b8866abd8a1f98e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 820264633, guid: 187e84c4babdc8a42b8866abd8a1f98e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 187e84c4babdc8a42b8866abd8a1f98e, type: 3}

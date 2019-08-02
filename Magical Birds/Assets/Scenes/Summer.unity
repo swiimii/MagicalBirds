@@ -4325,11 +4325,6 @@ PrefabInstance:
       propertyPath: cameraOffset.y
       value: 0.8
       objectReference: {fileID: 0}
-    - target: {fileID: 4894365219897887937, guid: d2c0e6cff4b31ef4abbdf125315acb6f,
-        type: 3}
-      propertyPath: orthographic size
-      value: 1.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2c0e6cff4b31ef4abbdf125315acb6f, type: 3}
 --- !u!1 &408451856
@@ -12037,15 +12032,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8115751502166754356, guid: c737fa141156c974db70f4df2143b4fb,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.338
-      objectReference: {fileID: 0}
     - target: {fileID: 770827899640195268, guid: c737fa141156c974db70f4df2143b4fb,
         type: 3}
       propertyPath: m_FlipX
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8115751502166754356, guid: c737fa141156c974db70f4df2143b4fb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.338
       objectReference: {fileID: 0}
     - target: {fileID: 1174974662520140028, guid: c737fa141156c974db70f4df2143b4fb,
         type: 3}
@@ -16958,6 +16953,14 @@ PrefabInstance:
       propertyPath: interactPrompt
       value: 
       objectReference: {fileID: 2040155462}
+    - target: {fileID: 820264633, guid: 187e84c4babdc8a42b8866abd8a1f98e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 820264633, guid: 187e84c4babdc8a42b8866abd8a1f98e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7782283973510856564, guid: 187e84c4babdc8a42b8866abd8a1f98e,
         type: 3}
       propertyPath: speed
@@ -16967,14 +16970,6 @@ PrefabInstance:
         type: 3}
       propertyPath: jumpForce
       value: 3.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 820264633, guid: 187e84c4babdc8a42b8866abd8a1f98e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 820264633, guid: 187e84c4babdc8a42b8866abd8a1f98e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 187e84c4babdc8a42b8866abd8a1f98e, type: 3}
