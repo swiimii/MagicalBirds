@@ -22,11 +22,12 @@ public class VictoryScreen : MonoBehaviour
 
     public void Continue()
     {
-        sm.setScene(SceneManager.GetActiveScene().buildIndex);
+        sm.setScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public IEnumerator Victory()
     {
+        sm.hasCheckpoint = false;
         yield return new WaitForSeconds(.5f);
         GameObject.FindGameObjectWithTag("Player").GetComponent<MovementController>().enabled = false;
         GameObject.FindGameObjectWithTag("Player").GetComponent<AbilityController>().enabled = false;
