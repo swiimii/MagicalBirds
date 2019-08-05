@@ -7,6 +7,7 @@ public class ResourceController : MonoBehaviour
     public int maxHealth = 1;
     public int currentHealth;
     public float damageRecoilMagnitude = 120;
+    public bool dead = false;
 
     public virtual void Start()
     {
@@ -95,6 +96,7 @@ public class ResourceController : MonoBehaviour
 
     public virtual IEnumerator Death()
     {
+        dead = true;
 
         foreach (Collider c in GetComponents<Collider>())
         {

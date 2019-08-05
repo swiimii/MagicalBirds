@@ -34,6 +34,8 @@ public class EnemyResourceController : ResourceController
             }
         }
 
+        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), GameObject.FindGameObjectWithTag("Player").GetComponent<Collider2D>());
+
         foreach (Collider2D c in GetComponents<Collider2D>())
         {
             c.enabled = false;

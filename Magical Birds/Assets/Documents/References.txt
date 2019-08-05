@@ -2,3 +2,4 @@
 Player, Friendly birds - Samuel Scherer
 Pixel Art Background - https://foxlybr.itch.io/23421124244
 Ground tiles + other animations - https://www.kenney.nl/assets
+Snowball Hit sound - https://freesound.org/people/djfroyd/sounds/478638/
