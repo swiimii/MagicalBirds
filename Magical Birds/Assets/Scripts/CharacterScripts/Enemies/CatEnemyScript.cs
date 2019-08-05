@@ -20,6 +20,8 @@ public class CatEnemyScript : MonoBehaviour
     public GameObject[] leftMovementLocks;
     public GameObject[] rightMovementLocks;
 
+    public AudioClip meleeAttack, rangedAttack, death;
+
 
 
     public void Update()
@@ -65,6 +67,7 @@ public class CatEnemyScript : MonoBehaviour
 
     public IEnumerator MeleeAttack()
     {
+        
         isIdle = false;
         GetComponent<Animator>().SetBool("isMeleeAttack", true);
         yield return new WaitForSeconds(.8f);
@@ -83,13 +86,14 @@ public class CatEnemyScript : MonoBehaviour
             direction = -1;
         }
 
-        while(Mathf.Abs(transform.position.x - distance.x) > .2f)
+        PlaySound(meleeAttack);
+
+        while (Mathf.Abs(transform.position.x - distance.x) > .2f)
         {
             transform.position = Vector3.Lerp(transform.position, distance, dashSpeed * Time.deltaTime);
             yield return null;
         }
-        
-        yield return null;
+
         GetComponent<Animator>().SetBool("isMeleeAttack", false);
         SetDirection(direction);
         isIdle = true;
@@ -99,12 +103,20 @@ public class CatEnemyScript : MonoBehaviour
     {
         isIdle = false;
         GetComponent<Animator>().SetBool("isRangedAttack", true);
+        PlaySound(rangedAttack);
+
         yield return new WaitForSeconds(.8f);
         Instantiate(rangedAttackPrefab, transform.position + rangedAttackOffset.x * GetDirection() * Vector3.right + rangedAttackOffset.y * Vector3.up, Quaternion.identity);
         yield return new WaitForSeconds(.5f);
         GetComponent<Animator>().SetBool("isRangedAttack", false);
         isIdle = true;
 
+    }
+
+    public void PlaySound(AudioClip clip)
+    {
+        GetComponent<AudioSource>().clip = clip;
+        GetComponent<AudioSource>().Play();
     }
 
 }

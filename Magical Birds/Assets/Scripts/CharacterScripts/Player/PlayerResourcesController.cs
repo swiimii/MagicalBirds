@@ -149,6 +149,8 @@ public class PlayerResourcesController : ResourceController
         }
 
         GetComponent<MovementController>().enabled = false;
+        GetComponent<AbilityController>().enabled = false;
+
         GetComponent<Animator>().SetBool("isDead", true);
         transform.localScale = new Vector3(1, 1, 1);
 

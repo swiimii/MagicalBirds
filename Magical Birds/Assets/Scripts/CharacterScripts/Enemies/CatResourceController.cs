@@ -50,6 +50,7 @@ public class CatResourceController : EnemyResourceController
 
         cat.StopAllCoroutines();        
         cat.enabled = false;
+        cat.PlaySound(cat.death);
 
         arena.StopBattle();
 
