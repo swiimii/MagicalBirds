@@ -23,7 +23,9 @@ public abstract class EnemyMovementController : MovementController
     }
     public virtual void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag.Equals("Player"))
+        var erc = GetComponent<EnemyResourceController>();
+
+        if (collision.gameObject.tag.Equals("Player") && erc ? !erc.dead : true) 
         {
             collision.gameObject.GetComponent<PlayerResourcesController>().Damage(damageDealt, transform.position);
         }

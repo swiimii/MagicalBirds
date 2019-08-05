@@ -17,4 +17,10 @@ public class SnowballAttack : RangedAttack
 
         EndAttack();
     }
+
+    public override void EndAttack()
+    {
+        GetComponent<AudioSource>().Play();
+        base.EndAttack();
+    }
 }

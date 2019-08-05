@@ -620,7 +620,12 @@ PrefabInstance:
     - target: {fileID: 6567220371613963361, guid: 187e84c4babdc8a42b8866abd8a1f98e,
         type: 3}
       propertyPath: isInvulnerable
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6567220371613963361, guid: 187e84c4babdc8a42b8866abd8a1f98e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8873519298922573328, guid: 187e84c4babdc8a42b8866abd8a1f98e,
         type: 3}

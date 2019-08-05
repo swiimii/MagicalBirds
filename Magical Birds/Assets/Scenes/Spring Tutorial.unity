@@ -7200,6 +7200,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 4894365219897887937, guid: d2c0e6cff4b31ef4abbdf125315acb6f,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4894365219897887937, guid: d2c0e6cff4b31ef4abbdf125315acb6f,
+        type: 3}
+      propertyPath: m_Depth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4894365219897887936, guid: d2c0e6cff4b31ef4abbdf125315acb6f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7269,16 +7279,6 @@ PrefabInstance:
         type: 3}
       propertyPath: restrictedByBounds
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4894365219897887937, guid: d2c0e6cff4b31ef4abbdf125315acb6f,
-        type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 4894365219897887937, guid: d2c0e6cff4b31ef4abbdf125315acb6f,
-        type: 3}
-      propertyPath: m_Depth
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8732462723064096619, guid: d2c0e6cff4b31ef4abbdf125315acb6f,
         type: 3}
@@ -7537,11 +7537,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8873519298922573328, guid: 187e84c4babdc8a42b8866abd8a1f98e,
-        type: 3}
-      propertyPath: interactPrompt
-      value: 
-      objectReference: {fileID: 1625688586}
     - target: {fileID: 820264633, guid: 187e84c4babdc8a42b8866abd8a1f98e, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -7549,6 +7544,16 @@ PrefabInstance:
     - target: {fileID: 7782283973510856564, guid: 187e84c4babdc8a42b8866abd8a1f98e,
         type: 3}
       propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873519298922573328, guid: 187e84c4babdc8a42b8866abd8a1f98e,
+        type: 3}
+      propertyPath: interactPrompt
+      value: 
+      objectReference: {fileID: 1625688586}
+    - target: {fileID: 3967201237208181186, guid: 187e84c4babdc8a42b8866abd8a1f98e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 820264629, guid: 187e84c4babdc8a42b8866abd8a1f98e, type: 3}
@@ -7559,11 +7564,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 47.000305
-      objectReference: {fileID: 0}
-    - target: {fileID: 3967201237208181186, guid: 187e84c4babdc8a42b8866abd8a1f98e,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4339147385428549807, guid: 187e84c4babdc8a42b8866abd8a1f98e,
         type: 3}

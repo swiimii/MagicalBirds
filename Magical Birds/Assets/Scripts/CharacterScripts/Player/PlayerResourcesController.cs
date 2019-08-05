@@ -39,6 +39,7 @@ public class PlayerResourcesController : ResourceController
 
         else
         {
+            StartCoroutine("PlayDamagedSound");
             StartCoroutine("Invulnerable");
             base.ProcessDamage(damageDealt, source);
 
@@ -66,6 +67,7 @@ public class PlayerResourcesController : ResourceController
 
         else
         {
+            StartCoroutine("PlayDamagedSound");
             StartCoroutine("Invulnerable");
             base.ProcessDamage(damageDealt, direction, magnitude);
 
@@ -121,6 +123,17 @@ public class PlayerResourcesController : ResourceController
             }
             return true;
         }
+    }
+
+    public IEnumerator PlayDamagedSound()
+    {
+        var sound = GetComponent<AudioSource>();
+        if (!sound.isPlaying)
+            sound.Play();
+        else
+            sound.UnPause();
+        yield return new WaitForSeconds(.3f);
+        sound.Pause();
     }
 
     public override IEnumerator Death()

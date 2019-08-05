@@ -170,7 +170,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 2598215640268674067, guid: a729c3eebeea1144d892aae6eebf22b0,
     type: 3}
   player: {fileID: 0}
-  distanceUntilSpawn: 5
+  distanceUntilSpawn: 8
   fixedDirection: 0
   directionIfFixed: 1
   spawnPositions:
