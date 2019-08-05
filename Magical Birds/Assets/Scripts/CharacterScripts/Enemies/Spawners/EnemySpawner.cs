@@ -13,7 +13,7 @@ public class EnemySpawner : MonoBehaviour
     public int directionIfFixed = 1; // Only useful if fixedDirection = true
 
     // Start is called before the first frame update
-    private void Start()
+    public virtual void Start()
     {
         if(!player)
         {
@@ -78,7 +78,7 @@ public class EnemySpawner : MonoBehaviour
         DespawnEnemy(transform.position);
     }
 
-    public int GetDirection()
+    public virtual int GetDirection()
     {
         
         if(fixedDirection)
@@ -86,6 +86,8 @@ public class EnemySpawner : MonoBehaviour
             return directionIfFixed;
         }
 
+        print(enemy);
+        print(player);
         var retval = Mathf.Abs(enemy.transform.position.x - player.transform.position.x)
             / (enemy.transform.position.x - player.transform.position.x);
         return (int)retval;

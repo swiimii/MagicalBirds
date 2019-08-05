@@ -10,22 +10,28 @@ public class EnemyMultiSpawner : EnemySpawner
     // These lists must be the same size
     public List<Transform> spawnPositions;
     public List<GameObject> enemies;
-    public bool repeats;
+    public bool repeats = true;
     private bool expended = false;
 
-    private void Start()
+    public override void Start()
     {
         if(!player)
         {
             player = GameObject.FindGameObjectWithTag("Player");
         }
-        CreateEnemy();
+
+        for (int i = 0; i < spawnPositions.Count; i++)
+        {
+            
+            CreateEnemy(spawnPositions[i].position, i);
+            
+        }
 
     }
 
     protected override void Update()
     {
-        
+
         if (player && Mathf.Abs(transform.position.x - player.transform.position.x) < distanceUntilSpawn)
         {
 
@@ -46,7 +52,7 @@ public class EnemyMultiSpawner : EnemySpawner
 
         }
 
-        else
+        else if (player && Mathf.Abs(transform.position.x - player.transform.position.x) > distanceUntilSpawn)
         {
             for (int i = 0; i < spawnPositions.Count; i++)
             {
@@ -70,14 +76,26 @@ public class EnemyMultiSpawner : EnemySpawner
 
         // Make the enemy face the direction of the player
         if(enemies[index].GetComponent<EnemyMovementController>())
-            enemies[index].GetComponent<EnemyMovementController>().SetDirection(GetDirection());
+            enemies[index].GetComponent<EnemyMovementController>().SetDirection(GetDirection(index));
         else
         {
-            enemies[index].GetComponentInChildren<EnemyMovementController>().SetDirection(GetDirection());
+            enemies[index].GetComponentInChildren<EnemyMovementController>().SetDirection(GetDirection(index));
         }
 
         //Only set active in update function
         enemies[index].SetActive(false);
+    }
+
+    public int GetDirection(int index)
+    {
+        if (fixedDirection)
+        {
+            return directionIfFixed;
+        }
+
+        var retval = Mathf.Abs(enemies[index].transform.position.x - player.transform.position.x)
+            / (enemies[index].transform.position.x - player.transform.position.x);
+        return (int)retval;
     }
 
 }
