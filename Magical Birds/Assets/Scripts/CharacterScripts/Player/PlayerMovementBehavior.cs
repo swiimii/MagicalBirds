@@ -23,7 +23,7 @@ public class PlayerMovementBehavior : MovementBehavior
             transform.localScale = new Vector2(-1, 1);
             if (!cont.CheckBlocked())
             {
-                transform.position = new Vector2(transform.position.x + xmovement, transform.position.y);
+                transform.position = new Vector3(transform.position.x + xmovement, transform.position.y, transform.position.z);
             }
         }
         else if(movementValue > 0)
@@ -31,7 +31,7 @@ public class PlayerMovementBehavior : MovementBehavior
             transform.localScale = new Vector2(1, 1);
             if (!cont.CheckBlocked())
             {
-                transform.position = new Vector2(transform.position.x + xmovement, transform.position.y);
+                transform.position = new Vector3(transform.position.x + xmovement, transform.position.y, transform.position.z);
             }
         }
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Friends : Interactives
 {
     public bool talkedTo = false;
-    public Animator textBubble;
+    public GameObject textBubble;
     public bool itemReturned = false;
     public bool enemiesKilled = false;
     public string currentQuest; 
@@ -20,27 +20,58 @@ public class Friends : Interactives
         }
     }
 
+    protected virtual void Start() {
+        state = FindObjectOfType<StateManager>();
+        textBubble.GetComponent<Animator>().SetInteger("currentQuest", 0);
+        if(state.hasCheckpoint){
+            talkedTo = true;
+            if(currentQuest == "item") {
+                itemReturned = true;
+                enemiesKilled = false;
+            }else if(currentQuest == "kill") {
+                enemiesKilled = true;
+                itemReturned = false;
+            }
+            QuestCheck();
+        }
+    }
+
     public void QuestCheck() {
         if(itemReturned && enemiesKilled) {
-            // TODO: do the level win
+            textBubble.GetComponent<Animator>().SetInteger("currentQuest", 3);
+            state.player.GetComponent<VictoryScreen>().StartCoroutine("Victory");
         } else if (itemReturned) {
             currentQuest = "kill";
-            // TODO: switch the quest reminder
+            state.hasCheckpoint = true;
+            textBubble.GetComponent<Animator>().SetInteger("currentQuest", 2);
         } else if (enemiesKilled) {
             currentQuest = "item";
-            // TODO: switch the quest reminder
+            state.hasCheckpoint = true;
+            textBubble.GetComponent<Animator>().SetInteger("currentQuest", 1);
         }
     }
 
     public override void DoInteract(){
         if(!talkedTo) {
             talkedTo = true;
+            switch (currentQuest) {
+                case "item": {
+                    textBubble.GetComponent<Animator>().SetInteger("currentQuest", 1);
+                    break;
+                }
+                case "kill": {
+                    textBubble.GetComponent<Animator>().SetInteger("currentQuest", 2);
+                    break;
+                }
+                default:
+                    break;
+            }
         } else {
 
             switch (currentQuest) {
                 case "item": {
                     foreach (GameObject item in state.collectedItems) {
-                        if(item.name == itemToCollect) {
+                        if(item && item.name.Equals(itemToCollect)) {
                             itemReturned = true;
                             state.removeCollectedItem(item);
                             break;

@@ -7,16 +7,11 @@ public class ResourceController : MonoBehaviour
     public int maxHealth = 1;
     public int currentHealth;
     public float damageRecoilMagnitude = 120;
+    public bool dead = false;
 
     public virtual void Start()
     {
         ResetHealth();
-        var manager = FindObjectOfType<StateManager>();
-        if (manager)
-        {
-            manager.player = gameObject;
-
-        }
     }
 
     #region Damage Functions
@@ -64,7 +59,7 @@ public class ResourceController : MonoBehaviour
         ProcessDamage(damageDealt, direction, magnitude);
     }
 
-    protected virtual void DamageRecoil(Vector2 source) // Move character due to damage
+    public virtual void DamageRecoil(Vector2 source) // Move character due to damage
     {
         Vector2 force = new Vector2(1, 1);
         if (Mathf.Abs(transform.position.x - source.x) <= 0.1f) // Move character up if the character is touching from above the enemy
@@ -82,7 +77,7 @@ public class ResourceController : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = force * damageRecoilMagnitude; // Move character away from object
     }
 
-    protected virtual void FixedDamageRecoil(Vector2 direction, float magnitude)
+    public virtual void FixedDamageRecoil(Vector2 direction, float magnitude)
     {
         GetComponent<Rigidbody2D>().velocity = direction * magnitude;
     }
@@ -101,18 +96,22 @@ public class ResourceController : MonoBehaviour
 
     public virtual IEnumerator Death()
     {
+        dead = true;
 
         foreach (Collider c in GetComponents<Collider>())
         {
             c.enabled = false;
-     }
+        }
         if (GetComponent<Rigidbody2D>())
         {
             GetComponent<Rigidbody2D>().isKinematic = true;
         }
-        GetComponent<MovementController>().enabled = false;
+        if (GetComponent<MovementController>())
+        {
+            GetComponent<MovementController>().enabled = false;
+            transform.localScale = new Vector3(1, 1, 1);
+        }
         GetComponent<Animator>().SetBool("isDead", true);
-        transform.localScale = new Vector3(1, 1, 1);
         yield return new WaitForSeconds(1.5f);
         Destroy(gameObject);
         

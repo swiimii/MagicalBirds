@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Penguin : Friends
 {
-    private void Start() {
+    protected override void Start() {
         state = FindObjectOfType<StateManager>();
         currentQuest = "item";
-        killRequirement = 10;
+        killRequirement = 5;
         itemToCollect = "YellowFeather";
         abilityLevel = 3;
+        base.Start();
     }
 }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2470428427693539773}
   - component: {fileID: 4483437196380907976}
   - component: {fileID: 1205348201769231771}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Hummingbird Sprite
   m_TagString: Friend
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactiveName: Hummingbird
   talkedTo: 0
-  textBubble: {fileID: 0}
+  textBubble: {fileID: 1886043928836891372}
   itemReturned: 0
   enemiesKilled: 0
   currentQuest: 
@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 8242953185540918045}
   - component: {fileID: 7266745022621171341}
   m_Layer: 0
-  m_Name: Speech Bubble Hummingbird Overlay_0
+  m_Name: Speech Bubble Overlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -370,7 +370,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1886043928836891372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.1}
+  m_LocalPosition: {x: 0.011, y: 0.019, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8115751502166754356}

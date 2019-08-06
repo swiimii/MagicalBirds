@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Woodpecker : Friends
 {
-    private void Start() {
+    protected override void Start() {
         state = FindObjectOfType<StateManager>();
-        currentQuest = "kill";
-        killRequirement = 10;
+        currentQuest = "item";
+        killRequirement = 4;
         itemToCollect = "GreenFeather";
         abilityLevel = 1;
+        base.Start();
     }
 }

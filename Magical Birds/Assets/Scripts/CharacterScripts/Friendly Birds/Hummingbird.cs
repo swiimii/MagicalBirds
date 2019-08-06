@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Hummingbird : Friends
 {
-    private void Start() {
-        state = FindObjectOfType<StateManager>();
+    protected override void Start() {
         currentQuest = "item";
-        killRequirement = 10;
+        killRequirement = 8;
         itemToCollect = "BlueFeather";
         abilityLevel = 2;
+        base.Start();
     }
 }

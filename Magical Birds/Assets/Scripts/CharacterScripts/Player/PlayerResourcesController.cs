@@ -13,6 +13,22 @@ public class PlayerResourcesController : ResourceController
     public bool isInvulnerable = false;
     public GameObject[] healthEggs;
     public GameObject[] damagedEggs;
+    public GameObject[] feathers;
+    public GameObject DeathScreen, HealthUI;
+    public BackgroundParallax bg;
+    private StateManager state;
+
+    public override void Start()
+    {
+        base.Start();
+        state = GameObject.FindGameObjectWithTag("GameController").GetComponent<StateManager>();
+        state.player = gameObject;
+
+        if(state.hasCheckpoint) {
+            var friend = GameObject.FindGameObjectWithTag("Friend").transform.position;
+            transform.position = new Vector3(friend.x, friend.y, transform.position.z);
+        }
+    }
 
     // Call from attack scripts and enemy behavior scripts. When the player gets hit
     public override void ProcessDamage(int damageDealt, Vector2 source)
@@ -24,6 +40,7 @@ public class PlayerResourcesController : ResourceController
 
         else
         {
+            StartCoroutine("PlayDamagedSound");
             StartCoroutine("Invulnerable");
             base.ProcessDamage(damageDealt, source);
 
@@ -37,6 +54,7 @@ public class PlayerResourcesController : ResourceController
                     // healthEggs[i - 1].GetComponent<Image>().color = greyedOut;
                 }
             } 
+
         }
         
     }
@@ -50,18 +68,31 @@ public class PlayerResourcesController : ResourceController
 
         else
         {
+            StartCoroutine("PlayDamagedSound");
             StartCoroutine("Invulnerable");
             base.ProcessDamage(damageDealt, direction, magnitude);
 
             // Change UI according to current health
-            if (currentHealth >= 0)
+            if (currentHealth > 0)
             {
                 for (int i = healthEggs.Length; i > currentHealth; i--)
                 {
                     damagedEggs[i - 1].SetActive(true);
                     healthEggs[i - 1].SetActive(false);
-                    // healthEggs[i - 1].GetComponent<Image>().color = greyedOut;
                 }
+            }
+
+            else //Player has died
+            {
+                //Set all healthy eggs to damaged
+                for (int i = healthEggs.Length; i > 0; i--)
+                {
+                    damagedEggs[i - 1].SetActive(true);
+                    healthEggs[i - 1].SetActive(false);
+                }
+
+                // Start Death coroutine
+                StartCoroutine("Death");
             }
         }
     }
@@ -95,10 +126,46 @@ public class PlayerResourcesController : ResourceController
         }
     }
 
+    public IEnumerator PlayDamagedSound()
+    {
+        var sound = GetComponent<AudioSource>();
+        if (!sound.isPlaying)
+            sound.Play();
+        else
+            sound.UnPause();
+        yield return new WaitForSeconds(.3f);
+        sound.Pause();
+    }
+
     public override IEnumerator Death()
     {
-        
-        yield return null;
+
+        //Camera stops moving
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<SimpleFollow>().following = false;
+        bg.trackedObject = null;
+
+        //Show death screen
+        HealthUI.SetActive(false);
+        DeathScreen.SetActive(true);
+
+        // Appropriate death animation
+        foreach (Collider2D c in GetComponents<Collider2D>())
+        {
+            c.enabled = false;
+        }
+        if (GetComponent<Rigidbody2D>())
+        {
+            GetComponent<Rigidbody2D>().isKinematic = true;
+        }
+
+        GetComponent<MovementController>().enabled = false;
+        GetComponent<AbilityController>().enabled = false;
+
+        GetComponent<Animator>().SetBool("isDead", true);
+        transform.localScale = new Vector3(1, 1, 1);
+
+        yield return 0;
+
     }
        
 

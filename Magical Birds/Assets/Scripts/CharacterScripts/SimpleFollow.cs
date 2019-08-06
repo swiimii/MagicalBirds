@@ -8,6 +8,7 @@ public class SimpleFollow : MonoBehaviour
     public Vector3 offset;
     public bool restrictedByBounds = false;
     public Transform bottomLeftBounds, topRightBounds;
+    public bool following = true;
     // Update is called once per frame
     private void Start()
     {
@@ -18,7 +19,7 @@ public class SimpleFollow : MonoBehaviour
     }
     void Update()
     {
-        if (player) // If player object isn't null, follow the player's position
+        if (player && following) // If player object isn't null, follow the player's position
         {
             var ptp = player.transform.position;
             transform.position = new Vector3(ptp.x, ptp.y) + offset;

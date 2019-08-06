@@ -4,9 +4,10 @@ using UnityEngine;
 
 public abstract class EnemyMovementController : MovementController
 {
-    public int health = 2, damageDealt = 1;
+    public int damageDealt = 1;
     public float moveSpeed = 20;
     public abstract void Move();
+
     public virtual int GetDirection()
     {
         return (int)(transform.localScale.x / Mathf.Abs(transform.localScale.x));
@@ -20,11 +21,16 @@ public abstract class EnemyMovementController : MovementController
         var scale = transform.localScale;
         transform.localScale = new Vector3(Mathf.Abs(scale.x) * direction, scale.y, scale.z);
     }
-    public virtual void OnCollisionStay2D(Collision2D collision)
+    public virtual void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag.Equals("Player"))
+        var erc = GetComponent<EnemyResourceController>();
+
+        if (collision.gameObject.tag.Equals("Player")) 
         {
-            collision.gameObject.GetComponent<PlayerResourcesController>().Damage(damageDealt, transform.position);
+            if(erc && !erc.dead)
+                collision.gameObject.GetComponent<PlayerResourcesController>().Damage(damageDealt, transform.position);
+            else if(!erc)
+                collision.gameObject.GetComponent<PlayerResourcesController>().Damage(damageDealt, transform.position);
         }
     }
 

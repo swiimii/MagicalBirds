@@ -20,9 +20,8 @@ public class StateManager : MonoBehaviour {
         3 - Double + Smash + Snowball
     */
     public int unlockedAbilities;
-    // Player's last used checkpoint to respawn from
-    // TODO: should be game object?
-    public GameObject currentCheckpoint;
+    // Player has a checkpoint to respawn from?
+    public bool hasCheckpoint;
     public float masterVolume;
     public float musicVolume;
     public float effectsVolume;
@@ -41,32 +40,52 @@ public class StateManager : MonoBehaviour {
 
     void Start()
     {
-        ReadData();
-        SceneManager.LoadScene(1);
+        if (Application.platform != RuntimePlatform.WebGLPlayer)
+        {
+            ReadData();
+        }
+        
+        setScene(1);
     }  
 
     public void addCollectedItem(GameObject collectedItem){
         collectedItems.Add(collectedItem);
+
+        for(int n = 0; n < player.GetComponent<PlayerResourcesController>().feathers.Length; n++){
+            player.GetComponent<PlayerResourcesController>().feathers[n].GetComponent<FeatherUI>().changeActiveFeather(collectedItem.name);
+        }
+
         Debug.Log("Added " + collectedItem + " to items collected");
     }
 
     public void removeCollectedItem(GameObject collectedItem) {
         collectedItems.Remove(collectedItem);
+
+        for(int n = 0; n < player.GetComponent<PlayerResourcesController>().feathers.Length; n++){
+            player.GetComponent<PlayerResourcesController>().feathers[n].GetComponent<FeatherUI>().changeActiveFeather();
+        }
+
         Debug.Log("Removed " + collectedItem + " to items collected");
     }
 
-    public void setLevel(int levelId) {
-        SceneManager.LoadScene(levelId);
+    public void setScene(int sceneId) {
+        var resetCheckpoint = true;
+        if(hasCheckpoint && sceneId == SceneManager.GetActiveScene().buildIndex) {
+            resetCheckpoint = false;
+        }
+
+        SceneManager.LoadScene(sceneId);
+        Time.timeScale = 1f;
+        player = GameObject.FindGameObjectWithTag("Player");
+        
+        if(resetCheckpoint){
+            hasCheckpoint = false;
+        }
     }
 
     private void ResetGameSession() {
-        // TODO: change this LoadScene arg to be whatever the main menu scene is
         SceneManager.LoadScene(0);
         Destroy(gameObject);
-    }
-
-    public void DoPlayerDeath() {
-        // TODO: whatever happens when the player dies, i.e. reset to checkpoint
     }
 
     public void SaveProgress() {

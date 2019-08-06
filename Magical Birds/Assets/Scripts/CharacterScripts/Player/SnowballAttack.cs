@@ -8,11 +8,19 @@ public class SnowballAttack : RangedAttack
     {
         // Attack has zero knockback, and hits one enemy.
         // Dissipates after hitting the ground.
-        if (collision.gameObject.tag == "Enemy")
+
+        if (collision.gameObject.GetComponent<ResourceController>())
         {
             collision.gameObject.GetComponent<ResourceController>().Damage(damage, Vector2.zero, 0);
         }
+        
 
         EndAttack();
+    }
+
+    public override void EndAttack()
+    {
+        GetComponent<AudioSource>().Play();
+        base.EndAttack();
     }
 }

@@ -33,6 +33,15 @@ public class BackgroundParallax : MonoBehaviour
     private void Update()
     {
 
+        if(trackedObject)
+        {
+            DoUpdate();
+        }
+        
+    }
+
+    private void DoUpdate()
+    {
         Vector2 newPos = trackedObject.transform.position;
         Vector2 difference = newPos - prevTrackedPosition;
         prevTrackedPosition = newPos;
@@ -60,7 +69,7 @@ public class BackgroundParallax : MonoBehaviour
                 // move layer to left if needed
                 ReplaceLeft(difference.x, background1, i);
             }
-            if(restrictedByBounds)
+            if (restrictedByBounds)
             {
 
                 var bot = bottomBounds.position.y;
@@ -101,8 +110,7 @@ public class BackgroundParallax : MonoBehaviour
                                                  layers[i].transform.position.z);
 
             }
-        }        
-        
+        }
     }
 
     // Move the rightmost background to the left side of the player as they move left.

@@ -50,7 +50,7 @@ public class SnakeMovementController : EnemyMovementController
     public override bool CheckBlocked()
     {
         var col = GetComponent<SpriteRenderer>().bounds;
-        float rayDistance = .25f; // Distance ray will be fired
+        float rayDistance = .28f; // Distance ray will be fired
 
         int direction = GetDirection(); // +1 or -1
                                         // print(direction);
