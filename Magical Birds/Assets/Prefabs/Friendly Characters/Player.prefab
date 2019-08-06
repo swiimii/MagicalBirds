@@ -337,6 +337,7 @@ GameObject:
   - component: {fileID: 304938681}
   - component: {fileID: 304938680}
   - component: {fileID: 304938679}
+  - component: {fileID: 4306260143527762762}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -457,6 +458,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &4306260143527762762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304938677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aaf570756e75e94ab734e920b099c42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!1 &708168245
 GameObject:
   m_ObjectHideFlags: 0
@@ -3836,6 +3850,7 @@ MonoBehaviour:
   maxHealth: 3
   currentHealth: 0
   damageRecoilMagnitude: 2.5
+  dead: 0
   greyedOut: {r: 1, g: 1, b: 1, a: 0.5}
   full: {r: 1, g: 1, b: 1, a: 1}
   invulnerabilityTime: 0.5
@@ -3854,6 +3869,7 @@ MonoBehaviour:
   - {fileID: 1901075788706704126}
   DeathScreen: {fileID: 5537787980951268981}
   HealthUI: {fileID: 402730691582928685}
+  bg: {fileID: 0}
 --- !u!114 &7357103240998757355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4534,15 +4550,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fd4e3f67c237cb4084da763721b4b59, type: 3}
---- !u!1 &2795540126356151077 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1013827728885828937, guid: 5fd4e3f67c237cb4084da763721b4b59,
-    type: 3}
-  m_PrefabInstance: {fileID: 2943689617320269420}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &3911417675436524198 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2202880044545955018, guid: 5fd4e3f67c237cb4084da763721b4b59,
+    type: 3}
+  m_PrefabInstance: {fileID: 2943689617320269420}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2795540126356151077 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1013827728885828937, guid: 5fd4e3f67c237cb4084da763721b4b59,
     type: 3}
   m_PrefabInstance: {fileID: 2943689617320269420}
   m_PrefabAsset: {fileID: 0}

@@ -25,9 +25,12 @@ public abstract class EnemyMovementController : MovementController
     {
         var erc = GetComponent<EnemyResourceController>();
 
-        if (collision.gameObject.tag.Equals("Player") && erc ? !erc.dead : true) 
+        if (collision.gameObject.tag.Equals("Player")) 
         {
-            collision.gameObject.GetComponent<PlayerResourcesController>().Damage(damageDealt, transform.position);
+            if(erc && !erc.dead)
+                collision.gameObject.GetComponent<PlayerResourcesController>().Damage(damageDealt, transform.position);
+            else if(!erc)
+                collision.gameObject.GetComponent<PlayerResourcesController>().Damage(damageDealt, transform.position);
         }
     }
 

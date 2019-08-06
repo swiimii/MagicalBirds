@@ -40,7 +40,11 @@ public class StateManager : MonoBehaviour {
 
     void Start()
     {
-        ReadData();
+        if (Application.platform != RuntimePlatform.WebGLPlayer)
+        {
+            ReadData();
+        }
+        
         setScene(1);
     }  
 

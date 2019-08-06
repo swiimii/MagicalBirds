@@ -15,6 +15,7 @@ public class PlayerResourcesController : ResourceController
     public GameObject[] damagedEggs;
     public GameObject[] feathers;
     public GameObject DeathScreen, HealthUI;
+    public BackgroundParallax bg;
     private StateManager state;
 
     public override void Start()
@@ -138,8 +139,17 @@ public class PlayerResourcesController : ResourceController
 
     public override IEnumerator Death()
     {
+
+        //Camera stops moving
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<SimpleFollow>().following = false;
+        bg.trackedObject = null;
+
+        //Show death screen
+        HealthUI.SetActive(false);
+        DeathScreen.SetActive(true);
+
         // Appropriate death animation
-        foreach (Collider c in GetComponents<Collider>())
+        foreach (Collider2D c in GetComponents<Collider2D>())
         {
             c.enabled = false;
         }
@@ -154,20 +164,7 @@ public class PlayerResourcesController : ResourceController
         GetComponent<Animator>().SetBool("isDead", true);
         transform.localScale = new Vector3(1, 1, 1);
 
-        //Camera stops moving
-        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<SimpleFollow>().player = null;
-        GameObject.FindGameObjectWithTag("Background").GetComponent<BackgroundParallax>().trackedObject = null;
-
-        yield return new WaitForSeconds(.5f);
-
-        //Show death screen
-        HealthUI.SetActive(false);
-        DeathScreen.SetActive(true);
-
-
-        
-        
-
+        yield return 0;
 
     }
        
