@@ -14102,16 +14102,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6769184229456636749, guid: 161f0a8ebbc24274bbea0bc44a5716cf,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 6769184228805334227, guid: 161f0a8ebbc24274bbea0bc44a5716cf,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.17
-      objectReference: {fileID: 0}
     - target: {fileID: 6769184230460561232, guid: 161f0a8ebbc24274bbea0bc44a5716cf,
         type: 3}
       propertyPath: spawnPositions.Array.size
@@ -14121,6 +14111,16 @@ PrefabInstance:
         type: 3}
       propertyPath: enemies.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6769184229456636749, guid: 161f0a8ebbc24274bbea0bc44a5716cf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 6769184228805334227, guid: 161f0a8ebbc24274bbea0bc44a5716cf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.17
       objectReference: {fileID: 0}
     - target: {fileID: 6769184230228353487, guid: 161f0a8ebbc24274bbea0bc44a5716cf,
         type: 3}
@@ -14313,6 +14313,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6769184230460561232, guid: 161f0a8ebbc24274bbea0bc44a5716cf,
+        type: 3}
+      propertyPath: enemies.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6769184230460561232, guid: 161f0a8ebbc24274bbea0bc44a5716cf,
+        type: 3}
+      propertyPath: spawnPositions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6769184229456636749, guid: 161f0a8ebbc24274bbea0bc44a5716cf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14327,16 +14337,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 6769184230460561232, guid: 161f0a8ebbc24274bbea0bc44a5716cf,
-        type: 3}
-      propertyPath: enemies.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6769184230460561232, guid: 161f0a8ebbc24274bbea0bc44a5716cf,
-        type: 3}
-      propertyPath: spawnPositions.Array.size
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6769184230228353487, guid: 161f0a8ebbc24274bbea0bc44a5716cf,
         type: 3}
@@ -15479,16 +15479,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.17
       objectReference: {fileID: 0}
+    - target: {fileID: 7782283973510856566, guid: 187e84c4babdc8a42b8866abd8a1f98e,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7782283973510856567, guid: 187e84c4babdc8a42b8866abd8a1f98e,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2869184395849975069, guid: 187e84c4babdc8a42b8866abd8a1f98e,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8873519298922573328, guid: 187e84c4babdc8a42b8866abd8a1f98e,
-        type: 3}
-      propertyPath: interactPrompt
-      value: 
-      objectReference: {fileID: 2040155462}
     - target: {fileID: 820264633, guid: 187e84c4babdc8a42b8866abd8a1f98e, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -15507,16 +15512,11 @@ PrefabInstance:
       propertyPath: jumpForce
       value: 3.6
       objectReference: {fileID: 0}
-    - target: {fileID: 7782283973510856567, guid: 187e84c4babdc8a42b8866abd8a1f98e,
+    - target: {fileID: 8873519298922573328, guid: 187e84c4babdc8a42b8866abd8a1f98e,
         type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7782283973510856566, guid: 187e84c4babdc8a42b8866abd8a1f98e,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 0.16
-      objectReference: {fileID: 0}
+      propertyPath: interactPrompt
+      value: 
+      objectReference: {fileID: 2040155462}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 187e84c4babdc8a42b8866abd8a1f98e, type: 3}
 --- !u!1 &1515042761
@@ -16372,7 +16372,7 @@ PrefabInstance:
     - target: {fileID: 713352932430601238, guid: 7cd5e8f01909aa647a31340696963c09,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.12
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 713352932430601238, guid: 7cd5e8f01909aa647a31340696963c09,
         type: 3}
