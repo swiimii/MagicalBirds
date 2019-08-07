@@ -10,6 +10,7 @@ public class CatArenaScript : MonoBehaviour
     public Transform arenaCamPosition;
     public BackgroundParallax background;
     public float distanceUntilActivate = 3;
+    public VictoryScreen winScreen;
 
     private void Start()
     {
@@ -39,7 +40,7 @@ public class CatArenaScript : MonoBehaviour
     {
         gameCamera.GetComponent<SimpleFollow>().enabled = true;
         background.enabled = true;
-
+        winScreen.StartCoroutine("Victory");
     }
 
     public IEnumerator CheckPlayerDistance()
