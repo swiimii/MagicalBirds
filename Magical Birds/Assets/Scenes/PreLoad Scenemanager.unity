@@ -550,5 +550,15 @@ PrefabInstance:
       propertyPath: gameLoaded
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3518381923893472295, guid: 685cac3519d592d48b900cd00842f91e,
+        type: 3}
+      propertyPath: unlockedLevels
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3518381923893472295, guid: 685cac3519d592d48b900cd00842f91e,
+        type: 3}
+      propertyPath: unlockedAbilities
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 685cac3519d592d48b900cd00842f91e, type: 3}
